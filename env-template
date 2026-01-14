@@ -1,0 +1,12 @@
+# Gmail SMTP Configuration
+EMAIL_USER=your-gmail@gmail.com
+EMAIL_PASS=your-gmail-app-password
+CONTACT_RECIPIENT=your-business-email@gmail.com
+
+# Instructions:
+# 1. Create a .env.local file in the root directory.
+# 2. Go to your Google Account settings -> Security
+# 3. Enable 2-Step Verification
+# 4. Search for "App Passwords"
+# 5. Create a new App Password for "Mail" and "Other (Custom Name)" like "TecWrites Website"
+# 6. Copy the 16-character password and paste it as EMAIL_PASS above.
