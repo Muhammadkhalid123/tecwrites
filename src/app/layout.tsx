@@ -9,6 +9,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "ZifE4ji4x6DAhHBhJ1LE1zfdcbSjSvOkV8r8O_RLN9k",
+  },
   title: {
     default: "TecWrites | The Future of Publishing & Software Solutions",
     template: "%s | TecWrites"
