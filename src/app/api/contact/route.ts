@@ -13,20 +13,32 @@ export async function POST(req: Request) {
             );
         }
 
+        // SMTP Credentials
+        const smtpUser = process.env.SMTP_USER || process.env.EMAIL_USER || 'writestec@gmail.com';
+        const smtpPass = (process.env.SMTP_PASS || process.env.EMAIL_PASS || '').trim();
+
         // Create a transporter
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS, // Use an App Password for Gmail
+                user: smtpUser,
+                pass: smtpPass, // Use an App Password for Gmail
             },
         });
 
-        // Email content for the business owner
-        const recipients = process.env.CONTACT_RECIPIENT || process.env.EMAIL_USER || '';
+        // Email content for the business owner & team
+        const TO_EMAIL = 'writestec@gmail.com';
+        const CC_EMAILS = [
+            'aliahk.developer@gmail.com',
+            'khalid8sharpk@gmail.com',
+            'muhammadalisoomr110@gmail.com'
+        ];
+
         const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: recipients.split(',').map(e => e.trim()).filter(e => e !== ''),
+            from: `"${firstName} ${lastName}" <${smtpUser}>`,
+            to: TO_EMAIL,
+            cc: CC_EMAILS,
+            replyTo: email,
             subject: `New Contact Request from ${firstName} ${lastName}`,
             text: `
                 Name: ${firstName} ${lastName}
@@ -46,7 +58,7 @@ export async function POST(req: Request) {
 
         // Email content for the user (auto-reply)
         const autoReplyOptions = {
-            from: process.env.EMAIL_USER,
+            from: smtpUser,
             to: email,
             subject: 'Thank you for contacting TecWrites!',
             text: `Hi ${firstName},\n\nThank you for reaching out to TecWrites. We have received your message regarding "${service}" and our team will get back to you within 24 hours.\n\nBest regards,\nTecWrites Team`,
