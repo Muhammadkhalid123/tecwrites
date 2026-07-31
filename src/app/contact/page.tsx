@@ -158,8 +158,8 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <div className="font-semibold text-[#111827] mb-1">Phone</div>
-                                            <a href="tel:+15551234567" className="text-gray-500 hover:text-indigo-600 transition-colors">
-                                                +1(555) 123-4567
+                                            <a href="tel:+18889213331" className="text-gray-500 hover:text-indigo-600 transition-colors">
+                                                +1(888)921 3331
                                             </a>
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@ export default function Contact() {
                                         <div>
                                             <div className="font-semibold text-[#111827] mb-1">Location</div>
                                             <div className="text-gray-500">
-                                                Available Worldwide
+                                                31 Gourdon Ct, Lake St. Louis, MO 63367
                                             </div>
                                         </div>
                                     </div>
