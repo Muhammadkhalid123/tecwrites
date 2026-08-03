@@ -1,283 +1,185 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-    title: "About Us",
-    description: "Learn about TecWrites, our mission, vision, and the expert team behind our publishing and software solutions.",
-};
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BackgroundMotionSystem from "@/components/BackgroundMotionSystem";
+import LenisProvider from "@/components/LenisProvider";
+import { Sparkles, Code2, Feather, Cpu, ShieldCheck, Zap, ArrowUpRight, Star } from "lucide-react";
 
-export default function About() {
-    return (
-        <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-grow">
-                <section className="py-24 bg-slate-50">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-                            <h1 className="text-4xl md:text-5xl font-bold text-[#111827] mb-6">
-                                About <span className="text-gradient-purple">TechWrites</span>
-                            </h1>
-                            <p className="text-lg text-gray-500 leading-relaxed">
-                                We're a passionate team bridging the gap between publishing excellence and cutting-edge software solutions.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+const values = [
+  "Creative Precision", "Editorial Craft", "Transparent Process",
+  "Scalable Code", "Human-Centered Design", "Zero Compromise",
+  "Creative Precision", "Editorial Craft", "Transparent Process",
+  "Scalable Code", "Human-Centered Design", "Zero Compromise",
+];
 
-                {/* Our Story Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
-                            {/* Left Content */}
-                            <div>
-                                <span className="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold mb-6">
-                                    Our Story
-                                </span>
-                                <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-8">
-                                    From Passion to Purpose
-                                </h2>
-                                <div className="space-y-6 text-gray-500 leading-relaxed">
-                                    <p>
-                                        TechWrites was born from a simple observation: authors and businesses often
-                                        struggle to find quality services that understand both the creative and
-                                        technical aspects of their projects.
-                                    </p>
-                                    <p>
-                                        Founded in 2019, we set out to create a one-stop solution that combines
-                                        professional publishing services with modern software development
-                                        expertise.
-                                    </p>
-                                    <p>
-                                        Today, we're proud to have helped hundreds of authors publish their dreams
-                                        and dozens of businesses establish their digital presence. Our dual expertise
-                                        allows us to offer unique, integrated solutions that others simply can't match.
-                                    </p>
-                                </div>
-                            </div>
+export default function AboutApproachPage() {
+  return (
+    <LenisProvider>
+      {/* Top Accent Stripe */}
+      <div className="page-accent-top" />
 
-                            {/* Right Stats Grid */}
-                            <div className="grid sm:grid-cols-2 gap-6">
-                                {/* Stat 1 */}
-                                <div className="bg-slate-50 p-8 rounded-2xl flex flex-col items-center text-center">
-                                    <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                            <circle cx="9" cy="7" r="4" />
-                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                        </svg>
-                                    </div>
-                                    <div className="text-3xl font-bold text-[#111827] mb-1">50+</div>
-                                    <div className="text-sm text-gray-500 font-medium">Happy Clients</div>
-                                </div>
+      <BackgroundMotionSystem />
+      <Header />
 
-                                {/* Stat 2 */}
-                                <div className="bg-slate-50 p-8 rounded-2xl flex flex-col items-center text-center">
-                                    <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <circle cx="12" cy="8" r="7" />
-                                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-                                        </svg>
-                                    </div>
-                                    <div className="text-3xl font-bold text-[#111827] mb-1">500+</div>
-                                    <div className="text-sm text-gray-500 font-medium">Projects Completed</div>
-                                </div>
+      <main className="relative z-10 min-h-screen pt-36 pb-24 px-6 md:px-12 text-white">
+        <div className="max-w-7xl mx-auto space-y-24">
 
-                                {/* Stat 3 */}
-                                <div className="bg-slate-50 p-8 rounded-2xl flex flex-col items-center text-center">
-                                    <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <polyline points="12 6 12 12 16 14" />
-                                        </svg>
-                                    </div>
-                                    <div className="text-3xl font-bold text-[#111827] mb-1">5+</div>
-                                    <div className="text-sm text-gray-500 font-medium">Years Experience</div>
-                                </div>
+          {/* ── PAGE HERO HEADER ── */}
+          <div className="relative flex flex-col space-y-6 max-w-4xl overflow-hidden rounded-3xl bg-[#0D1322] border border-[#12D6C4]/35 p-8 md:p-12 shadow-2xl">
+            {/* Section background image */}
+            <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
+              <img
+                src="/BG/ChatGPT Image Aug 1, 2026, 10_45_29 AM.png"
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-cover object-center opacity-20"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0A0E1A] via-[#0A0E1A]/85 to-transparent" />
+            </div>
 
-                                {/* Stat 4 */}
-                                <div className="bg-slate-50 p-8 rounded-2xl flex flex-col items-center text-center">
-                                    <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <line x1="2" x2="22" y1="12" y2="12" />
-                                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                                        </svg>
-                                    </div>
-                                    <div className="text-3xl font-bold text-[#111827] mb-1">20+</div>
-                                    <div className="text-sm text-gray-500 font-medium">Countries Served</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <div className="relative z-10 space-y-6">
+              <div className="page-enter inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#161F33] border border-[#12D6C4]/40 w-fit text-xs font-mono text-[#12D6C4] font-semibold uppercase tracking-widest">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>THE TECWRITES MANIFESTO &amp; APPROACH</span>
+              </div>
 
-                {/* Our Foundation Section */}
-                <section className="py-24 bg-[#020617]">
-                    <div className="container mx-auto px-4">
-                        {/* Section Header */}
-                        <div className="flex flex-col items-center text-center mb-16">
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-[#1e293b] text-blue-400 text-xs font-semibold mb-6 border border-slate-800">
-                                What Drives Us
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                                Our Foundation
-                            </h2>
-                        </div>
+              <h1 className="page-enter page-enter-delay-1 font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-white">
+                <span className="block text-white">WHERE THE PEN MEETS</span>
+                <span className="block italic shimmer-text">THE ALGORITHM.</span>
+              </h1>
 
-                        {/* Cards Grid */}
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {/* Mission Card */}
-                            <div className="bg-[#0f172a] p-10 rounded-2xl border border-slate-800 text-center hover:bg-[#1e293b] transition-colors duration-300">
-                                <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mx-auto mb-6">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-xl font-bold text-white mb-4">Mission</h3>
-                                <p className="text-slate-400 text-sm leading-relaxed">
-                                    To empower creators and businesses with world-class publishing and software solutions that bring their visions to life.
-                                </p>
-                            </div>
+              <p className="page-enter page-enter-delay-2 text-gray-200 font-light text-lg md:text-xl leading-relaxed max-w-3xl">
+                We bridge the gap between creative storytelling and hard-line software engineering. Every line of code we ship is built with editorial craft, speed, and architectural scalability.
+              </p>
+            </div>
+          </div>
 
-                            {/* Vision Card */}
-                            <div className="bg-[#0f172a] p-10 rounded-2xl border border-slate-800 text-center hover:bg-[#1e293b] transition-colors duration-300">
-                                <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mx-auto mb-6">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-xl font-bold text-white mb-4">Vision</h3>
-                                <p className="text-slate-400 text-sm leading-relaxed">
-                                    To be the leading one-stop destination for comprehensive digital solutions spanning publishing and technology.
-                                </p>
-                            </div>
+          {/* ── VALUES MARQUEE RIBBON ── */}
+          <div className="page-enter page-enter-delay-2 relative overflow-hidden py-4 border-y border-[#12D6C4]/30 bg-[#0D1322]">
+            <div className="flex gap-8 w-max" style={{ animation: "marquee-scroll 30s linear infinite" }}>
+              {values.map((v, i) => (
+                <span key={i} className="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-gray-300 whitespace-nowrap font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#12D6C4]" />
+                  {v}
+                </span>
+              ))}
+            </div>
+            <style>{`
+              @keyframes marquee-scroll {
+                from { transform: translateX(0); }
+                to   { transform: translateX(-50%); }
+              }
+            `}</style>
+          </div>
 
-                            {/* Values Card */}
-                            <div className="bg-[#0f172a] p-10 rounded-2xl border border-slate-800 text-center hover:bg-[#1e293b] transition-colors duration-300">
-                                <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mx-auto mb-6">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-xl font-bold text-white mb-4">Values</h3>
-                                <p className="text-slate-400 text-sm leading-relaxed">
-                                    Quality, innovation, integrity, and client satisfaction drive everything we do at TechWrites.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+          {/* ── DUAL CORE PHILOSOPHY CARDS ── */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 page-enter page-enter-delay-3">
+            {/* Card 1: Code */}
+            <div className="p-10 rounded-3xl bg-[#0D1322] border border-[#12D6C4]/35 space-y-6 relative overflow-hidden group hover:border-[#12D6C4]/60 transition-all duration-500 hover:-translate-y-1 shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1F2E8C]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none" />
+              <div className="w-14 h-14 rounded-2xl bg-[#161F33] border border-[#12D6C4]/40 flex items-center justify-center text-[#12D6C4]">
+                <Code2 className="w-7 h-7" />
+              </div>
+              <h2 className="font-serif text-3xl text-white font-semibold">Engineering Standard</h2>
+              <p className="text-gray-200 font-light text-base leading-relaxed">
+                We design custom web platforms, multi-model AI workflows, and cross-platform apps using modern serverless architectures, WebGL momentum graphics, and type-safe systems that load under 100ms.
+              </p>
+              <div className="pt-4 border-t border-gray-700 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
+                <span>TypeScript</span> &bull; <span>Next.js 16</span> &bull; <span>Three.js</span> &bull; <span>Python LLMs</span>
+              </div>
+            </div>
 
-                {/* Team Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4">
-                        {/* Section Header */}
-                        <div className="flex flex-col items-center text-center mb-16">
-                            <span className="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold mb-6 border border-slate-200">
-                                The Team
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-6">
-                                Meet Our Experts
-                            </h2>
-                        </div>
+            {/* Card 2: Craft */}
+            <div className="p-10 rounded-3xl bg-[#0D1322] border border-[#1E8FBF]/40 space-y-6 relative overflow-hidden group hover:border-[#1E8FBF]/70 transition-all duration-500 hover:-translate-y-1 shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1E8FBF]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none" />
+              <div className="w-14 h-14 rounded-2xl bg-[#161F33] border border-[#1E8FBF]/40 flex items-center justify-center text-[#1E8FBF]">
+                <Feather className="w-7 h-7" />
+              </div>
+              <h2 className="font-serif text-3xl text-white font-semibold">Editorial Craft</h2>
+              <p className="text-gray-200 font-light text-base leading-relaxed">
+                Code without craft is cold. We treat every layout, typography pair, and brand publication like a luxury print release—ensuring your digital identity feels authoritative, memorable, and human.
+              </p>
+              <div className="pt-4 border-t border-gray-700 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
+                <span>Syne &amp; Fraunces Types</span> &bull; <span>Self Publishing Suite</span> &bull; <span>Grid Systems</span>
+              </div>
+            </div>
+          </div>
 
-                        {/* Team Grid */}
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {/* Member 1: John Smith */}
-                            <div className="flex flex-col items-center text-center">
-                                <div className="w-24 h-24 rounded-full bg-slate-200 flex items-center justify-center text-2xl font-bold text-[#1e3a8a] mb-6">
-                                    JS
-                                </div>
-                                <h3 className="text-lg font-bold text-[#111827] mb-1">John Smith</h3>
-                                <div className="text-sm font-semibold text-[#1e3a8a] mb-3">Founder & CEO</div>
-                                <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
-                                    Visionary leader with 10+ years in publishing and tech.
-                                </p>
-                            </div>
+          {/* ── METHODOLOGY RIBBON TIMELINE ── */}
+          <div className="space-y-12 pt-12 border-t border-gray-800 page-enter page-enter-delay-4">
+            <div className="flex flex-col space-y-3">
+              <span className="text-xs font-mono tracking-widest text-[#12D6C4] uppercase font-bold">4-STEP METHODOLOGY</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-white font-normal">How We Execute</h2>
+            </div>
 
-                            {/* Member 2: Sarah Johnson */}
-                            <div className="flex flex-col items-center text-center">
-                                <div className="w-24 h-24 rounded-full bg-slate-200 flex items-center justify-center text-2xl font-bold text-[#1e3a8a] mb-6">
-                                    SJ
-                                </div>
-                                <h3 className="text-lg font-bold text-[#111827] mb-1">Sarah Johnson</h3>
-                                <div className="text-sm font-semibold text-[#1e3a8a] mb-3">Creative Director</div>
-                                <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
-                                    Award-winning designer specializing in book covers and branding.
-                                </p>
-                            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {[
+                { step: "01", title: "Discovery & Blueprint", desc: "We analyze your business architecture, define technical constraints, and map out the user flow and AI data model.", icon: Cpu },
+                { step: "02", title: "Prototyping & Motion", desc: "High-fidelity UI designs with smooth momentum physics, micro-interactions, and WebGL ambient motifs.", icon: Zap },
+                { step: "03", title: "Production Engineering", desc: "Full-stack development with Next.js, API integrations, LLM fine-tuning, and zero-compromise optimization.", icon: Code2 },
+                { step: "04", title: "Deployment & Scale", desc: "Edge server deployment, automated SEO indexing, monitoring, and ongoing publishing support.", icon: ShieldCheck },
+              ].map((m, idx) => {
+                const IconComp = m.icon;
+                return (
+                  <div key={idx} className="p-8 rounded-2xl bg-[#0D1322] border border-gray-700 space-y-4 relative group hover:border-[#12D6C4]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                    <span className="font-mono text-3xl font-bold text-[#12D6C4]">{m.step}</span>
+                    <IconComp className="w-5 h-5 text-gray-400 group-hover:text-[#12D6C4] transition-colors" />
+                    <h3 className="font-serif text-xl text-white font-semibold">{m.title}</h3>
+                    <p className="text-gray-300 text-sm font-light leading-relaxed">{m.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
-                            {/* Member 3: Michael Chen */}
-                            <div className="flex flex-col items-center text-center">
-                                <div className="w-24 h-24 rounded-full bg-slate-200 flex items-center justify-center text-2xl font-bold text-[#1e3a8a] mb-6">
-                                    MC
-                                </div>
-                                <h3 className="text-lg font-bold text-[#111827] mb-1">Michael Chen</h3>
-                                <div className="text-sm font-semibold text-[#1e3a8a] mb-3">Tech Lead</div>
-                                <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
-                                    Full-stack developer passionate about building scalable solutions.
-                                </p>
-                            </div>
+          {/* ── FOUNDER CARD ── */}
+          <div className="page-enter page-enter-delay-5 p-10 md:p-14 rounded-3xl bg-[#0D1322] border border-[#12D6C4]/35 flex flex-col md:flex-row items-center gap-10 shadow-2xl">
+            <div className="relative w-28 h-28 rounded-2xl shrink-0 bg-gradient-to-br from-[#1F2E8C] via-[#1E8FBF] to-[#12D6C4] p-[2px]">
+              <div className="w-full h-full rounded-[14px] bg-[#0A0E1A] flex items-center justify-center">
+                <span className="font-serif text-4xl text-white select-none">TW</span>
+              </div>
+            </div>
+            <div className="flex-1 space-y-4 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-2">
+                <span className="text-xs font-mono tracking-widest text-[#12D6C4] uppercase font-bold">Studio Lead</span>
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 fill-[#12D6C4] text-[#12D6C4]" />
+                  ))}
+                </div>
+              </div>
+              <h3 className="font-serif text-3xl text-white font-semibold">The TecWrites Team</h3>
+              <p className="text-gray-200 font-light text-base leading-relaxed max-w-2xl">
+                We&apos;re a distributed studio of engineers, designers, and editorial experts. Our founders spent years at the intersection of technology and publishing — which is exactly how TecWrites was born.
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start text-xs font-mono text-gray-300">
+                <span className="px-3 py-1 rounded-full bg-[#161F33] border border-gray-700">Est. 2021</span>
+                <span className="px-3 py-1 rounded-full bg-[#161F33] border border-gray-700">Los Angeles, CA</span>
+                <span className="px-3 py-1 rounded-full bg-[#161F33] border border-gray-700">Global Remote</span>
+              </div>
+            </div>
+          </div>
 
-                            {/* Member 4: Emily Davis */}
-                            <div className="flex flex-col items-center text-center">
-                                <div className="w-24 h-24 rounded-full bg-slate-200 flex items-center justify-center text-2xl font-bold text-[#1e3a8a] mb-6">
-                                    ED
-                                </div>
-                                <h3 className="text-lg font-bold text-[#111827] mb-1">Emily Davis</h3>
-                                <div className="text-sm font-semibold text-[#1e3a8a] mb-3">Marketing Head</div>
-                                <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
-                                    Digital marketing expert driving growth strategies.
-                                </p>
-                            </div>
-                        </div>
+          {/* ── CTA STRIP ── */}
+          <div className="p-12 rounded-3xl bg-[#0D1322] border border-[#12D6C4]/40 flex flex-col md:flex-row items-center justify-between gap-8 bg-gradient-to-r from-[#1F2E8C]/30 via-[#1E8FBF]/20 to-[#0D1322] page-enter page-enter-delay-5 shadow-2xl">
+            <div className="space-y-2 text-center md:text-left">
+              <h3 className="font-serif text-3xl text-white font-semibold">Ready to elevate your digital presence?</h3>
+              <p className="text-gray-200 font-light text-sm">Let&apos;s discuss how code and craft can transform your brand.</p>
+            </div>
+            <a
+              href="/contact"
+              className="liquid-cta-btn px-8 py-4 rounded-full font-syne text-xs uppercase tracking-widest font-bold inline-flex items-center gap-3 shrink-0 text-white shadow-xl"
+            >
+              <span>Schedule a Consultation</span>
+              <ArrowUpRight className="w-4 h-4 text-white" />
+            </a>
+          </div>
 
-                        {/* Navigation Arrows */}
-                        <div className="flex justify-center gap-3 mt-16">
-                            <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-indigo-600 hover:border-indigo-600 transition-colors">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M19 12H5" />
-                                    <path d="M12 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                            <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-indigo-600 hover:border-indigo-600 transition-colors">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 12h14" />
-                                    <path d="m12 5 7 7-7 7" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-
-                {/* CTA Section */}
-                <section className="py-24 bg-white border-t border-slate-100">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl font-bold text-[#111827] mb-4">
-                            Ready to Work With Us?
-                        </h2>
-                        <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
-                            Let's collaborate and bring your project to life.
-                        </p>
-                        <div className="flex justify-center gap-4">
-                            <a href="/contact" className="inline-flex items-center gap-2 bg-[#1e3a8a] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1e40af] transition-colors">
-                                Get Started
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 12h14m-7-7 7 7-7 7" />
-                                </svg>
-                            </a>
-                            <a href="/portfolio" className="inline-flex items-center gap-2 bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-                                View Our Work
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <Footer />
         </div>
-    );
+      </main>
+
+      <Footer />
+    </LenisProvider>
+  );
 }

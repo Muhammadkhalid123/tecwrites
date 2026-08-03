@@ -1,420 +1,222 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import { Metadata } from "next";
-import coverMock2 from "./cover-mock2.png";
-import coverMock3 from "./cover-mock3.png";
-import coverMock4 from "./cover-mock4.png";
-import Image from "next/image";
+"use client";
 
-export const metadata: Metadata = {
-    title: "Our Portfolio",
-    description: "View our recent work in publishing and software development. See how we've helped authors and businesses achieve their goals.",
-};
+import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BackgroundMotionSystem from "@/components/BackgroundMotionSystem";
+import LenisProvider from "@/components/LenisProvider";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 
-export default function Portfolio() {
-    return (
-        <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-grow">
-                <section className="py-24 bg-slate-50">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-                            <h1 className="text-4xl md:text-5xl font-bold text-[#111827] mb-6">
-                                Our <span className="text-gradient-purple">Portfolio</span>
-                            </h1>
-                            <p className="text-lg text-gray-500 leading-relaxed">
-                                Explore our work across publishing and software development.
-                                <br className="hidden md:block" />
-                                Every project tells a story of creativity and excellence.
-                            </p>
-                        </div>
+const projects = [
+  {
+    id: "neural-cms",
+    title: "Neural Content Engine",
+    category: "AI & Automation",
+    tag: "AI & AUTOMATION",
+    desc: "Autonomous LLM-driven publishing platform automating editorial workflows, multi-channel distribution, and automated SEO translation for global media outlets.",
+    metrics: "+340% Production Velocity",
+    img: "/BG/ChatGPT Image Aug 1, 2026, 10_44_38 AM.png",
+    tech: ["Next.js 16", "OpenAI GPT-4", "Vector DB", "TailwindCSS"],
+    link: "#",
+  },
+  {
+    id: "lumina-web",
+    title: "Lumina Financial Portal",
+    category: "Web Engineering",
+    tag: "BESPOKE WEB",
+    desc: "Ultra-fast WebGL financial platform with sub-10ms real-time chart rendering, kinetic glass typography, and institutional-grade encryption.",
+    metrics: "<10ms Latency | 99.99% Uptime",
+    img: "/BG/ChatGPT Image Aug 1, 2026, 10_44_54 AM.png",
+    tech: ["React", "Three.js", "WebSockets", "GSAP"],
+    link: "#",
+  },
+  {
+    id: "kandle-publishing",
+    title: "Kandle Direct Publishing",
+    category: "Publishing & Media",
+    tag: "EDITORIAL & EBOOKS",
+    desc: "Complete digital & print publishing pipeline powering 200+ hardcover book releases, interactive e-readers, and global ISBN distribution.",
+    metrics: "200+ Books Released Worldwide",
+    img: "/BG/ChatGPT Image Aug 1, 2026, 10_45_03 AM.png",
+    tech: ["Epub3", "Adobe InDesign", "Next.js", "Stripe API"],
+    link: "#",
+  },
+  {
+    id: "hyper-app",
+    title: "Aura Neural Assistant",
+    category: "AI & Automation",
+    tag: "AI & AUTOMATION",
+    desc: "Enterprise generative AI voice & text assistant integrated with real-time vector search, knowledge base streaming, and automated workflow triggers.",
+    metrics: "120k Active Enterprise Users",
+    img: "/BG/ChatGPT Image Aug 1, 2026, 10_45_15 AM.png",
+    tech: ["Next.js 16", "OpenAI GPT-4", "FastAPI", "PostgreSQL"],
+    link: "#",
+  },
+  {
+    id: "nexus-automations",
+    title: "Nexus Enterprise Workflows",
+    category: "AI & Automation",
+    tag: "AI & AUTOMATION",
+    desc: "Enterprise Zapier & Make custom node integrations replacing manual data entry for a Fortune 500 logistics firm.",
+    metrics: "1,200 Hours Saved / Mo",
+    img: "/BG/ChatGPT Image Aug 1, 2026, 10_45_22 AM.png",
+    tech: ["Python", "Docker", "Node.js", "Redis"],
+    link: "#",
+  },
+  {
+    id: "cyber-editorial",
+    title: "Verve Fashion Journal",
+    category: "Web Engineering",
+    tag: "BESPOKE WEB",
+    desc: "Horizontal scroll editorial magazine blending high-fashion photography with smooth interactive WebGL particle transitions.",
+    metrics: "Awwwards Site of the Day Winner",
+    img: "/BG/ChatGPT Image Aug 1, 2026, 10_44_38 AM.png",
+    tech: ["Next.js", "GSAP ScrollTrigger", "WebGL", "Lenis"],
+    link: "#",
+  },
+];
+
+const categories = ["All", "AI & Automation", "Web Engineering", "Publishing & Media"];
+
+export default function PortfolioPage() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
+
+  return (
+    <LenisProvider>
+      <div className="page-accent-top" />
+      <BackgroundMotionSystem />
+      <Header />
+
+      <main className="relative z-10 min-h-screen pt-36 pb-24 px-6 md:px-12 text-gray-900 dark:text-white">
+        <div className="max-w-7xl mx-auto">
+          
+          {/* PAGE HERO HEADER */}
+          <div className="flex flex-col space-y-6 max-w-4xl mb-12">
+            <div className="page-enter inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-[#12D6C4]/40 w-fit text-xs font-mono text-[#0D9488] dark:text-[#12D6C4] font-semibold uppercase tracking-widest">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>SELECTED CASE STUDIES &amp; ARCHITECTURES</span>
+            </div>
+
+            <h1 className="page-enter page-enter-delay-1 font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95]">
+              <span className="block text-white">CRAFTED WITH</span>
+              <span className="block italic shimmer-text">ENGINEERING PRECISION.</span>
+            </h1>
+
+            <p className="page-enter page-enter-delay-2 text-gray-700 dark:text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+              Explore our portfolio of high-impact AI systems, bespoke digital platforms, and publish-ready media releases designed for visionary brands.
+            </p>
+          </div>
+
+          {/* STATS BAR */}
+          <div className="page-enter page-enter-delay-2 grid grid-cols-2 md:grid-cols-4 gap-4 mb-14 p-6 rounded-2xl glass-panel border border-[#12D6C4]/20">
+            {[
+              { label: "Projects Shown", value: "6" },
+              { label: "Total Delivered", value: "500+" },
+              { label: "Industries Served", value: "12+" },
+              { label: "Avg. Satisfaction", value: "4.9★" },
+            ].map((s, i) => (
+              <div key={i} className="text-center">
+                <p className="font-syne font-bold text-2xl text-[#12D6C4]">{s.value}</p>
+                <p className="text-[11px] font-mono text-gray-500 uppercase tracking-wider mt-0.5">{s.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* FILTER BUTTONS */}
+          <div className="page-enter page-enter-delay-3 flex flex-wrap items-center gap-3 pb-12 border-b border-gray-800/80 mb-14">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveFilter(cat)}
+                className={`px-5 py-2.5 rounded-full text-xs font-mono tracking-wider uppercase transition-all duration-300 ${
+                  activeFilter === cat
+                    ? "bg-[#12D6C4] text-black font-bold shadow-lg shadow-[#12D6C4]/25 scale-105"
+                    : "glass-panel text-gray-400 hover:text-white border border-gray-800 hover:border-gray-600"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* PROJECT GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
+            {filteredProjects.map((project) => (
+              <div
+                key={project.id}
+                className="group relative rounded-3xl overflow-hidden glass-panel border border-white/10 flex flex-col justify-between hover:border-[#12D6C4]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1F2E8C]/30"
+              >
+                {/* Visual UI Mockup Container */}
+                <div className="relative w-full h-72 md:h-80 overflow-hidden bg-gradient-to-br from-[#1F2E8C]/25 via-[#0A0E1A] to-[#12D6C4]/15 p-6 flex flex-col justify-between select-none border-b border-white/10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
                     </div>
-                </section>
-
-                {/* Published Works Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4">
-                        {/* Section Header */}
-                        <div className="mb-12">
-                            <span className="inline-block px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold mb-4 border border-indigo-100">
-                                Publishing Division
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#111827]">
-                                Published Works
-                            </h2>
-                        </div>
-
-                        {/* Works Grid */}
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {/* Card 1: The DP Kids -> God's Word */}
-                            <a href="https://thedpkids.com/" target="_blank" rel="noopener noreferrer" className="block rounded-xl overflow-hidden border border-slate-100 bg-slate-50 hover:shadow-lg transition-shadow duration-300">
-                                <div className="h-64 bg-slate-100 relative overflow-hidden flex items-center justify-center p-4">
-                                    <Image
-                                        src={coverMock2}
-                                        alt="God's Word Book Cover"
-                                        className="h-full w-auto object-contain shadow-lg"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <div className="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2">Non-Fiction</div>
-                                    <h3 className="text-xl font-bold text-[#111827] mb-2">God's Word</h3>
-                                    <p className="text-gray-500 text-sm mb-4">
-                                        A powerful spiritual guide exploring the depths of faith and understanding.
-                                    </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["Spiritual", "Design", "Publishing"].map((tag, i) => (
-                                            <span key={i} className="px-2 py-1 bg-white border border-slate-200 rounded text-xs text-slate-600">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </a>
-
-                            {/* Card 2: Noel LaChance -> The Art of Pizza */}
-                            <a href="https://noellachance.com/" target="_blank" rel="noopener noreferrer" className="block rounded-xl overflow-hidden border border-slate-100 bg-slate-50 hover:shadow-lg transition-shadow duration-300">
-                                <div className="h-64 bg-slate-100 relative overflow-hidden flex items-center justify-center p-4">
-                                    <Image
-                                        src={coverMock3}
-                                        alt="The Art of Pizza Book Cover"
-                                        className="h-full w-auto object-contain shadow-lg"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <div className="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2">Cookbook</div>
-                                    <h3 className="text-xl font-bold text-[#111827] mb-2">The Art of Pizza</h3>
-                                    <p className="text-gray-500 text-sm mb-4">
-                                        50 great recipes for crafting the perfect pizza right in your own kitchen.
-                                    </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["Cooking", "Photography", "Layout"].map((tag, i) => (
-                                            <span key={i} className="px-2 py-1 bg-white border border-slate-200 rounded text-xs text-slate-600">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </a>
-
-                            {/* Card 3: Nina Strong -> A Dragon's Hide */}
-                            <a href="https://ninastrongbooks.com/" target="_blank" rel="noopener noreferrer" className="block rounded-xl overflow-hidden border border-slate-100 bg-slate-50 hover:shadow-lg transition-shadow duration-300">
-                                <div className="h-64 bg-slate-100 relative overflow-hidden flex items-center justify-center p-4">
-                                    <Image
-                                        src={coverMock4}
-                                        alt="A Dragon's Hide Book Cover"
-                                        className="h-full w-auto object-contain shadow-lg"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <div className="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2">Fantasy Fiction</div>
-                                    <h3 className="text-xl font-bold text-[#111827] mb-2">A Dragon's Hide</h3>
-                                    <p className="text-gray-500 text-sm mb-4">
-                                        An epic fantasy adventure taking readers through mystical realms and danger.
-                                    </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["Fantasy", "Illustration", "Series"].map((tag, i) => (
-                                            <span key={i} className="px-2 py-1 bg-white border border-slate-200 rounded text-xs text-slate-600">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        {/* Navigation Arrows */}
-                        <div className="flex justify-center gap-3 mt-12">
-                            <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-indigo-600 hover:border-indigo-600 transition-colors">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M19 12H5" />
-                                    <path d="M12 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                            <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-indigo-600 hover:border-indigo-600 transition-colors">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 12h14" />
-                                    <path d="m12 5 7 7-7 7" />
-                                </svg>
-                            </button>
-                        </div>
+                    <div className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono text-[#5CF2E0] uppercase tracking-widest">
+                      {project.tag}
                     </div>
-                </section>
+                  </div>
 
-                {/* Digital Projects Section */}
-                <section className="py-24 bg-[#f8fafc]">
-                    <div className="container mx-auto px-4">
-                        {/* Section Header */}
-                        <div className="mb-12">
-                            <span className="inline-block px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold mb-4 border border-indigo-100">
-                                Software Division
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#111827]">
-                                Digital Projects
-                            </h2>
-                        </div>
+                  <div className="my-auto space-y-2 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <span className="text-[10px] font-mono text-[#12D6C4] tracking-widest uppercase block">CASE STUDY // {project.category.toUpperCase()}</span>
+                    <h3 className="font-serif text-xl text-white font-bold">{project.title}</h3>
+                    <p className="text-xs text-gray-300 line-clamp-2 font-light">{project.desc}</p>
+                  </div>
 
-                        {/* Projects Grid */}
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {/* Card 1: The DP Kids */}
-                            <a href="https://thedpkids.com/" target="_blank" rel="noopener noreferrer" className="block rounded-xl overflow-hidden border border-slate-100 bg-white hover:shadow-lg transition-shadow duration-300 group">
-                                <div className="h-64 bg-slate-100 relative overflow-hidden border-b border-slate-100">
-                                    <img
-                                        src="https://thedpkids.com/wp-content/uploads/2025/06/image-14.webp"
-                                        alt="The DP Kids Website"
-                                        className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
-                                    />
-                                    <div className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span className="bg-white px-4 py-2 rounded-full text-xs font-bold text-slate-800 shadow-sm">Visit Website</span>
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <div className="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2">Book Series</div>
-                                    <h3 className="text-xl font-bold text-[#111827] mb-2">The DP Kids</h3>
-                                    <p className="text-gray-500 text-sm mb-4">
-                                        A book series focused on teaching children about kindness, inclusion, and love.
-                                    </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["Children's Books", "Education", "Inclusion"].map((tag, i) => (
-                                            <span key={i} className="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </a>
+                  <div className="flex items-center justify-between text-[11px] font-mono text-gray-400 pt-2">
+                    <span>ARCHITECTURE :: VERIFIED</span>
+                    <span className="text-[#12D6C4]">{project.metrics}</span>
+                  </div>
+                </div>
 
-                            {/* Card 2: Noel LaChance */}
-                            <a href="https://noellachance.com/" target="_blank" rel="noopener noreferrer" className="block rounded-xl overflow-hidden border border-slate-100 bg-white hover:shadow-lg transition-shadow duration-300 group">
-                                <div className="h-64 bg-slate-100 relative overflow-hidden border-b border-slate-100">
-                                    <img
-                                        src="https://noellachance.com/wp-content/uploads/2025/08/Book-Mockup-1.webp"
-                                        alt="Noel LaChance Website"
-                                        className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-                                    />
-                                    <div className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span className="bg-white px-4 py-2 rounded-full text-xs font-bold text-slate-800 shadow-sm">Visit Website</span>
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <div className="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2">Author Platform</div>
-                                    <h3 className="text-xl font-bold text-[#111827] mb-2">Noel LaChance</h3>
-                                    <p className="text-gray-500 text-sm mb-4">
-                                        Come To The Quiet. A platform dedicated to connecting readers with inspirational books.
-                                    </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["Inspirational", "Self-Growth", "Books"].map((tag, i) => (
-                                            <span key={i} className="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </a>
+                {/* Card Content Details */}
+                <div className="p-8 flex flex-col justify-between flex-grow space-y-6">
+                  <div>
+                    <h2 className="font-serif text-2xl md:text-3xl text-white group-hover:text-[#12D6C4] transition-colors mb-3">
+                      {project.title}
+                    </h2>
+                    <p className="text-gray-400 text-sm font-light leading-relaxed mb-4">
+                      {project.desc}
+                    </p>
 
-                            {/* Card 3: Nina Strong */}
-                            <a href="https://ninastrongbooks.com/" target="_blank" rel="noopener noreferrer" className="block rounded-xl overflow-hidden border border-slate-100 bg-white hover:shadow-lg transition-shadow duration-300 group">
-                                <div className="h-64 bg-slate-100 relative overflow-hidden border-b border-slate-100">
-                                    <img
-                                        src="https://ninastrongbooks.com/wp-content/uploads/2025/08/Group-1000009164.png"
-                                        alt="Nina Strong Books Website"
-                                        className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-                                    />
-                                    <div className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span className="bg-white px-4 py-2 rounded-full text-xs font-bold text-slate-800 shadow-sm">Visit Website</span>
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <div className="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2">Astrology Guide</div>
-                                    <h3 className="text-xl font-bold text-[#111827] mb-2">Cultured Urban Astrology</h3>
-                                    <p className="text-gray-500 text-sm mb-4">
-                                        A personal roadmap to understanding yourself and others through the stars.
-                                    </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["Astrology", "Relationships", "Guide"].map((tag, i) => (
-                                            <span key={i} className="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        {/* Navigation Arrows */}
-                        <div className="flex justify-center gap-3 mt-12">
-                            <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-indigo-600 hover:border-indigo-600 transition-colors">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M19 12H5" />
-                                    <path d="M12 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                            <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-indigo-600 hover:border-indigo-600 transition-colors">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 12h14" />
-                                    <path d="m12 5 7 7-7 7" />
-                                </svg>
-                            </button>
-                        </div>
+                    <div className="inline-block text-xs font-mono font-semibold text-[#12D6C4] bg-[#12D6C4]/10 px-3 py-1 rounded-md border border-[#12D6C4]/20">
+                      {project.metrics}
                     </div>
-                </section>
+                  </div>
 
-                {/* Testimonials Section */}
-                <section className="py-24 bg-slate-50">
-                    <div className="container mx-auto px-4">
-                        {/* Section Header */}
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold mb-4 border border-slate-200">
-                                Testimonials
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
-                                What Our Clients <span className="text-[#3b82f6]">Say</span>
-                            </h2>
-                            <p className="text-gray-500">
-                                Don't just take our word for it. Here's what our satisfied clients have to say about working with TechWrites.
-                            </p>
-                        </div>
-
-                        {/* Testimonials Grid */}
-                        <div className="grid md:grid-cols-2 gap-8">
-                            {/* Testimonial 1 */}
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative group hover:shadow-md transition-shadow">
-                                <div className="absolute top-8 right-8 text-indigo-100">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.017 7V3H19.017C20.6739 3 22.017 4.34315 22.017 6V15C22.017 16.6569 20.6739 18 19.017 18H16.017V21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 7.55228 5.0166 7V3H10.0166C11.6735 3 13.0166 4.34315 13.0166 6V15C13.0166 16.6569 11.6735 18 10.0166 18H7.0166V21H5.0166Z" />
-                                    </svg>
-                                </div>
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" className="w-full h-full object-cover" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-[#111827]">Sarah Johnson</h4>
-                                        <div className="text-sm text-gray-500">Author</div>
-                                    </div>
-                                </div>
-                                <div className="flex text-yellow-400 mb-4 gap-1">
-                                    {[1, 2, 3, 4, 5].map((i) => (
-                                        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                                        </svg>
-                                    ))}
-                                </div>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    "TechWrites transformed my manuscript into a beautifully designed book. Their attention to detail approach exceeded my expectations."
-                                </p>
-                            </div>
-
-                            {/* Testimonial 2 */}
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative group hover:shadow-md transition-shadow">
-                                <div className="absolute top-8 right-8 text-indigo-100">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.017 7V3H19.017C20.6739 3 22.017 4.34315 22.017 6V15C22.017 16.6569 20.6739 18 19.017 18H16.017V21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 7.55228 5.0166 7V3H10.0166C11.6735 3 13.0166 4.34315 13.0166 6V15C13.0166 16.6569 11.6735 18 10.0166 18H7.0166V21H5.0166Z" />
-                                    </svg>
-                                </div>
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" className="w-full h-full object-cover" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-[#111827]">Michael Chen</h4>
-                                        <div className="text-sm text-gray-500">Startup Founder</div>
-                                    </div>
-                                </div>
-                                <div className="flex text-yellow-400 mb-4 gap-1">
-                                    {[1, 2, 3, 4, 5].map((i) => (
-                                        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                                        </svg>
-                                    ))}
-                                </div>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    "The website they built for our startup was exactly what we needed. Clean, modern, and highly functional. Our conversion rates increased by 40%."
-                                </p>
-                            </div>
-
-                            {/* Testimonial 3 */}
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative group hover:shadow-md transition-shadow">
-                                <div className="absolute top-8 right-8 text-indigo-100">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.017 7V3H19.017C20.6739 3 22.017 4.34315 22.017 6V15C22.017 16.6569 20.6739 18 19.017 18H16.017V21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 7.55228 5.0166 7V3H10.0166C11.6735 3 13.0166 4.34315 13.0166 6V15C13.0166 16.6569 11.6735 18 10.0166 18H7.0166V21H5.0166Z" />
-                                    </svg>
-                                </div>
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Roberts" className="w-full h-full object-cover" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-[#111827]">Emily Roberts</h4>
-                                        <div className="text-sm text-gray-500">Publisher</div>
-                                    </div>
-                                </div>
-                                <div className="flex text-yellow-400 mb-4 gap-1">
-                                    {[1, 2, 3, 4, 5].map((i) => (
-                                        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                                        </svg>
-                                    ))}
-                                </div>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    "Working with TechWrites on our e-book publishing project was seamless. They delivered on time and the quality was outstanding."
-                                </p>
-                            </div>
-
-                            {/* Testimonial 4 */}
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative group hover:shadow-md transition-shadow">
-                                <div className="absolute top-8 right-8 text-indigo-100">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.017 7V3H19.017C20.6739 3 22.017 4.34315 22.017 6V15C22.017 16.6569 20.6739 18 19.017 18H16.017V21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 7.55228 5.0166 7V3H10.0166C11.6735 3 13.0166 4.34315 13.0166 6V15C13.0166 16.6569 11.6735 18 10.0166 18H7.0166V21H5.0166Z" />
-                                    </svg>
-                                </div>
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-                                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="David Park" className="w-full h-full object-cover" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-[#111827]">David Park</h4>
-                                        <div className="text-sm text-gray-500">Marketing Director</div>
-                                    </div>
-                                </div>
-                                <div className="flex text-yellow-400 mb-4 gap-1">
-                                    {[1, 2, 3, 4, 5].map((i) => (
-                                        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                                        </svg>
-                                    ))}
-                                </div>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    "Their graphic design team created stunning visuals for our brand campaign. The results spoke for themselves - engagement went through the roof!"
-                                </p>
-                            </div>
-                        </div>
+                  {/* Tech Stack Tags & CTA */}
+                  <div className="pt-6 border-t border-gray-800 flex items-center justify-between">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((t, idx) => (
+                        <span key={idx} className="text-[10px] font-mono text-gray-400 bg-white/5 px-2 py-0.5 rounded">
+                          {t}
+                        </span>
+                      ))}
                     </div>
-                </section>
 
-                {/* CTA Section */}
-                <section className="py-24 bg-white border-t border-slate-100">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl font-bold text-[#111827] mb-4">
-                            Ready to Start Your Project?
-                        </h2>
-                        <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
-                            Let's create something amazing together.
-                        </p>
-                        <div className="flex justify-center gap-4">
-                            <a href="#" className="inline-flex items-center gap-2 bg-[#1e3a8a] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1e40af] transition-colors">
-                                Get Started
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 12h14m-7-7 7 7-7 7" />
-                                </svg>
-                            </a>
-                            <a href="/services" className="inline-flex items-center gap-2 bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-                                Explore Services
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <Footer />
+                    <a
+                      href="#contact"
+                      className="p-3 rounded-full glass-panel border border-white/20 text-white hover:text-black hover:bg-[#12D6C4] transition-all duration-300 group/btn"
+                    >
+                      <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
-    );
+      </main>
+
+      <Footer />
+    </LenisProvider>
+  );
 }

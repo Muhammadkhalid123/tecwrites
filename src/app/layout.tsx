@@ -1,11 +1,30 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Syne, Fraunces, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+  style: ["normal", "italic"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -13,40 +32,33 @@ export const metadata: Metadata = {
     google: "ZifE4ji4x6DAhHBhJ1LE1zfdcbSjSvOkV8r8O_RLN9k",
   },
   title: {
-    default: "TecWrites | The Future of Publishing & Software Solutions",
-    template: "%s | TecWrites"
+    default: "TecWrites | Where Code Meets Craft",
+    template: "%s | TecWrites",
   },
-  description: "TecWrites provides professional book publishing, software development, and digital marketing solutions. Transform your ideas into reality with our expert team.",
-  keywords: ["publishing services", "software development", "web development", "book designing", "ghostwriting", "digital marketing", "UI/UX design"],
-  authors: [{ name: "TecWrites Team" }],
+  description: "TecWrites is a hybrid creative technology & publishing studio specializing in AI & Automation, Bespoke Web Design, and Self Publishing Services.",
+  keywords: [
+    "AI automation",
+    "web design studio",
+    "ebook publishing",
+    "self publishing consultant",
+    "technical writing",
+    "3D web design",
+    "creative agency"
+  ],
+  authors: [{ name: "TecWrites Studio" }],
   creator: "TecWrites",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://techwrites.com",
+    url: "https://tecwrites.com",
     siteName: "TecWrites",
-    title: "TecWrites | The Future of Publishing & Software Solutions",
-    description: "Transform your ideas into reality with our professional publishing and software development services.",
-    images: [
-      {
-        url: "/TecWrites-Logo-03.png",
-        width: 1200,
-        height: 630,
-        alt: "TecWrites - Publishing & Software Solutions",
-      },
-    ],
+    title: "TecWrites | Where Code Meets Craft",
+    description: "Hybrid creative technology & publishing studio: AI & Automation, Bespoke Web, and Self Publishing Services.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TecWrites | The Future of Publishing & Software Solutions",
-    description: "Transform your ideas into reality with our professional publishing and software development services.",
-    images: ["/TecWrites-Logo-03.png"],
-    creator: "@tecwrites",
-  },
-  icons: {
-    icon: '/TecWrites-Logo_Facicon.png',
-    shortcut: '/TecWrites-Logo_Facicon.png',
-    apple: '/TecWrites-Logo_Facicon.png',
+    title: "TecWrites | Where Code Meets Craft",
+    description: "Hybrid creative technology & publishing studio: AI & Automation, Bespoke Web, and Self Publishing Services.",
   },
 };
 
@@ -56,8 +68,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.variable} font-sans`}>
+    <html lang="en" className={`dark ${syne.variable} ${fraunces.variable} ${inter.variable} ${jakarta.variable} scroll-smooth`}>
+      <body className="font-sans antialiased bg-[#0A0E1A] text-white selection:bg-[#12D6C4] selection:text-[#0A0E1A]">
         {children}
       </body>
     </html>

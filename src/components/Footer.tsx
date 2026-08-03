@@ -1,152 +1,145 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
-    return (
-        <footer className="bg-slate-50 pt-16 pb-8 border-t border-slate-200 text-sm">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    {/* Brand Column */}
-                    <div className="flex flex-col gap-6">
-                        <h3 className="text-xl font-bold text-[#111827]">TechWrites</h3>
-                        <p className="text-gray-500 leading-relaxed">
-                            Bridging the gap between creative publishing and innovative software
-                            solutions.
-                        </p>
-                    </div>
+  return (
+    <footer className="relative w-full bg-[#070A12] text-white pt-16 pb-12 overflow-hidden border-t border-gray-800/80">
 
-                    {/* Publishing Services */}
-                    <div>
-                        <h4 className="font-bold text-[#111827] mb-6">Publishing Services</h4>
-                        <ul className="flex flex-col gap-4 text-gray-500">
-                            <li>
-                                <a href="#" className="hover:text-[#1e3a8a] transition-colors">
-                                    Book Designing
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="hover:text-[#1e3a8a] transition-colors">
-                                    Book Publishing
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="hover:text-[#1e3a8a] transition-colors">
-                                    E-book Publishing
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+      {/* Background Image Layer */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none transform-gpu">
+        <img
+          src="/BG/ChatGPT Image Aug 1, 2026, 10_44_38 AM.png"
+          alt=""
+          decoding="async"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-25 brightness-90 transform-gpu translate-z-0"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#070A12]/95 via-[#070A12]/90 to-[#070A12]" />
+      </div>
 
-                    {/* Software Agency */}
-                    <div>
-                        <h4 className="font-bold text-[#111827] mb-6">Software Agency</h4>
-                        <ul className="flex flex-col gap-4 text-gray-500">
-                            <li>
-                                <a href="#" className="hover:text-[#1e3a8a] transition-colors">
-                                    Graphic Designing
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="hover:text-[#1e3a8a] transition-colors">
-                                    Website Development
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="hover:text-[#1e3a8a] transition-colors">
-                                    Marketing Agency
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="hover:text-[#1e3a8a] transition-colors">
-                                    Custom Software
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
 
-                    {/* Contact Us */}
-                    <div>
-                        <h4 className="font-bold text-[#111827] mb-6">Contact Us</h4>
-                        <ul className="flex flex-col gap-4 text-gray-500">
-                            <li className="flex items-center gap-3">
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="text-[#1e3a8a]"
-                                >
-                                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                                </svg>
-                                info@techwrites.com
-                            </li>
-                            <li className="flex items-center gap-3">
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="text-[#1e3a8a]"
-                                >
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                </svg>
-                                +1(888)921 3331
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="text-[#1e3a8a] mt-1 flex-shrink-0"
-                                >
-                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
-                                <span>31 Gourdon Ct, Lake St. Louis, MO 63367</span>
-                            </li>
-                        </ul>
-                        <div className="flex gap-4 mt-6">
-                            <a href="#" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#1e3a8a] hover:border-[#1e3a8a] transition-all">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
-                            </a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#1e3a8a] hover:border-[#1e3a8a] transition-all">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
-                            </a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#1e3a8a] hover:border-[#1e3a8a] transition-all">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
-                            </a>
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-gray-800/80 items-start">
 
-                        </div>
-                    </div>
+          {/* Brand & Description Column */}
+          <div className="md:col-span-5 space-y-6">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#1F2E8C] via-[#1E8FBF] to-[#12D6C4] p-[1.5px]">
+                <div className="w-full h-full bg-[#0A0E1A] rounded-[10.5px] flex items-center justify-center">
+                  <Image
+                    src="/TecWrites-Logo_Facicon.png"
+                    alt="TecWrites Logo"
+                    width={24}
+                    height={24}
+                    className="object-contain"
+                  />
                 </div>
+              </div>
+              <span className="font-syne font-bold text-2xl text-white">
+                Tec<span className="text-gradient-glow">Writes</span>
+              </span>
+            </Link>
 
-                {/* Copyright */}
-                <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-400">
-                        © 2025 TechWrites. All rights reserved.
-                    </p>
-                    <div className="flex gap-6 text-[#1e3a8a]">
-                        <a href="#" className="hover:text-blue-700">
-                            Privacy Policy
-                        </a>
-                        <a href="#" className="hover:text-blue-700">
-                            Terms of Service
-                        </a>
-                    </div>
-                </div>
+            <p className="text-gray-400 font-light text-sm max-w-sm leading-relaxed">
+              A hybrid creative technology &amp; publishing studio building next-generation WebGL platforms, autonomous AI pipelines, and bestseller publication suites.
+            </p>
+
+            <div className="space-y-3 text-xs font-sans text-gray-300 pt-1">
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-[#12D6C4]" />
+                <a href="mailto:writestec@gmail.com" className="hover:text-[#12D6C4] transition-colors">
+                  writestec@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-[#12D6C4]" />
+                <span>Los Angeles, CA &amp; Global Remote</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-[#12D6C4]" />
+                <span>+1 (800) TEC-WRITES</span>
+              </div>
             </div>
-        </footer>
-    );
+          </div>
+
+          {/* Navigation Column 1: Core Capabilities */}
+          <div className="md:col-span-3 space-y-4">
+            <h4 className="font-mono text-xs text-[#12D6C4] uppercase tracking-widest font-semibold">CAPABILITIES</h4>
+            <ul className="space-y-2.5 text-xs text-gray-300 font-sans">
+              <li>
+                <Link href="/services#ai-automation" className="hover:text-white transition-colors">
+                  AI &amp; Neural Workflows
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#web-engineering" className="hover:text-white transition-colors">
+                  WebGL &amp; Web Engineering
+                </Link>
+              </li>
+              <li>
+                <a href="https://www.selfpublishingconsultant.com/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  Book Design &amp; Publishing
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Navigation Column 2: Studio & Quick Links */}
+          <div className="md:col-span-4 space-y-4">
+            <h4 className="font-mono text-xs text-[#12D6C4] uppercase tracking-widest font-semibold">STUDIO DIRECTORY</h4>
+            <ul className="space-y-2.5 text-xs text-gray-300 font-sans">
+              <li>
+                <Link href="/about" className="hover:text-white transition-colors">
+                  About Our Craft &amp; Methodology
+                </Link>
+              </li>
+              <li>
+                <Link href="/portfolio" className="hover:text-white transition-colors">
+                  Selected Work &amp; Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white transition-colors">
+                  Services &amp; Pricing Tiers
+                </Link>
+              </li>
+              <li>
+                <Link href="/#contact" className="hover:text-white transition-colors">
+                  Initiate a Project Inquiry
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Footer Bottom Bar */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-400">
+          <p>© {new Date().getFullYear()} TECWRITES STUDIO LLC. ALL RIGHTS RESERVED.</p>
+
+          <div className="flex items-center gap-6">
+            <Link href="/" className="hover:text-[#12D6C4] transition-colors">
+              PRIVACY POLICY
+            </Link>
+            <Link href="/" className="hover:text-[#12D6C4] transition-colors">
+              TERMS OF SERVICE
+            </Link>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#12D6C4] transition-colors inline-flex items-center gap-1"
+            >
+              GITHUB <ArrowUpRight className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
 }
