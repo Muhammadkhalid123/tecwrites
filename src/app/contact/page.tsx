@@ -129,8 +129,8 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-[#12D6C4] shrink-0" />
                     <div>
                       <span className="block text-white font-semibold mb-0.5">Email Inquiries</span>
-                      <a href="mailto:writestec@gmail.com" className="hover:text-[#12D6C4] transition-colors font-medium text-white">
-                        writestec@gmail.com
+                      <a href="mailto:info@tecwrites.com" className="hover:text-[#12D6C4] transition-colors font-medium text-white">
+                        info@tecwrites.com
                       </a>
                     </div>
                   </div>
@@ -139,7 +139,9 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5 text-[#12D6C4] shrink-0" />
                     <div>
                       <span className="block text-white font-semibold mb-0.5">Phone Hotline</span>
-                      <span className="font-mono text-white">+1 (800) TEC-WRITES</span>
+                      <a href="tel:+18889213331" className="font-mono text-white hover:text-[#12D6C4] transition-colors">
+                        +1(888) 921 3331
+                      </a>
                     </div>
                   </div>
 
@@ -301,7 +303,7 @@ export default function ContactPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
-                { step: "01", title: "Direct Scope Inquiry", desc: "Submit your details using our form or email writestec@gmail.com directly with project notes." },
+                { step: "01", title: "Direct Scope Inquiry", desc: "Submit your details using our form or email info@tecwrites.com directly with project notes." },
                 { step: "02", title: "30-Min Scope Call", desc: "We review your requirements and align on architecture, technical feasibility, and goals." },
                 { step: "03", title: "Fixed Proposal & NDA", desc: "You receive a comprehensive blueprint document with fixed milestone pricing and signed NDA." },
                 { step: "04", title: "Sprint 1 Kickoff", desc: "Engineering starts within 3-5 days. You gain direct access to our Slack channel and weekly staging builds." },

@@ -100,8 +100,8 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <span className="block text-[10px] font-mono text-gray-400 uppercase">DIRECT EMAIL</span>
-                    <a href="mailto:writestec@gmail.com" className="text-white font-medium hover:text-[#12D6C4] transition-colors">
-                      writestec@gmail.com
+                    <a href="mailto:info@tecwrites.com" className="text-white font-medium hover:text-[#12D6C4] transition-colors">
+                      info@tecwrites.com
                     </a>
                   </div>
                 </div>
@@ -122,7 +122,9 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <span className="block text-[10px] font-mono text-gray-400 uppercase">INQUIRIES</span>
-                    <span className="text-white font-medium">+1 (800) TEC-WRITES</span>
+                    <a href="tel:+18889213331" className="text-white font-medium hover:text-[#12D6C4] transition-colors">
+                      +1(888) 921 3331
+                    </a>
                   </div>
                 </div>
               </div>

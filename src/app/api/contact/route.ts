@@ -14,7 +14,7 @@ export async function POST(req: Request) {
         }
 
         // SMTP Credentials
-        const smtpUser = process.env.SMTP_USER || process.env.EMAIL_USER || 'writestec@gmail.com';
+        const smtpUser = process.env.SMTP_USER || process.env.EMAIL_USER || 'info@tecwrites.com';
         const smtpPass = (process.env.SMTP_PASS || process.env.EMAIL_PASS || '').trim();
 
         // Create a transporter
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
         });
 
         // Email content for the business owner & team
-        const TO_EMAIL = 'writestec@gmail.com';
+        const TO_EMAIL = 'info@tecwrites.com';
         const CC_EMAILS = [
             'aliahk.developer@gmail.com',
             'khalid8sharpk@gmail.com',

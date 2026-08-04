@@ -225,11 +225,11 @@ export default function Header() {
                   <span className="text-xs font-mono tracking-[0.2em] uppercase text-[#12D6C4]">03 // WORK WITH US</span>
                   <div className="flex flex-col space-y-4">
                     <a
-                      href="mailto:hello@tecwrites.com"
+                      href="mailto:info@tecwrites.com"
                       className="inline-flex items-center gap-2.5 text-sm md:text-base font-sans text-gray-200 hover:text-[#12D6C4] transition-colors"
                     >
                       <Mail className="w-4 h-4 text-[#12D6C4]" />
-                      <span>hello@tecwrites.com</span>
+                      <span>info@tecwrites.com</span>
                     </a>
 
                     <a

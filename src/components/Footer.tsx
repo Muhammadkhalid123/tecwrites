@@ -51,8 +51,8 @@ export default function Footer() {
             <div className="space-y-3 text-xs font-sans text-gray-300 pt-1">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#12D6C4]" />
-                <a href="mailto:writestec@gmail.com" className="hover:text-[#12D6C4] transition-colors">
-                  writestec@gmail.com
+                <a href="mailto:info@tecwrites.com" className="hover:text-[#12D6C4] transition-colors">
+                  info@tecwrites.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -61,7 +61,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#12D6C4]" />
-                <span>+1 (800) TEC-WRITES</span>
+                <a href="tel:+18889213331" className="hover:text-[#12D6C4] transition-colors">
+                  +1(888) 921 3331
+                </a>
               </div>
             </div>
           </div>
