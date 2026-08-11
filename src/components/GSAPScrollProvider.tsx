@@ -42,3 +42,4 @@ export default function GSAPScrollProvider({ children }: { children: React.React
 
   return <>{children}</>;
 }
+

@@ -1,188 +1,154 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import Image from "next/image";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { ExternalLink, Sparkles, Layers } from "lucide-react";
-
-interface ProjectItem {
-  id: string;
-  title: string;
-  category: string;
-  techStack: string[];
-  description: string;
-  gradient: string;
-  metrics: string;
-  bgImage: string;
-}
-
-const projectsList: ProjectItem[] = [
-  {
-    id: "proj-1",
-    title: "Aura Neural Assistant",
-    category: "AI & WORKFLOW AUTOMATION",
-    techStack: ["Next.js", "OpenAI RAG", "Python API", "Tailwind"],
-    description: "Autonomous customer support & document analysis engine handling 50k+ daily queries with 99.4% precision.",
-    gradient: "from-[#1F2E8C] via-[#1E8FBF] to-[#12D6C4]",
-    metrics: "85% Reduction in Ticket Response Time",
-    bgImage: "/BG/ChatGPT Image Aug 1, 2026, 10_45_38 AM.png",
-  },
-  {
-    id: "proj-2",
-    title: "Vortex 3D Fintech Suite",
-    category: "BESPOKE WEB DESIGN",
-    techStack: ["Three.js", "WebGL Shaders", "React", "GSAP"],
-    description: "Awwwards-recognized 3D interactive web platform for institutional asset managers.",
-    gradient: "from-[#1E8FBF] via-[#12D6C4] to-[#5CF2E0]",
-    metrics: "+320% User Session Duration",
-    bgImage: "/BG/ChatGPT Image Aug 1, 2026, 10_44_54 AM.png",
-  },
-  {
-    id: "proj-3",
-    title: "Chronicle Executive Ebook",
-    category: "PUBLISHING & GHOSTWRITING",
-    techStack: ["EPUB 3.0", "KDP Print", "Adobe InDesign", "Typography"],
-    description: "Bestselling technical strategy book ghostwritten, formatted, and published globally across Amazon & Apple Books.",
-    gradient: "from-[#12D6C4] via-[#1F2E8C] to-[#1E8FBF]",
-    metrics: "#1 Bestseller in Tech Leadership",
-    bgImage: "/BG/ChatGPT Image Aug 1, 2026, 10_45_15 AM.png",
-  },
-  {
-    id: "proj-4",
-    title: "Pulse Enterprise AI Hub",
-    category: "AI & WORKFLOW AUTOMATION",
-    techStack: ["Next.js", "GraphQL", "Node.js", "Python"],
-    description: "Enterprise AI workflow hub synchronizing multi-agent data streams and automated document pipelines.",
-    gradient: "from-[#1F2E8C] via-[#12D6C4] to-[#5CF2E0]",
-    metrics: "1,200 Hours Saved Monthly",
-    bgImage: "/BG/Disc.png",
-  },
-];
+import Link from "next/link";
 
 export default function PortfolioHorizontalSection() {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const triggerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const container = targetRef.current;
-    const trigger = triggerRef.current;
-    if (!container || !trigger) return;
-
-    const totalWidth = container.scrollWidth - window.innerWidth + 100;
-
-    const pin = gsap.to(container, {
-      x: -totalWidth,
-      ease: "none",
-      scrollTrigger: {
-        trigger: trigger,
-        pin: true,
-        scrub: 1,
-        start: "top top",
-        end: () => `+=${totalWidth}`,
-        invalidateOnRefresh: true,
-      },
-    });
-
-    return () => {
-      pin.kill();
-    };
-  }, []);
-
   return (
-    <section id="work" ref={triggerRef} className="relative w-full min-h-screen bg-[#0A0E1A] text-white overflow-hidden py-20">
-      
-      {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <span className="text-xs font-mono font-bold tracking-[0.3em] uppercase text-[#12D6C4]">
-            03 / FEATURED WORK
-          </span>
-          <h2 className="font-serif text-4xl md:text-6xl font-normal text-white mt-1">
-            Horizontal <span className="italic text-gradient-glow">Scroll Gallery</span>
+    <div className="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-32">
+      {/* Header Section */}
+      <section className="text-center space-y-8 flex flex-col items-center">
+        <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-surface-container shadow-clay-inset text-label-caps font-label-caps text-on-surface-variant">
+          SELECTED WORK
+        </div>
+        <h1 className="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary max-w-3xl leading-tight">
+          Case Studies &amp; Craft in Action
+        </h1>
+        {/* Filter Pills */}
+        <div className="flex flex-wrap justify-center gap-4 mt-8">
+          <button className="px-6 py-2 rounded-full bg-primary text-on-primary text-label-caps font-label-caps shadow-clay-sm hover:scale-105 active:scale-95 transition-all duration-300">
+            All
+          </button>
+          <button className="px-6 py-2 rounded-full bg-surface-container text-on-surface text-label-caps font-label-caps shadow-clay-sm hover:scale-105 active:scale-95 transition-all duration-300">
+            AI &amp; Automation
+          </button>
+          <button className="px-6 py-2 rounded-full bg-surface-container text-on-surface text-label-caps font-label-caps shadow-clay-sm hover:scale-105 active:scale-95 transition-all duration-300">
+            Web Design
+          </button>
+          <button className="px-6 py-2 rounded-full bg-surface-container text-on-surface text-label-caps font-label-caps shadow-clay-sm hover:scale-105 active:scale-95 transition-all duration-300">
+            Publishing
+          </button>
+        </div>
+      </section>
+
+      {/* Case Study Grid */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Card 1 */}
+        <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group">
+          <div className="relative w-full aspect-[4/3] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden shadow-clay-inset">
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYcwuccMwSun1inHV98AJsmZlPpnea7uHptVSbqCJQMSb1iH4QFFnsrBrYwd8yhmhgxlRZW0MYPohh7ee2flZGJHgiHkH5r3UdGqpV5pg8-GsWCDNMBNMP-_Ikffn0ev1uaFUC7dt8ofOatGmjPZT18qVQIGQc4pnBTHkhUbJvgiw0eStQzjhhEAZpGY00SLM0VJWTOiaeeU4IMGzMckB45L__HPfCr8g-RRGzvC5hnt1G5LA5OZJg" alt="" />
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="inline-flex px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-label-caps font-label-caps shadow-clay-sm self-start">
+              AI &amp; Automation
+            </div>
+            <h3 className="font-headline-lg text-headline-lg-mobile text-on-surface">Neural Interface Logic</h3>
+            <p className="font-body-md text-on-surface-variant line-clamp-2">
+              Redesigning the cognitive workflow for enterprise AI agents, resulting in a 40% reduction in processing friction.
+            </p>
+          </div>
+        </article>
+
+        {/* Card 2 */}
+        <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group mt-0 md:mt-12">
+          <div className="relative w-full aspect-[4/3] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] overflow-hidden shadow-clay-inset">
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU_-TZz22lEsbeaVgMLXlGk_AxEqmdq_Hf74tv3HSFp3kdT7kylZAlX9_87Mhp9XA3_Z29o9MFZoeQ0-T2OTV90qQfE9ze_DB4g8BulxrnSiMbuxOMkuq9jlrAcHLgIjVz4BhhIouaZSRIoe9lxvN8AuOc2qNh_2Dl8_Ce_DrV3jNH5yTplIl7w3TORFydilqtuOgOlo_UhyG8xZE0piE5xy13Xolwso8AZGUqHRb7AyMo7v5R43-e" alt="" />
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="inline-flex px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-label-caps font-label-caps shadow-clay-sm self-start">
+              Web Design
+            </div>
+            <h3 className="font-headline-lg text-headline-lg-mobile text-on-surface">Fluid Architecture</h3>
+            <p className="font-body-md text-on-surface-variant line-clamp-2">
+              A headless commerce experience built on composable principles, elevating conversion rates by rethinking interaction models.
+            </p>
+          </div>
+        </article>
+
+        {/* Card 3 */}
+        <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group">
+          <div className="relative w-full aspect-[4/3] rounded-t-[4rem] rounded-b-[2rem] overflow-hidden shadow-clay-inset">
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4KNbuuJTvRYftltkrRNztwMf9ej7S0fdwuMxmUZ52knRObWUUIwZfm2_gRKaPVzT8Bl1oikjaaT4K1Ammq1SQFmUFH50xoBqr-ibEnidBN7heJTkXC-HahzTLUI2AHa92jtx39O1Cesa88GUKxxBQ7PT5E-bxG6dLDbaUyYb7hxcU9StRrGUXz5TLPuXsYDOG2PU3oIf3q5tEA5HyhcJJkHaq_Y_0BaxvPHEDrxWdiwBvHqzWgaRP" alt="" />
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="inline-flex px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-label-caps font-label-caps shadow-clay-sm self-start">
+              Publishing
+            </div>
+            <h3 className="font-headline-lg text-headline-lg-mobile text-on-surface">Modern Editorial Print</h3>
+            <p className="font-body-md text-on-surface-variant line-clamp-2">
+              Bridging tactile print typography with dynamic digital grids for a premier literary journal's digital rebirth.
+            </p>
+          </div>
+        </article>
+
+        {/* Card 4 */}
+        <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group mt-0 md:mt-12">
+          <div className="relative w-full aspect-[4/3] rounded-[3rem] overflow-hidden shadow-clay-inset">
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8vjpJ1gNR0LX7v9_ALjRnUmI4_NVnnLtYKf4oEtdLeilrni9pESEW5Rr5NmvSEU1GwXTUzv0MDH9FudVjoCv1VyAYapBgflMYowBbPiruWtnxD6-W8xPRlPgCFLE04XUmggxUx2b6U_LpDgnW1j6UaqM31zQzSAlu4gqbhqW1lv3d6kCMg11Su6yETr4gkd3QIqC2IzxA4oqyXkSHuVizcv-XXqSUX0XkAMttZgkMwewXWXGOp4az" alt="" />
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="inline-flex px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-label-caps font-label-caps shadow-clay-sm self-start">
+              AI &amp; Automation
+            </div>
+            <h3 className="font-headline-lg text-headline-lg-mobile text-on-surface">Predictive Logic Systems</h3>
+            <p className="font-body-md text-on-surface-variant line-clamp-2">
+              Implementing a natural language interface over legacy data silos to create an intuitive analytics dashboard.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      {/* Featured Spotlight */}
+      <section className="bg-surface rounded-3xl p-8 md:p-16 shadow-clay flex flex-col lg:flex-row gap-12 items-center relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary-fixed/40 rounded-full blur-[60px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
+        <div className="flex-1 space-y-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container shadow-clay-inset text-label-caps font-label-caps text-primary">
+            <span className="material-symbols-outlined text-sm">star</span>
+            FEATURED SPOTLIGHT
+          </div>
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+            Project Nexus: Reimagining Global Collaboration
           </h2>
-        </div>
-        <div className="flex items-center gap-2 text-xs font-mono text-gray-400">
-          <Layers className="w-4 h-4 text-[#12D6C4]" />
-          <span>DRAG OR SCROLL HORIZONTALLY</span>
-        </div>
-      </div>
-
-      {/* Horizontal Track Container */}
-      <div ref={targetRef} className="flex gap-8 pl-6 md:pl-12 w-max items-center py-6">
-        {projectsList.map((project, idx) => (
-          <div
-            key={project.id}
-            className="w-[85vw] sm:w-[480px] h-[540px] rounded-3xl glass-panel p-8 flex flex-col justify-between border border-[#12D6C4]/30 relative overflow-hidden group transition-transform duration-500 hover:-translate-y-3"
-            style={{
-              background: "linear-gradient(145deg, rgba(18,24,41,0.9) 0%, rgba(10,14,26,0.95) 100%)",
-            }}
-          >
-            {/* Background Kinetic Shader Glow */}
-            <div
-              className={`absolute top-0 right-0 w-80 h-80 rounded-full bg-gradient-to-br ${project.gradient} opacity-15 blur-3xl group-hover:opacity-30 transition-opacity duration-500`}
-            />
-
-            {/* Top Bar */}
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-[10px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-[#12D6C4]/10 text-[#12D6C4] border border-[#12D6C4]/20">
-                  {project.category}
-                </span>
-                <span className="font-syne font-bold text-sm text-gray-500">0{idx + 1}</span>
-              </div>
-
-              <h3 className="font-syne font-bold text-3xl text-white mb-3 tracking-tight group-hover:text-[#12D6C4] transition-colors">
-                {project.title}
-              </h3>
-
-              <p className="text-sm text-gray-300 font-light leading-relaxed mb-6">
-                {project.description}
-              </p>
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <h4 className="font-label-caps text-label-caps text-on-surface-variant uppercase">The Challenge</h4>
+              <p className="font-body-md text-on-surface">Unifying disjointed communication channels across 15 international offices without disrupting active workflows.</p>
             </div>
-
-            {/* Middle Preview Card Framing with /BG/ Motif Image */}
-            <div className="w-full h-44 rounded-2xl border border-white/15 relative overflow-hidden flex items-center justify-center p-4 bg-black/40 group-hover:border-[#12D6C4]/40 transition-colors">
-              <Image
-                src={project.bgImage}
-                alt={project.title}
-                fill
-                className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E1A] via-transparent to-transparent opacity-80" />
-              
-              <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center">
-                <Sparkles className="w-6 h-6 text-[#12D6C4] mb-2 animate-pulse" />
-                <span className="text-xs font-syne font-bold text-white tracking-wider">
-                  {project.metrics}
-                </span>
-              </div>
-            </div>
-
-            {/* Bottom Tech Stack Tags & CTA */}
-            <div className="pt-4 border-t border-gray-800 flex items-center justify-between">
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech) => (
-                  <span key={tech} className="text-[10px] font-mono text-gray-400">
-                    #{tech}
-                  </span>
-                ))}
-              </div>
-
-              <a
-                href="#contact"
-                className="p-2.5 rounded-full bg-[#12D6C4]/10 text-[#12D6C4] hover:bg-[#12D6C4] hover:text-[#0A0E1A] transition-all duration-300"
-                aria-label={`View ${project.title} case study`}
-              >
-                <ExternalLink className="w-4 h-4" />
-              </a>
+            <div className="space-y-2">
+              <h4 className="font-label-caps text-label-caps text-on-surface-variant uppercase">The Solution</h4>
+              <p className="font-body-md text-on-surface">A claymorphic, tactile dashboard that centralized async tasks into 'soft' interactive spaces, reducing cognitive load.</p>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+          <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-col items-center justify-center p-4 rounded-[1.5rem] bg-surface shadow-clay-sm min-w-[120px]">
+              <span className="font-headline-lg text-headline-lg-mobile text-primary">2.4x</span>
+              <span className="font-label-caps text-label-caps text-on-surface-variant mt-1">Engagement</span>
+            </div>
+            <div className="flex flex-col items-center justify-center p-4 rounded-[1.5rem] bg-surface shadow-clay-sm min-w-[120px]">
+              <span className="font-headline-lg text-headline-lg-mobile text-secondary">18%</span>
+              <span className="font-label-caps text-label-caps text-on-surface-variant mt-1">Less Churn</span>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 w-full relative">
+          <div className="aspect-square md:aspect-[4/5] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-surface-container-high shadow-clay-inset overflow-hidden p-4">
+            <img className="w-full h-full object-cover rounded-[2rem] shadow-clay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIt0Mmcge1UtJ-Fd8XgnO_0NaA-SzsztLG63sJVr7fqkG9afA2sv9P5te_jzvX03u98-xgun0REpbLomtO1_aFFQeIcjvzrvWrffKn2BWRAIbzNfP2MsK7h_411lSEraWgkLnJUkYwYInm4ynUxV75vxVM0hjGm1uU86xO_CJ7xzhYU62I9ZDB3lIf5HkaBl9U5urDkNPSk-yM2Uuq67HUbjtNZszoGqNxA2jeoHWCpK64dFNMj59e" alt="" />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Panel */}
+      <section className="bg-primary/5 rounded-[3rem] p-12 md:p-24 shadow-clay flex flex-col items-center text-center gap-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-surface/50 to-transparent -z-10"></div>
+        <h2 className="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary max-w-2xl">
+          Ready to mold your next big idea?
+        </h2>
+        <p className="font-body-md text-on-surface-variant max-w-lg">
+          Let's collaborate to build digital experiences that are as tactile and engaging as they are powerful.
+        </p>
+        <Link href="/contact" className="px-8 py-4 mt-4 rounded-full bg-primary text-on-primary font-label-caps text-label-caps shadow-clay hover:shadow-clay-active hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 w-fit">
+          Start a Conversation
+          <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </Link>
+      </section>
+    </div>
   );
 }
 

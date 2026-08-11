@@ -32,3 +32,4 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
 
   return <>{children}</>;
 }
+

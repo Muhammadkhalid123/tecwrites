@@ -86,3 +86,4 @@ export default function NavigationOverlay({ isOpen, onClose }: NavigationOverlay
     </div>
   );
 }
+

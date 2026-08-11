@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /staging/
 
-Sitemap: https://techwrites.com/sitemap.xml
+Sitemap: https://tecwrites.com/sitemap.xml

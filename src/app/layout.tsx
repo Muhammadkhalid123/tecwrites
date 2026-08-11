@@ -1,33 +1,31 @@
 import type { Metadata } from "next";
-import { Syne, Fraunces, Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { DM_Sans, Plus_Jakarta_Sans, Hanken_Grotesk } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
-const syne = Syne({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-syne",
+  variable: "--font-dm-sans",
   display: "swap",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-  style: ["normal", "italic"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  weight: ["400", "500", "700"],
 });
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const hanken = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-hanken",
+  display: "swap",
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://tecwrites.com'),
   verification: {
     google: "ZifE4ji4x6DAhHBhJ1LE1zfdcbSjSvOkV8r8O_RLN9k",
   },
@@ -67,11 +65,55 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Placeholder GA4 ID
+  
   return (
-    <html lang="en" className={`dark ${syne.variable} ${fraunces.variable} ${inter.variable} ${jakarta.variable} scroll-smooth`}>
-      <body className="font-sans antialiased bg-[#0A0E1A] text-white selection:bg-[#12D6C4] selection:text-[#0A0E1A]">
+    <html lang="en" className={`${dmSans.variable} ${jakarta.variable} ${hanken.variable} scroll-smooth`}>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "TecWrites",
+              url: "https://tecwrites.com",
+              logo: "https://tecwrites.com/TecWrites-Logo_Facicon.png",
+              sameAs: [
+                "https://twitter.com/tecwrites",
+                "https://linkedin.com/company/tecwrites"
+              ]
+            })
+          }}
+        />
+      </head>
+      <body className="font-body antialiased bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
         {children}
+
+        {/* Google Analytics 4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+
+        {/* SPC-RAG Live Chat Widget Integration */}
+        <Script
+          src="http://localhost:5000/frontend/widget.js"
+          strategy="lazyOnload"
+          data-bot-id="tecwrites"
+          data-api-base="http://localhost:5000"
+        />
       </body>
     </html>
   );
 }
+
