@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Plus_Jakarta_Sans, Hanken_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import LiveChatWidget from "@/components/LiveChatWidget";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -105,13 +106,8 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* SPC-RAG Live Chat Widget Integration */}
-        <Script
-          src="http://localhost:5000/frontend/widget.js"
-          strategy="lazyOnload"
-          data-bot-id="tecwrites"
-          data-api-base="http://localhost:5000"
-        />
+        {/* Custom Live Chat Widget Connected to Railway Backend */}
+        <LiveChatWidget />
       </body>
     </html>
   );

@@ -14,7 +14,7 @@ export default function ServicesStackSection() {
         {/* Card 1: AI & Automation */}
         <div className="relative group">
           <article className="clay-card clay-surface-indigo p-10 flex flex-col gap-6 h-full relative z-10">
-            <div className="clay-icon-badge w-16 h-16 text-primary">
+            <div className="clay-icon-badge w-16 h-16 text-[#003B95]">
               <span className="material-symbols-outlined" style={{ fontSize: "32px" }}>smart_toy</span>
             </div>
             <div>

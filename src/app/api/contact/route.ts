@@ -72,11 +72,31 @@ export async function POST(req: Request) {
             `,
         };
 
-        // Send both emails
-        await Promise.all([
+        // Send emails and forward to Google Sheets Webhook (if configured)
+        const promises: Promise<any>[] = [
             transporter.sendMail(mailOptions),
             transporter.sendMail(autoReplyOptions)
-        ]);
+        ];
+
+        const sheetWebhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
+        if (sheetWebhookUrl) {
+            promises.push(
+                fetch(sheetWebhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstName,
+                        lastName,
+                        email,
+                        service,
+                        message,
+                        timestamp: new Date().toISOString()
+                    })
+                }).catch(err => console.error('Error submitting to Google Sheet:', err))
+            );
+        }
+
+        await Promise.all(promises);
 
         return NextResponse.json({ message: 'Email sent successfully!' }, { status: 200 });
     } catch (error: any) {
