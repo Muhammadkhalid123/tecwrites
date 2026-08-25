@@ -29,22 +29,21 @@ export default function Header() {
             <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-max bg-surface/95 backdrop-blur-md rounded-2xl shadow-clay-active p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex gap-8 before:content-[''] before:absolute before:inset-0 before:-top-4 before:h-4 pointer-events-none group-hover:pointer-events-auto z-50">
 
               <div className="flex flex-col gap-2">
-                <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">WEB & DESIGN</span>
-                <Link href="/services/web" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">UI/UX Design</Link>
-                <Link href="/services/web" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Web App Development</Link>
-                <Link href="/services/web" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Static & Dynamic Websites</Link>
-                <Link href="/services/web" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">SEO Services</Link>
-                <Link href="/services/web" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Graphic Design</Link>
+                <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">DEV &amp; CODE</span>
+                <Link href="/services/app" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">End-to-End App Dev</Link>
+                <Link href="/services/game" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Game Development</Link>
               </div>
 
               <div className="flex flex-col gap-2">
-                <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">AI & TECH</span>
-                <Link href="/services/ai" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">AI Solutions</Link>
-                <Link href="/services/ai" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Custom Workflows</Link>
+                <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">AI &amp; CLOUD</span>
+                <Link href="/services/ai" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">AI-Integrated Products</Link>
+                <Link href="/services/devops" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Cloud Infrastructure &amp; DevOps</Link>
+              </div>
 
-                <span className="text-primary font-label-caps text-[10px] tracking-widest mt-4 mb-1">PUBLISHING</span>
-                <Link href="/services/publishing" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">eBook Publishing</Link>
-                <Link href="/services/publishing" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Formatting & Design</Link>
+              <div className="flex flex-col gap-2">
+                <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">CREATIVE &amp; PUBLISHING</span>
+                <Link href="/services/branding" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Branding, Animation &amp; Design</Link>
+                <Link href="/services/publishing" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">App Store Publishing &amp; ASO</Link>
               </div>
             </div>
           </div>
@@ -96,22 +95,19 @@ export default function Header() {
             <Link href="/capabilities" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-label-caps hover:text-primary py-2">Capabilities</Link>
             <div className="flex flex-col gap-6 bg-surface-container/50 rounded-xl p-6 w-full text-center">
               <div className="flex flex-col gap-2">
-                <span className="text-primary font-label-caps text-[10px] tracking-widest">WEB & DESIGN</span>
-                <Link href="/services/web" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">UI/UX Design</Link>
-                <Link href="/services/web" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Web App Development</Link>
-                <Link href="/services/web" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Static & Dynamic Websites</Link>
-                <Link href="/services/web" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">SEO Services</Link>
-                <Link href="/services/web" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Graphic Design</Link>
+                <span className="text-primary font-label-caps text-[10px] tracking-widest">DEV &amp; CODE</span>
+                <Link href="/services/app" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">End-to-End App Dev</Link>
+                <Link href="/services/game" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Game Development</Link>
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-primary font-label-caps text-[10px] tracking-widest">AI & TECH</span>
-                <Link href="/services/ai" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">AI Solutions</Link>
-                <Link href="/services/ai" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Custom Workflows</Link>
+                <span className="text-primary font-label-caps text-[10px] tracking-widest">AI &amp; CLOUD</span>
+                <Link href="/services/ai" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">AI-Integrated Products</Link>
+                <Link href="/services/devops" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Cloud Infrastructure &amp; DevOps</Link>
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-primary font-label-caps text-[10px] tracking-widest">PUBLISHING</span>
-                <Link href="/services/publishing" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">eBook Publishing</Link>
-                <Link href="/services/publishing" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Formatting & Design</Link>
+                <span className="text-primary font-label-caps text-[10px] tracking-widest">CREATIVE &amp; PUBLISHING</span>
+                <Link href="/services/branding" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Branding, Animation &amp; Design</Link>
+                <Link href="/services/publishing" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">App Store Publishing &amp; ASO</Link>
               </div>
             </div>
           </div>

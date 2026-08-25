@@ -5,49 +5,49 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI-Integrated Product Solutions & Agents | TecWrites",
-  description: "TecWrites builds custom AI-integrated products, LLM integrations, RAG database setups, and smart features to optimize your application logic.",
+  title: "End-to-End Mobile & Web App Development | TecWrites",
+  description: "TecWrites builds full-product mobile and web applications from idea to App Store. In-house UI/UX design, Next.js, React Native, and cloud architecture.",
   alternates: {
-    canonical: 'https://tecwrites.com/services/ai'
+    canonical: 'https://tecwrites.com/services/app'
   }
 };
 
-export default function AIServicesPage() {
+export default function AppServicesPage() {
   const sections = [
     {
-      title: "1. AI Strategy & Consulting",
-      description: "We help align AI capabilities with business outcomes and design systems before developing models:",
+      title: "1. Product Strategy & UX Journey Design",
+      description: "We map product architecture and design user journeys before writing a single line of code:",
       items: [
-        { name: "AI Opportunity Audits", desc: "Auditing user workflows, databases, and client codebases to discover high-value AI integration opportunities." },
-        { name: "Model & Stack Selection", desc: "Selecting optimal models (OpenAI, Anthropic, or open-source Llama) based on speed, cost, and security guidelines." },
-        { name: "Risk & Privacy Planning", desc: "Setting up private database structures and guardrails to prevent data leaks and hallucinations." }
+        { name: "Figma Interactive Prototypes", desc: "Building high-fidelity interactive screens and screen flow visual maps so you can test user flows before building." },
+        { name: "UX Journey Optimization", desc: "Analyzing user friction points to minimize onboarding time, user fatigue, and mobile cart churn." },
+        { name: "Technology Stack Consulting", desc: "Selecting optimal databases, cloud host servers, and language ecosystems for your performance and scaling goals." }
       ]
     },
     {
-      title: "2. Custom LLM & Agentic Workflows",
-      description: "Building intelligent agents that execute multi-step operations without human intervention:",
+      title: "2. Full-Stack Web & Backend Engineering",
+      description: "Engineering robust, high-performance web systems and secure server logic:",
       items: [
-        { name: "Conversational Chat Assistants", desc: "Deploying chat agents that understand brand context, customer inquiries, and trigger platform actions." },
-        { name: "Agentic Automation Pipelines", desc: "Orchestrating agents using n8n/Make to transfer and sync information across CRMs, databases, and APIs." },
-        { name: "Voice Agent Integration", desc: "Deploying fast voice automation models (ElevenLabs) to handle incoming calls and bookings." }
+        { name: "Next.js & React Frontend", desc: "Building fast, responsive web systems optimized for search engines (SEO) and conversions." },
+        { name: "Custom API Integration", desc: "Connecting databases, CRMs, and payment gateways using clean, securely documented API endpoints." },
+        { name: "Headless CMS Deployments", desc: "Deploying setups (Strapi, Sanity) so your non-technical team can update marketing copy instantly." }
       ]
     },
     {
-      title: "3. Retrieval-Augmented Generation (RAG)",
-      description: "Connecting Large Language Models to your private company data securely:",
+      title: "3. Cross-Platform Mobile Development",
+      description: "Building native-feeling iOS & Android applications from a singular, clean codebase:",
       items: [
-        { name: "Private Database Syncing", desc: "Structuring text search setups over PDF folders, company wikis, and product lists." },
-        { name: "Cognitive Search Engines", desc: "Enabling search functionality that extracts grounded answers without hallucination risk." },
-        { name: "Internal Q&A Tools", desc: "Providing tools that help team members query massive document archives instantly." }
+        { name: "React Native Architecture", desc: "Writing modular, scalable cross-platform mobile apps for rapid App Store releases." },
+        { name: "Tactile Micro-Animations", desc: "Integrating layout animations and tap/swipe visual physics to make your app look and feel premium." },
+        { name: "Offline-First Caching", desc: "Implementing local SQLite/WatermelonDB database caching so the app stays functional without internet connections." }
       ]
     },
     {
-      title: "4. Embedded AI Features & Co-Pilots",
-      description: "Bolting intelligent features directly onto existing web and mobile applications:",
+      title: "4. Store Submission & Optimization",
+      description: "Managing the deployment pipeline and optimizing store listings to guarantee discoverability:",
       items: [
-        { name: "App Feature Integrations", desc: "Adding recommendation algorithms, auto-completion, and dynamic summaries into active app codebases." },
-        { name: "Custom Machine Learning Models", desc: "Engineering models for user churn forecasting, lead scoring, or demand prediction." },
-        { name: "Claymorphic AI UIs", desc: "Designing visual layouts and loader states to make wait times feel fluid and responsive." }
+        { name: "Store Console Setup", desc: "Configuring App Store Connect and Google Play Console credentials under your business identifiers." },
+        { name: "Review Guidelines Audit", desc: "Evaluating apps against strict Apple and Google guidelines to ensure first-time review approvals." },
+        { name: "ASO Asset Engineering", desc: "Optimizing App Store keywords, metadata copywriting, and screenshots for higher organic search rankings." }
       ]
     }
   ];
@@ -57,13 +57,13 @@ export default function AIServicesPage() {
       <SchemaMarkup
         type="Service"
         data={{
-          name: "AI-Integrated Product Services",
-          description: "Custom AI integrations, LLM fine-tuning, RAG databases, and conversational chat assistants.",
+          name: "End-to-End App Development Services",
+          description: "Full-product mobile and web applications from idea to App Store. UI/UX design, Next.js, React Native, and cloud setups.",
           provider: {
             "@type": "Organization",
             name: "TecWrites"
           },
-          serviceType: "AI Solutions"
+          serviceType: "Full-Stack Development"
         }}
       />
       <Header />
@@ -73,10 +73,10 @@ export default function AIServicesPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary-fixed to-surface-container-lowest rounded-full shadow-[30px_30px_50px_rgba(0,0,0,0.05)] opacity-30 -z-10 mix-blend-multiply blur-[80px]"></div>
           <p className="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4 opacity-80">SERVICE DEEP DIVE</p>
           <h1 className="font-headline-xl text-headline-xl text-on-surface mb-6 mx-auto max-w-4xl leading-tight text-balance">
-            AI-Integrated Products
+            End-to-End App Development
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-lg">
-            Give your product a high-value edge by bolting custom LLM features, conversational chat assistants, and private search models onto your software.
+            We handle everything from your initial product blueprint and UX layout to writing full-stack code and deploying live to App Stores.
           </p>
         </header>
 
@@ -90,7 +90,7 @@ export default function AIServicesPage() {
               <ul className="space-y-6">
                 {section.items.map((item, itemIdx) => (
                   <li key={itemIdx} className="flex items-start gap-4">
-                    <span className="material-symbols-outlined text-[#006B5B] mt-1 text-[24px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                    <span className="material-symbols-outlined text-primary mt-1 text-[24px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                       check_circle
                     </span>
                     <div>
@@ -109,16 +109,15 @@ export default function AIServicesPage() {
           <h2 className="font-headline-lg text-headline-lg text-on-surface text-center mb-12">Technologies We Use</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "LangChain",
-              "OpenAI API",
-              "Anthropic Claude",
+              "React",
+              "Next.js",
+              "React Native",
+              "TailwindCSS",
+              "Node.js",
               "Python",
-              "FastAPI",
-              "n8n.io",
-              "Make.com",
-              "LlamaIndex",
-              "Vector Databases",
-              "Pinecone"
+              "PostgreSQL",
+              "GraphQL",
+              "Figma"
             ].map((tech, idx) => (
               <span key={idx} className="px-6 py-3 bg-surface rounded-full shadow-clay-sm text-on-surface font-label-caps text-label-caps border border-white/50">
                 {tech}
@@ -130,7 +129,7 @@ export default function AIServicesPage() {
         {/* CTA */}
         <div className="mt-24 text-center">
           <Link href="/contact" className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps tracking-widest uppercase shadow-clay hover:scale-105 active:scale-95 transition-all duration-300 gap-3">
-            Build Your AI Feature
+            Build Your App Product
             <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
           </Link>
         </div>

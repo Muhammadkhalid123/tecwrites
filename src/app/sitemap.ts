@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9,
         },
         {
-            url: `${baseUrl}/services/web`,
+            url: `${baseUrl}/services/app`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
@@ -45,6 +45,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/services/publishing`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/services/game`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/services/devops`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/services/branding`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,

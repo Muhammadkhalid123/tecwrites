@@ -10,7 +10,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-wrap justify-center gap-6 text-label-caps font-label-caps">
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/capabilities">Capabilities</Link>
-        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/web">Web Services</Link>
+        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/app">App Services</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/ai">AI Services</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/publishing">Publishing</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/lab">Lab</Link>

@@ -17,70 +17,54 @@ interface ServiceItem {
 
 const SERVICES_LEFT: ServiceItem[] = [
   {
-    id: "motion",
-    name: "Motion Design and Animations",
-    tagline: "Crafting fluid visual stories and dynamic motion graphic systems.",
-    description: "Our motion team brings brands to life with cutting-edge 2D/3D motion graphic systems, interactive UI animations, and high-impact visual effects for digital platforms.",
-    points: ["3D Kinetic Typography", "App & UI Micro-animations", "Branded Motion Systems"],
-    color: "#FF2E74",
-  },
-  {
-    id: "immersive",
-    name: "Immersive Experience Marketing",
-    tagline: "Combining the art of crafting experiences and marketing them strategically.",
-    description: "Our Immersive Experience Building takes your audience on a journey beyond reality. Create branded virtual spaces, events, and interactive web experiences that leave a lasting impression.",
-    points: ["Virtual Brand Arenas", "Interactive Web3D Portals", "Gamified Product Launch"],
+    id: "app",
+    name: "End-to-End App Development",
+    tagline: "Full-product mobile & web builds from idea to store.",
+    description: "We engineer smooth, cross-platform mobile apps (React Native), web platforms, custom APIs, and backend architectures designed to scale effortlessly.",
+    points: ["iOS & Android App Builds", "Next.js & React Frontend", "Custom API & Server Setup"],
     color: "#22FAFF",
   },
   {
     id: "ai",
-    name: "AI Marketing Activations",
-    tagline: "The future of content and marketing is here, powered by AI.",
-    description: "Our AI Activations leverage machine learning & custom generative models to personalize campaigns, automate documentation workflows, and scale creative output dynamically.",
-    points: ["Custom AI Agent Workflows", "Generative Visual Content", "Automated Knowledge Hubs"],
+    name: "AI-Integrated Products",
+    tagline: "Adding cognitive capabilities and smart logic to your app.",
+    description: "We build custom LLM fine-tuning, RAG databases, recommendation algorithms, and conversational chat interfaces that give your product a high-value competitive edge.",
+    points: ["Custom LLM Integrations", "Conversational Chat Assistants", "Private RAG Knowledge Bases"],
     color: "#34F5FC",
   },
   {
-    id: "spatial",
-    name: "Spatial Computing / VR",
-    tagline: "Step into the future with Vision Pro, Quest 3 & WebXR activations.",
-    description: "From Apple Vision Pro to Meta Quest 3, we harness augmented and virtual reality to create spatial applications that blur the lines between physical and digital worlds.",
-    points: ["Apple Vision Pro Apps", "WebXR Interactive Canvas", "Virtual Showrooms"],
-    color: "#22FF7A",
+    id: "game",
+    name: "Game Development",
+    tagline: "Additive browser WebGL and native mobile games.",
+    description: "Our game dev and animator combo builds lightweight, 60+ FPS WebGL interactive canvas features, ed-tech learning applications, and branded campaign mini-games.",
+    points: ["WebGL & Three.js Canvas", "Gamified Learning Solutions", "Branded Marketing Mini-Games"],
+    color: "#FF2E74",
   },
 ];
 
 const SERVICES_RIGHT: ServiceItem[] = [
   {
-    id: "tech-doc",
-    name: "Technical Writing & Docs Strategy",
-    tagline: "Clear, precise engineering docs & developer portals.",
-    description: "We craft world-class technical documentation, API specifications, developer portals, and system architecture guides designed for rapid engineer onboarding.",
-    points: ["API & SDK Documentation", "Developer Experience (DX)", "Architecture Whitepapers"],
-    color: "#22FAFF",
-  },
-  {
-    id: "product-3d",
-    name: "3D Product Animation",
-    tagline: "Transforming products into captivating stories with 3D animation.",
-    description: "We breathe life into complex hardware and software offerings, making them leap off the screen with photorealistic 3D renders and exploded product views.",
-    points: ["Photorealistic 3D Renders", "Exploded View Animations", "Interactive WebGL Displays"],
-    color: "#FF2E74",
-  },
-  {
-    id: "phygital",
-    name: "Phygital Marketing",
-    tagline: "Break down barriers between physical and digital touchpoints.",
-    description: "We seamlessly blend physical events, QR AR experiences, and web portals to create unified brand journeys that engage consumers anywhere.",
-    points: ["AR QR Campaigns", "Interactive Kiosks", "Event Live Displays"],
+    id: "branding",
+    name: "Branding, Animation & Design",
+    tagline: "Strategic branding and motion graphics as a service.",
+    description: "We create cohesive visual brand books, logos, vector asset kits, App Store promotional layouts, and premium explainer video animations that feed directly into codebases.",
+    points: ["Brand Identity Books & Logos", "Vector Illustration Libraries", "Explainer Videos & Motion"],
     color: "#8300D7",
   },
   {
-    id: "ooh",
-    name: "Out-Of-Home (OOH) Digital",
-    tagline: "Make a massive statement where it matters most in the real world.",
-    description: "Our 3D anamorphic billboards and high-impact digital out-of-home installations ensure your brand takes center stage in global cities.",
-    points: ["3D Anamorphic Billboards", "LED Matrix Graphics", "Urban Billboard Displays"],
+    id: "publishing",
+    name: "App Store Publishing & ASO",
+    tagline: "Metadata optimization and release management audits.",
+    description: "We manage App Store Connect and Google Play Console release cycles, optimizing keywords, descriptions, and screenshots to maximize organic store discovery.",
+    points: ["App Store & Play Store Setup", "ASO Audits & Keyword Research", "Metadata & Asset Optimization"],
+    color: "#FFB236",
+  },
+  {
+    id: "devops",
+    name: "Cloud Infrastructure & DevOps",
+    tagline: "Standalone audits, CI/CD pipelines, and cost reduction.",
+    description: "We audit and scale cloud environments (AWS/GCP), deploy Terraform modules, configure container clustering (Docker), and reduce hosting bills.",
+    points: ["AWS & GCP Scalability Audits", "CI/CD Pipelines (GitHub Actions)", "Terraform Infrastructure as Code"],
     color: "#EA2D18",
   },
 ];
@@ -285,10 +269,10 @@ export default function WhatWeDo() {
           </div>
 
           <Link
-            href="/portfolio"
+            href="/capabilities"
             className="bg-[#34F5FC] hover:bg-[#FF2E74] hover:text-black text-black font-extrabold px-6 py-3 rounded-xl text-sm inline-flex items-center justify-between gap-2 transition-all duration-300 shadow-lg"
           >
-            <span>Explore Projects</span>
+            <span>Explore Capabilities</span>
             <ArrowUpRight size={18} />
           </Link>
         </div>

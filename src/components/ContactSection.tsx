@@ -3,13 +3,20 @@
 import { useState } from "react";
 
 export default function ContactSection() {
-  const [activeService, setActiveService] = useState("UX Writing");
+  const [activeService, setActiveService] = useState("App Development");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const services = ["UX Writing", "Documentation", "Content Strategy", "Other"];
+  const services = [
+    "App Development",
+    "AI Products",
+    "Game Dev",
+    "Branding & Design",
+    "Publishing & ASO",
+    "Cloud & DevOps"
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,7 +70,7 @@ export default function ContactSection() {
           <div>
             <h1 className="text-headline-xl font-headline-xl text-primary mb-4">Let's craft <br/>something <br/>together.</h1>
             <p className="text-body-md font-body-md text-on-surface-variant max-w-md">
-              Whether you need technical documentation, UX writing, or a complete content overhaul, our studio is ready to mold your ideas into reality.
+              Whether you need custom mobile apps, AI integrations, game development, cloud scalability, or brand design, our studio is ready to mold your ideas into reality.
             </p>
           </div>
           <div className="space-y-6 pt-8">
