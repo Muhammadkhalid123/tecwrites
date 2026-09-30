@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SchemaMarkup from "@/components/SchemaMarkup";
 import { getPostBySlug, getAllPosts } from "@/data/posts";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -17,6 +18,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) {
     return { title: 'Post Not Found' };
   }
+  const imageUrl = post.coverImage.startsWith('http') 
+    ? post.coverImage 
+    : `https://tecwrites.com${post.coverImage}`;
+
   return {
     title: `${post.title} | TecWrites`,
     description: post.metaDescription,
@@ -27,13 +32,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.publishDate,
       authors: [post.author],
-      images: [{ url: post.coverImage }],
+      images: [{ url: imageUrl }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.metaDescription,
-      images: [post.coverImage],
+      images: [imageUrl],
     },
     alternates: {
       canonical: `https://tecwrites.com/blog/${post.slug}`,
@@ -49,8 +54,34 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
+  const imageUrl = post.coverImage.startsWith('http') 
+    ? post.coverImage 
+    : `https://tecwrites.com${post.coverImage}`;
+
   return (
     <>
+      <SchemaMarkup
+        type="Article"
+        data={{
+          headline: post.title,
+          description: post.metaDescription,
+          image: [imageUrl],
+          datePublished: post.publishDate,
+          author: {
+            "@type": "Organization",
+            name: post.author,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "TecWrites",
+            url: "https://tecwrites.com",
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://tecwrites.com/blog/${post.slug}`,
+          },
+        }}
+      />
       <Header />
       <main className="flex-grow pt-32 pb-24 relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <article className="max-w-3xl mx-auto">

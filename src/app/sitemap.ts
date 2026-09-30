@@ -1,96 +1,58 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/data/posts'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://tecwrites.com'
-    const posts = getAllPosts();
+// Use ONE canonical host everywhere. It must match your canonical tags,
+// metadataBase, og:url and your Google Search Console property.
+// (Your server currently redirects non-www to www, so www is used here.)
+const baseUrl = 'https://www.tecwrites.com'
 
+// Only list pages that return 200 and are meant to be indexed.
+const staticPaths = [
+    '', // homepage
+    '/capabilities',
+    '/lab',
+    '/studio',
+    '/contact',
+    '/services/app',
+    '/services/ai',
+    '/services/game',
+    '/services/devops',
+    '/services/branding',
+    '/services/publishing',
+
+    // Add these back ONLY after the pages exist and return 200:
+    // '/about',      // returned 404 when checked
+    // '/portfolio',  // returned 404 when checked
+    // '/services',   // returned non-HTML content when checked, so verify it
+]
+
+export default function sitemap(): MetadataRoute.Sitemap {
+    const posts = getAllPosts()
+
+    // Static pages: no lastModified, because an inaccurate date is worse than none.
+    // If you want one, use the real date the page content last changed.
+    const staticEntries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
+        url: `${baseUrl}${path}`,
+    }))
+
+    // Blog posts: real publish dates.
+    // If your posts have an updatedDate field, use it: post.updatedDate ?? post.publishDate
     const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,
         lastModified: new Date(post.publishDate),
-        changeFrequency: 'weekly',
-        priority: 0.7,
-    }));
+    }))
 
-    return [
-        {
-            url: baseUrl,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 1,
-        },
-        {
-            url: `${baseUrl}/about`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/services`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/services/app`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/services/ai`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/services/publishing`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/services/game`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/services/devops`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/services/branding`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/capabilities`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/portfolio`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
+    // Blog index changes whenever a new post is published.
+    const latestPostDate = posts.length
+        ? new Date(Math.max(...posts.map((p) => new Date(p.publishDate).getTime())))
+        : undefined
+
+    const blogIndex: MetadataRoute.Sitemap = [
         {
             url: `${baseUrl}/blog`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
+            ...(latestPostDate && { lastModified: latestPostDate }),
         },
-        {
-            url: `${baseUrl}/contact`,
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.5,
-        },
-        ...blogEntries,
     ]
+
+    return [...staticEntries, ...blogIndex, ...blogEntries]
 }
