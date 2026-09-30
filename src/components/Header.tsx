@@ -30,6 +30,7 @@ export default function Header() {
 
               <div className="flex flex-col gap-2">
                 <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">DEV &amp; CODE</span>
+                <Link href="/services/web-design" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Web Design &amp; Dev</Link>
                 <Link href="/services/app" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">End-to-End App Dev</Link>
                 <Link href="/services/game" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Game Development</Link>
               </div>
@@ -96,6 +97,7 @@ export default function Header() {
             <div className="flex flex-col gap-6 bg-surface-container/50 rounded-xl p-6 w-full text-center">
               <div className="flex flex-col gap-2">
                 <span className="text-primary font-label-caps text-[10px] tracking-widest">DEV &amp; CODE</span>
+                <Link href="/services/web-design" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Web Design &amp; Dev</Link>
                 <Link href="/services/app" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">End-to-End App Dev</Link>
                 <Link href="/services/game" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Game Development</Link>
               </div>

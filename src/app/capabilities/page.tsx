@@ -15,6 +15,18 @@ export default function CapabilitiesPage() {
 
   const capabilitiesList = [
     {
+      title: "Web Design & Development",
+      subtitle: "Bespoke Web Engineering",
+      icon: "web",
+      image: "/services/website-animation-services.png",
+      colorClass: "text-primary",
+      bgGradient: "from-primary-fixed/20 to-transparent",
+      badgeBg: "bg-primary-container",
+      description: "Bespoke, animated, performance-focused websites where design, code, and motion are planned together. Sub-second load speeds, 3D WebGL experiences, and SEO-first architectures.",
+      points: ["Bespoke Web Design & UI Systems", "Animated Interfaces & 3D WebGL", "Full-Stack React & Next.js Builds"],
+      link: "/services/web-design"
+    },
+    {
       title: "End-to-End App Development",
       subtitle: "Full Product Builds",
       icon: "devices",

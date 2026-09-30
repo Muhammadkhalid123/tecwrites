@@ -19,6 +19,7 @@ const staticPaths = [
     '/services/devops',
     '/services/branding',
     '/services/publishing',
+    '/services/web-design',
 
     // Add these back ONLY after the pages exist and return 200:
     // '/about',      // returned 404 when checked

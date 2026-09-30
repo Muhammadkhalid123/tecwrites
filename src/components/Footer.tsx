@@ -10,8 +10,12 @@ export default function Footer() {
       </div>
       <div className="flex flex-wrap justify-center gap-6 text-label-caps font-label-caps">
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/capabilities">Capabilities</Link>
+        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/web-design">Web Design</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/app">App Services</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/ai">AI Services</Link>
+        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/game">Game Dev</Link>
+        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/devops">DevOps</Link>
+        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/branding">Branding</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/publishing">Publishing</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/lab">Lab</Link>
         <Link className="text-primary font-semibold hover:translate-y-[-2px] transition-transform" href="/studio">Studio</Link>

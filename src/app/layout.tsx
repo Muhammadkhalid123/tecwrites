@@ -26,7 +26,7 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tecwrites.com'),
+  metadataBase: new URL('https://www.tecwrites.com'),
   verification: {
     google: "ZifE4ji4x6DAhHBhJ1LE1zfdcbSjSvOkV8r8O_RLN9k",
   },
