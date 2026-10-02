@@ -1,10 +1,71 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
+import SchemaMarkup from "@/components/SchemaMarkup";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Lab & Case Studies | TecWrites Studio",
+  description: "Explore our featured engineering and design case studies in AI & Automation, Headless Web Design, and Digital Publishing.",
+  keywords: [
+    "TecWrites case studies",
+    "web design portfolio",
+    "AI automation case study",
+    "headless commerce case study",
+    "digital publishing portfolio"
+  ],
+  alternates: {
+    canonical: "https://www.tecwrites.com/lab",
+  },
+  openGraph: {
+    title: "Lab & Case Studies | TecWrites Studio",
+    description: "Explore our featured engineering and design case studies in AI, Bespoke Web Design, and Publishing.",
+    url: "https://www.tecwrites.com/lab",
+    type: "website",
+    images: [
+      {
+        url: "/project_nexus_dashboard.png",
+        width: 1200,
+        height: 630,
+        alt: "TecWrites Lab & Case Studies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lab & Case Studies | TecWrites Studio",
+    description: "Explore our featured engineering and design case studies in AI, Bespoke Web Design, and Publishing.",
+    images: ["/project_nexus_dashboard.png"],
+  },
+};
 
 export default function LabPage() {
   return (
     <>
+      <SchemaMarkup
+        type="CollectionPage"
+        data={{
+          name: "TecWrites Lab - Selected Case Studies",
+          description: "Featured engineering and design case studies by TecWrites Studio.",
+          url: "https://www.tecwrites.com/lab",
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.tecwrites.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Lab",
+                "item": "https://www.tecwrites.com/lab"
+              }
+            ]
+          }
+        }}
+      />
       <Header />
       <main className="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-32 relative z-10">
         {/* Background Blobs */}
@@ -44,7 +105,7 @@ export default function LabPage() {
               <img
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYcwuccMwSun1inHV98AJsmZlPpnea7uHptVSbqCJQMSb1iH4QFFnsrBrYwd8yhmhgxlRZW0MYPohh7ee2flZGJHgiHkH5r3UdGqpV5pg8-GsWCDNMBNMP-_Ikffn0ev1uaFUC7dt8ofOatGmjPZT18qVQIGQc4pnBTHkhUbJvgiw0eStQzjhhEAZpGY00SLM0VJWTOiaeeU4IMGzMckB45L__HPfCr8g-RRGzvC5hnt1G5LA5OZJg"
-                alt="Case Study 1"
+                alt="Neural Interface Logic - Enterprise AI workflow case study"
               />
             </div>
             <div className="flex flex-col gap-4">
@@ -64,7 +125,7 @@ export default function LabPage() {
               <img
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU_-TZz22lEsbeaVgMLXlGk_AxEqmdq_Hf74tv3HSFp3kdT7kylZAlX9_87Mhp9XA3_Z29o9MFZoeQ0-T2OTV90qQfE9ze_DB4g8BulxrnSiMbuxOMkuq9jlrAcHLgIjVz4BhhIouaZSRIoe9lxvN8AuOc2qNh_2Dl8_Ce_DrV3jNH5yTplIl7w3TORFydilqtuOgOlo_UhyG8xZE0piE5xy13Xolwso8AZGUqHRb7AyMo7v5R43-e"
-                alt="Case Study 2"
+                alt="Fluid Architecture - Composable headless commerce case study"
               />
             </div>
             <div className="flex flex-col gap-4">
@@ -84,7 +145,7 @@ export default function LabPage() {
               <img
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4KNbuuJTvRYftltkrRNztwMf9ej7S0fdwuMxmUZ52knRObWUUIwZfm2_gRKaPVzT8Bl1oikjaaT4K1Ammq1SQFmUFH50xoBqr-ibEnidBN7heJTkXC-HahzTLUI2AHa92jtx39O1Cesa88GUKxxBQ7PT5E-bxG6dLDbaUyYb7hxcU9StRrGUXz5TLPuXsYDOG2PU3oIf3q5tEA5HyhcJJkHaq_Y_0BaxvPHEDrxWdiwBvHqzWgaRP"
-                alt="Case Study 3"
+                alt="Modern Editorial Print - Literary digital publishing case study"
               />
             </div>
             <div className="flex flex-col gap-4">
@@ -93,7 +154,7 @@ export default function LabPage() {
               </div>
               <h3 className="font-headline-lg text-headline-lg-mobile text-on-surface">Modern Editorial Print</h3>
               <p className="font-body-md text-on-surface-variant line-clamp-2">
-                Bridging tactile print typography with dynamic digital grids for a premier literary journal's digital rebirth.
+                Bridging tactile print typography with dynamic digital grids for a premier literary journal&apos;s digital rebirth.
               </p>
             </div>
           </article>
@@ -104,7 +165,7 @@ export default function LabPage() {
               <img
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8vjpJ1gNR0LX7v9_ALjRnUmI4_NVnnLtYKf4oEtdLeilrni9pESEW5Rr5NmvSEU1GwXTUzv0MDH9FudVjoCv1VyAYapBgflMYowBbPiruWtnxD6-W8xPRlPgCFLE04XUmggxUx2b6U_LpDgnW1j6UaqM31zQzSAlu4gqbhqW1lv3d6kCMg11Su6yETr4gkd3QIqC2IzxA4oqyXkSHuVizcv-XXqSUX0XkAMttZgkMwewXWXGOp4az"
-                alt="Case Study 4"
+                alt="Predictive Logic Systems - Natural language analytics dashboard case study"
               />
             </div>
             <div className="flex flex-col gap-4">

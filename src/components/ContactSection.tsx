@@ -68,7 +68,7 @@ export default function ContactSection() {
         {/* Left: Hero Text & Info */}
         <div className="lg:col-span-5 space-y-8 pr-0 lg:pr-8">
           <div>
-            <h1 className="text-headline-xl font-headline-xl text-primary mb-4">Let's craft <br/>something <br/>together.</h1>
+            <h2 className="text-headline-xl font-headline-xl text-primary mb-4">Let's craft <br/>something <br/>together.</h2>
             <p className="text-body-md font-body-md text-on-surface-variant max-w-md">
               Whether you need custom mobile apps, AI integrations, game development, cloud scalability, or brand design, our studio is ready to mold your ideas into reality.
             </p>

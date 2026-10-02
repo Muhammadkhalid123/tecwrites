@@ -1,9 +1,31 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SchemaMarkup from "@/components/SchemaMarkup";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | TecWrites",
+  description: "Read the TecWrites Privacy Policy to understand how we collect, protect, and handle your personal data across our services.",
+  alternates: {
+    canonical: "https://www.tecwrites.com/privacy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function PrivacyPage() {
   return (
     <>
+      <SchemaMarkup
+        type="WebPage"
+        data={{
+          name: "Privacy Policy - TecWrites",
+          url: "https://www.tecwrites.com/privacy",
+          description: "Privacy policy and personal data protection principles of TecWrites Studio."
+        }}
+      />
       <Header />
       <main className="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto space-y-12 relative z-10">
         <section className="text-center space-y-4">

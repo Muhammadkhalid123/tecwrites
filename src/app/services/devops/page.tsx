@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cloud & DevOps Services: AWS, GCP, Terraform",
+  title: "Cloud & DevOps Services: AWS, GCP, Terraform | TecWrites",
   description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits. Request a quote from TecWrites.",
   keywords: [
     "Cloud Infrastructure and DevOps Services",
@@ -19,18 +19,27 @@ export const metadata: Metadata = {
     "DevOps consulting services"
   ],
   alternates: {
-    canonical: "/services/devops"
+    canonical: "https://www.tecwrites.com/services/devops"
   },
   openGraph: {
-    title: "Cloud & DevOps Services: AWS, GCP, Terraform",
+    title: "Cloud & DevOps Services: AWS, GCP, Terraform | TecWrites",
     description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits. Request a quote from TecWrites.",
-    url: "/services/devops",
-    type: "website"
+    url: "https://www.tecwrites.com/services/devops",
+    type: "website",
+    images: [
+      {
+        url: "/services/DevOps & Scaling (Cloud Infrastructure).png",
+        width: 1200,
+        height: 630,
+        alt: "Cloud Infrastructure and DevOps Services by TecWrites",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cloud & DevOps Services: AWS, GCP, Terraform",
-    description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits."
+    title: "Cloud & DevOps Services: AWS, GCP, Terraform | TecWrites",
+    description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits.",
+    images: ["/services/DevOps & Scaling (Cloud Infrastructure).png"],
   }
 };
 
@@ -163,18 +172,60 @@ export default function DevOpsServicesPage() {
 
   return (
     <>
-      <SchemaMarkup
-        type="Service"
-        data={{
-          name: "Cloud Infrastructure and DevOps Services",
-          serviceType: "DevOps & Cloud Engineering",
-          provider: {
-            "@type": "Organization",
-            name: "TecWrites",
-            url: "https://www.tecwrites.com"
-          },
-          areaServed: "US",
-          description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tecwrites.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.tecwrites.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Cloud Infrastructure & DevOps",
+                    "item": "https://www.tecwrites.com/services/devops"
+                  }
+                ]
+              },
+              {
+                "@type": "Service",
+                "name": "Cloud Infrastructure and DevOps Services",
+                "serviceType": "DevOps & Cloud Engineering",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com"
+                },
+                "areaServed": "US",
+                "description": "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          })
         }}
       />
       <Header />

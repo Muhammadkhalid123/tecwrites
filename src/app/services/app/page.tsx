@@ -19,18 +19,27 @@ export const metadata: Metadata = {
     "app development from idea to App Store"
   ],
   alternates: {
-    canonical: "/services/app"
+    canonical: "https://www.tecwrites.com/services/app"
   },
   openGraph: {
     title: "Mobile App Development Services USA | iOS & Android",
     description: "Custom mobile app development services in the USA. iOS and Android apps, backend servers, and APIs engineered from idea to App Store.",
-    url: "/services/app",
-    type: "website"
+    url: "https://www.tecwrites.com/services/app",
+    type: "website",
+    images: [
+      {
+        url: "/services/Full Product Builds.png",
+        width: 1200,
+        height: 630,
+        alt: "Mobile App Development Services USA by TecWrites",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mobile App Development Services USA | iOS & Android",
-    description: "Custom mobile app development services in the USA. iOS and Android apps, backend servers, and APIs engineered from idea to App Store."
+    description: "Custom mobile app development services in the USA. iOS and Android apps, backend servers, and APIs engineered from idea to App Store.",
+    images: ["/services/Full Product Builds.png"],
   }
 };
 
@@ -169,18 +178,60 @@ export default function AppServicesPage() {
 
   return (
     <>
-      <SchemaMarkup
-        type="Service"
-        data={{
-          name: "Mobile App Development Services",
-          serviceType: "Mobile app development",
-          provider: {
-            "@type": "Organization",
-            name: "TecWrites",
-            url: "https://www.tecwrites.com"
-          },
-          areaServed: "US",
-          description: "Custom mobile app development services in the USA. iOS and Android apps, backend servers, and APIs engineered from idea to App Store."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tecwrites.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.tecwrites.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "App Development",
+                    "item": "https://www.tecwrites.com/services/app"
+                  }
+                ]
+              },
+              {
+                "@type": "Service",
+                "name": "Mobile App Development Services",
+                "serviceType": "Mobile app development",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com"
+                },
+                "areaServed": "US",
+                "description": "Custom mobile app development services in the USA. iOS and Android apps, backend servers, and APIs engineered from idea to App Store."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          })
         }}
       />
       <Header />

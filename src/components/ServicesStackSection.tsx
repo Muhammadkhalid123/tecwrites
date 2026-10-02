@@ -3,6 +3,15 @@ import Link from "next/link";
 export default function ServicesStackSection() {
   const services = [
     {
+      title: "Web Design & Development",
+      description: "Bespoke, animated, high-performance websites and 3D WebGL experiences engineered for sub-second speeds and SEO visibility.",
+      icon: "web",
+      link: "/services/web-design",
+      iconColor: "#001BB5",
+      bgClass: "clay-surface-indigo",
+      pills: ["Next.js & React", "3D WebGL", "Animation", "SEO-First"]
+    },
+    {
       title: "End-to-End App Development",
       description: "Custom cross-platform iOS & Android mobile apps, backend servers, and web products engineered from idea to App Store.",
       icon: "devices",
@@ -65,7 +74,7 @@ export default function ServicesStackSection() {
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-secondary-container/10 to-transparent rounded-[40%_60%_70%_30%/40%_50%_60%_50%] filter blur-[60px] -z-10 animate-[float_20s_ease-in-out_infinite_alternate-reverse]"></div>
 
       <section className="mb-24 text-center relative z-10">
-        <h1 className="font-headline-xl text-headline-xl text-primary mb-6">Our Services</h1>
+        <h2 className="font-headline-xl text-headline-xl text-primary mb-6">Our Services</h2>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-lg">
           Expertise crafted for the modern digital landscape. We build, automate, and publish with absolute precision.
         </p>

@@ -1,9 +1,63 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SchemaMarkup from "@/components/SchemaMarkup";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About the Studio | Craft & Philosophy | TecWrites",
+  description: "Learn about TecWrites: our story, methodology, and philosophy of pairing high-performance software engineering with tactile design and editorial publishing.",
+  keywords: [
+    "About TecWrites",
+    "creative technology studio",
+    "software engineering philosophy",
+    "claymorphic design agency",
+    "digital laboratory"
+  ],
+  alternates: {
+    canonical: "https://www.tecwrites.com/studio",
+  },
+  openGraph: {
+    title: "About the Studio | Craft & Philosophy | TecWrites",
+    description: "Learn about TecWrites: our story, methodology, and philosophy of pairing high-performance engineering with refined design.",
+    url: "https://www.tecwrites.com/studio",
+    type: "website",
+    images: [
+      {
+        url: "/modern-website-for-business-2026.png",
+        width: 1200,
+        height: 630,
+        alt: "TecWrites Studio Craft & Methodology",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About the Studio | Craft & Philosophy | TecWrites",
+    description: "Learn about TecWrites: our story, methodology, and philosophy of pairing high-performance engineering with refined design.",
+    images: ["/modern-website-for-business-2026.png"],
+  },
+};
 
 export default function StudioPage() {
   return (
     <>
+      <SchemaMarkup
+        type="AboutPage"
+        data={{
+          name: "About TecWrites Studio",
+          description: "TecWrites is a digital laboratory specializing in claymorphic design, full-stack software engineering, and publishing.",
+          url: "https://www.tecwrites.com/studio",
+          mainEntity: {
+            "@type": "Organization",
+            name: "TecWrites",
+            url: "https://www.tecwrites.com",
+            founder: {
+              "@type": "Person",
+              name: "Muhammad Khalid"
+            }
+          }
+        }}
+      />
       <Header />
       <main className="relative pt-32 pb-24">
         {/* Ambient Background Blobs */}
@@ -30,7 +84,7 @@ export default function StudioPage() {
                 <img
                   className="w-full h-full object-cover rounded-[40%_60%_70%_30%/40%_50%_60%_50%]"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYR-8PcR9L573tt8SAjfLGrWvfQ0PQr60zWI7--O2DYebcO-tmeOpBqD5v-21x0pBZXD2ukc_ZDqXDCS_Xa4FiBJhU371usr_ef5DWFKFqkUknA3usiq4c-c8c-ojkNEPqNu0mbupZZsT9wXUSlESHHx6kUlHhUKSqqe0MhbrTVPVRa6Wd3TkusV-fQ_mNojwc7pJPePg_kRn6ZvZOaJBhpqCbUJhB8aibBQWm3wcEKPov5EUzV6Ug"
-                  alt="Studio"
+                  alt="TecWrites Studio Design and Craft"
                 />
               </div>
             </div>
@@ -40,7 +94,7 @@ export default function StudioPage() {
                 TecWrites began as an experiment in tactile digital environments. We recognized that enterprise software had become cold and overly flat. Our mission was to reintroduce volume, depth, and a sense of physical comfort into digital interfaces.
               </p>
               <p className="text-body-md font-body-md text-on-surface-variant">
-                Today, we partner with forward-thinking creators and tech innovators to build products that don't just function perfectly, but feel inherently good to use. Like a well-crafted object in the palm of your hand.
+                Today, we partner with forward-thinking creators and tech innovators to build products that don&apos;t just function perfectly, but feel inherently good to use. Like a well-crafted object in the palm of your hand.
               </p>
             </div>
           </div>

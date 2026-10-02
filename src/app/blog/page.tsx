@@ -1,12 +1,45 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import SchemaMarkup from "@/components/SchemaMarkup";
 import { getAllPosts } from "@/data/posts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | TecWrites",
-  description: "Read the latest insights on UI/UX, Web App Development, AI, and eBook Publishing from the TecWrites team.",
+  title: "Blog & Technical Insights | TecWrites Studio",
+  description: "Read in-depth guides and strategic insights on Web Design, Animation, Mobile Apps, Artificial Intelligence, and Digital Publishing from the TecWrites team.",
+  keywords: [
+    "TecWrites blog",
+    "web design articles",
+    "website animation guide",
+    "AI solutions for web development",
+    "app store launch strategy",
+    "ebook publishing guide",
+    "DevOps cost optimization"
+  ],
+  alternates: {
+    canonical: "https://www.tecwrites.com/blog",
+  },
+  openGraph: {
+    title: "Blog & Technical Insights | TecWrites Studio",
+    description: "Read in-depth guides on Web Design, Animation, Mobile Apps, AI, and Publishing from TecWrites.",
+    url: "https://www.tecwrites.com/blog",
+    type: "website",
+    images: [
+      {
+        url: "/modern-website-for-business-2026.png",
+        width: 1200,
+        height: 630,
+        alt: "TecWrites Blog & Technical Insights",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog & Technical Insights | TecWrites Studio",
+    description: "Read in-depth guides on Web Design, Animation, Mobile Apps, AI, and Publishing from TecWrites.",
+    images: ["/modern-website-for-business-2026.png"],
+  },
 };
 
 export default function BlogIndexPage() {
@@ -14,6 +47,31 @@ export default function BlogIndexPage() {
 
   return (
     <>
+      <SchemaMarkup
+        type="CollectionPage"
+        data={{
+          name: "TecWrites Blog - Insights & Technical Guides",
+          description: "Articles and tutorials on web design, app development, AI, and publishing.",
+          url: "https://www.tecwrites.com/blog",
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.tecwrites.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.tecwrites.com/blog"
+              }
+            ]
+          }
+        }}
+      />
       <Header />
       <main className="flex-grow pt-32 pb-24 relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <header className="text-center mb-16 relative">

@@ -5,8 +5,8 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Integration Services: Chatbots, LLMs & RAG",
-  description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using.",
+  title: "AI Integration Services: Chatbots, LLMs & RAG | TecWrites",
+  description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using. Request a quote.",
   keywords: [
     "AI Integration Services",
     "custom AI development services",
@@ -19,18 +19,27 @@ export const metadata: Metadata = {
     "natural language interface for business data"
   ],
   alternates: {
-    canonical: "/services/ai"
+    canonical: "https://www.tecwrites.com/services/ai"
   },
   openGraph: {
-    title: "AI Integration Services: Chatbots, LLMs & RAG",
+    title: "AI Integration Services: Chatbots, LLMs & RAG | TecWrites",
     description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using.",
-    url: "/services/ai",
-    type: "website"
+    url: "https://www.tecwrites.com/services/ai",
+    type: "website",
+    images: [
+      {
+        url: "/services/AI & Intelligence.png",
+        width: 1200,
+        height: 630,
+        alt: "AI Integration Services by TecWrites",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Integration Services: Chatbots, LLMs & RAG",
-    description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features."
+    title: "AI Integration Services: Chatbots, LLMs & RAG | TecWrites",
+    description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features.",
+    images: ["/services/AI & Intelligence.png"],
   }
 };
 
@@ -163,18 +172,60 @@ export default function AIServicesPage() {
 
   return (
     <>
-      <SchemaMarkup
-        type="Service"
-        data={{
-          name: "AI Integration Services",
-          serviceType: "AI Solutions",
-          provider: {
-            "@type": "Organization",
-            name: "TecWrites",
-            url: "https://www.tecwrites.com"
-          },
-          areaServed: "US",
-          description: "Custom AI integration services: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tecwrites.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.tecwrites.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "AI Services",
+                    "item": "https://www.tecwrites.com/services/ai"
+                  }
+                ]
+              },
+              {
+                "@type": "Service",
+                "name": "AI Integration Services",
+                "serviceType": "AI Solutions",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com"
+                },
+                "areaServed": "US",
+                "description": "Custom AI integration services: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          })
         }}
       />
       <Header />

@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Game Development Services: WebGL, 3D & Mobile",
+  title: "Game Development Services: WebGL, 3D & Mobile | TecWrites",
   description: "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps built for engagement. Start your project today.",
   keywords: [
     "Game Development Services",
@@ -19,18 +19,27 @@ export const metadata: Metadata = {
     "branded mini-games for marketing"
   ],
   alternates: {
-    canonical: "/services/game"
+    canonical: "https://www.tecwrites.com/services/game"
   },
   openGraph: {
-    title: "Game Development Services: WebGL, 3D & Mobile",
+    title: "Game Development Services: WebGL, 3D & Mobile | TecWrites",
     description: "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps built for engagement. Start your project today.",
-    url: "/services/game",
-    type: "website"
+    url: "https://www.tecwrites.com/services/game",
+    type: "website",
+    images: [
+      {
+        url: "/services/Interactive Games.png",
+        width: 1200,
+        height: 630,
+        alt: "Game Development Services by TecWrites",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Game Development Services: WebGL, 3D & Mobile",
-    description: "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps."
+    title: "Game Development Services: WebGL, 3D & Mobile | TecWrites",
+    description: "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps.",
+    images: ["/services/Interactive Games.png"],
   }
 };
 
@@ -169,18 +178,60 @@ export default function GameServicesPage() {
 
   return (
     <>
-      <SchemaMarkup
-        type="Service"
-        data={{
-          name: "Game Development Services",
-          serviceType: "Game Development",
-          provider: {
-            "@type": "Organization",
-            name: "TecWrites",
-            url: "https://www.tecwrites.com"
-          },
-          areaServed: "US",
-          description: "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps built for engagement."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tecwrites.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.tecwrites.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Game Development",
+                    "item": "https://www.tecwrites.com/services/game"
+                  }
+                ]
+              },
+              {
+                "@type": "Service",
+                "name": "Game Development Services",
+                "serviceType": "Game Development",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com"
+                },
+                "areaServed": "US",
+                "description": "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps built for engagement."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          })
         }}
       />
       <Header />

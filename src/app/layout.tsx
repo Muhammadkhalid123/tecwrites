@@ -27,6 +27,9 @@ const hanken = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tecwrites.com'),
+  alternates: {
+    canonical: '/',
+  },
   verification: {
     google: "ZifE4ji4x6DAhHBhJ1LE1zfdcbSjSvOkV8r8O_RLN9k",
   },
@@ -34,30 +37,57 @@ export const metadata: Metadata = {
     default: "TecWrites | Where Code Meets Craft",
     template: "%s | TecWrites",
   },
-  description: "TecWrites is a hybrid creative technology & publishing studio specializing in AI & Automation, Bespoke Web Design, and Self Publishing Services.",
+  description: "TecWrites is a hybrid creative technology & publishing studio specializing in AI & Automation, Bespoke Web Design, Mobile Apps, Game Dev, and Self Publishing Services.",
   keywords: [
     "AI automation",
     "web design studio",
+    "custom web design company",
+    "mobile app development",
+    "game development services",
+    "DevOps consulting services",
+    "branding and animation services",
+    "app store publishing and ASO",
     "ebook publishing",
     "self publishing consultant",
     "technical writing",
     "3D web design",
     "creative agency"
   ],
-  authors: [{ name: "TecWrites Studio" }],
+  authors: [{ name: "TecWrites Studio", url: "https://www.tecwrites.com" }],
   creator: "TecWrites",
+  publisher: "TecWrites Studio",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tecwrites.com",
+    url: "https://www.tecwrites.com",
     siteName: "TecWrites",
     title: "TecWrites | Where Code Meets Craft",
-    description: "Hybrid creative technology & publishing studio: AI & Automation, Bespoke Web, and Self Publishing Services.",
+    description: "Hybrid creative technology & publishing studio: AI & Automation, Bespoke Web Design, Mobile Apps, Game Dev, and Self Publishing Services.",
+    images: [
+      {
+        url: "/modern-website-for-business-2026.png",
+        width: 1200,
+        height: 630,
+        alt: "TecWrites Studio - Where Code Meets Craft",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "TecWrites | Where Code Meets Craft",
-    description: "Hybrid creative technology & publishing studio: AI & Automation, Bespoke Web, and Self Publishing Services.",
+    description: "Hybrid creative technology & publishing studio: AI & Automation, Bespoke Web Design, Mobile Apps, Game Dev, and Self Publishing Services.",
+    images: ["/modern-website-for-business-2026.png"],
   },
 };
 
@@ -71,19 +101,57 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${jakarta.variable} ${hanken.variable} scroll-smooth`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "TecWrites",
-              url: "https://tecwrites.com",
-              logo: "https://tecwrites.com/TecWrites-Logo_Facicon.png",
-              sameAs: [
-                "https://twitter.com/tecwrites",
-                "https://linkedin.com/company/tecwrites"
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.tecwrites.com/#organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://www.tecwrites.com/#logo",
+                    "url": "https://www.tecwrites.com/TecWrites-Logo_Facicon.png",
+                    "caption": "TecWrites Logo"
+                  },
+                  "image": "https://www.tecwrites.com/TecWrites-Logo-03.png",
+                  "description": "Hybrid creative technology & publishing studio specializing in AI & Automation, Bespoke Web Design, App Development, Game Dev, and Publishing.",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "31 Gourdon Ct",
+                    "addressLocality": "Lake St. Louis",
+                    "addressRegion": "MO",
+                    "postalCode": "63367",
+                    "addressCountry": "US"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-888-921-3331",
+                    "contactType": "customer service",
+                    "email": "info@tecwrites.com"
+                  },
+                  "sameAs": [
+                    "https://twitter.com/tecwrites",
+                    "https://linkedin.com/company/tecwrites"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.tecwrites.com/#website",
+                  "url": "https://www.tecwrites.com",
+                  "name": "TecWrites",
+                  "publisher": {
+                    "@id": "https://www.tecwrites.com/#organization"
+                  },
+                  "inLanguage": "en-US"
+                }
               ]
             })
           }}

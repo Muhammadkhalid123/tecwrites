@@ -19,18 +19,27 @@ export const metadata: Metadata = {
     "self-publishing services"
   ],
   alternates: {
-    canonical: "/services/publishing"
+    canonical: "https://www.tecwrites.com/services/publishing"
   },
   openGraph: {
     title: "App Store Publishing & ASO Services | TecWrites",
     description: "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup to help your app or book get discovered.",
-    url: "/services/publishing",
-    type: "website"
+    url: "https://www.tecwrites.com/services/publishing",
+    type: "website",
+    images: [
+      {
+        url: "/services/App Store Publishing.png",
+        width: 1200,
+        height: 630,
+        alt: "App Store Publishing and ASO Services by TecWrites",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "App Store Publishing & ASO Services | TecWrites",
-    description: "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup."
+    description: "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup.",
+    images: ["/services/App Store Publishing.png"],
   }
 };
 
@@ -170,18 +179,60 @@ export default function PublishingServicesPage() {
 
   return (
     <>
-      <SchemaMarkup
-        type="Service"
-        data={{
-          name: "App Store Publishing and ASO Services",
-          serviceType: "App Store Optimization & Publishing",
-          provider: {
-            "@type": "Organization",
-            name: "TecWrites",
-            url: "https://www.tecwrites.com"
-          },
-          areaServed: "US",
-          description: "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup to help your app or book get discovered."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tecwrites.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.tecwrites.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "App Store Publishing & ASO",
+                    "item": "https://www.tecwrites.com/services/publishing"
+                  }
+                ]
+              },
+              {
+                "@type": "Service",
+                "name": "App Store Publishing and ASO Services",
+                "serviceType": "App Store Optimization & Publishing",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com"
+                },
+                "areaServed": "US",
+                "description": "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup to help your app or book get discovered."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          })
         }}
       />
       <Header />

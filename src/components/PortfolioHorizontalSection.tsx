@@ -8,9 +8,9 @@ export default function PortfolioHorizontalSection() {
         <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-surface-container shadow-clay-inset text-label-caps font-label-caps text-on-surface-variant">
           SELECTED WORK
         </div>
-        <h1 className="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary max-w-3xl leading-tight">
+        <h2 className="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary max-w-3xl leading-tight">
           Case Studies &amp; Craft in Action
-        </h1>
+        </h2>
         {/* Filter Pills */}
         <div className="flex flex-wrap justify-center gap-4 mt-8">
           <button className="px-6 py-2 rounded-full bg-primary text-on-primary text-label-caps font-label-caps shadow-clay-sm hover:scale-105 active:scale-95 transition-all duration-300">
@@ -33,7 +33,7 @@ export default function PortfolioHorizontalSection() {
         {/* Card 1 */}
         <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group">
           <div className="relative w-full aspect-[4/3] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden shadow-clay-inset">
-            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYcwuccMwSun1inHV98AJsmZlPpnea7uHptVSbqCJQMSb1iH4QFFnsrBrYwd8yhmhgxlRZW0MYPohh7ee2flZGJHgiHkH5r3UdGqpV5pg8-GsWCDNMBNMP-_Ikffn0ev1uaFUC7dt8ofOatGmjPZT18qVQIGQc4pnBTHkhUbJvgiw0eStQzjhhEAZpGY00SLM0VJWTOiaeeU4IMGzMckB45L__HPfCr8g-RRGzvC5hnt1G5LA5OZJg" alt="" />
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYcwuccMwSun1inHV98AJsmZlPpnea7uHptVSbqCJQMSb1iH4QFFnsrBrYwd8yhmhgxlRZW0MYPohh7ee2flZGJHgiHkH5r3UdGqpV5pg8-GsWCDNMBNMP-_Ikffn0ev1uaFUC7dt8ofOatGmjPZT18qVQIGQc4pnBTHkhUbJvgiw0eStQzjhhEAZpGY00SLM0VJWTOiaeeU4IMGzMckB45L__HPfCr8g-RRGzvC5hnt1G5LA5OZJg" alt="Neural Interface Logic - AI workflow redesign case study by TecWrites" />
           </div>
           <div className="flex flex-col gap-4">
             <div className="inline-flex px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-label-caps font-label-caps shadow-clay-sm self-start">
@@ -49,7 +49,7 @@ export default function PortfolioHorizontalSection() {
         {/* Card 2 */}
         <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group mt-0 md:mt-12">
           <div className="relative w-full aspect-[4/3] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] overflow-hidden shadow-clay-inset">
-            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU_-TZz22lEsbeaVgMLXlGk_AxEqmdq_Hf74tv3HSFp3kdT7kylZAlX9_87Mhp9XA3_Z29o9MFZoeQ0-T2OTV90qQfE9ze_DB4g8BulxrnSiMbuxOMkuq9jlrAcHLgIjVz4BhhIouaZSRIoe9lxvN8AuOc2qNh_2Dl8_Ce_DrV3jNH5yTplIl7w3TORFydilqtuOgOlo_UhyG8xZE0piE5xy13Xolwso8AZGUqHRb7AyMo7v5R43-e" alt="" />
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU_-TZz22lEsbeaVgMLXlGk_AxEqmdq_Hf74tv3HSFp3kdT7kylZAlX9_87Mhp9XA3_Z29o9MFZoeQ0-T2OTV90qQfE9ze_DB4g8BulxrnSiMbuxOMkuq9jlrAcHLgIjVz4BhhIouaZSRIoe9lxvN8AuOc2qNh_2Dl8_Ce_DrV3jNH5yTplIl7w3TORFydilqtuOgOlo_UhyG8xZE0piE5xy13Xolwso8AZGUqHRb7AyMo7v5R43-e" alt="Fluid Architecture - Composable headless commerce web design case study" />
           </div>
           <div className="flex flex-col gap-4">
             <div className="inline-flex px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-label-caps font-label-caps shadow-clay-sm self-start">
@@ -65,7 +65,7 @@ export default function PortfolioHorizontalSection() {
         {/* Card 3 */}
         <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group">
           <div className="relative w-full aspect-[4/3] rounded-t-[4rem] rounded-b-[2rem] overflow-hidden shadow-clay-inset">
-            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4KNbuuJTvRYftltkrRNztwMf9ej7S0fdwuMxmUZ52knRObWUUIwZfm2_gRKaPVzT8Bl1oikjaaT4K1Ammq1SQFmUFH50xoBqr-ibEnidBN7heJTkXC-HahzTLUI2AHa92jtx39O1Cesa88GUKxxBQ7PT5E-bxG6dLDbaUyYb7hxcU9StRrGUXz5TLPuXsYDOG2PU3oIf3q5tEA5HyhcJJkHaq_Y_0BaxvPHEDrxWdiwBvHqzWgaRP" alt="" />
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4KNbuuJTvRYftltkrRNztwMf9ej7S0fdwuMxmUZ52knRObWUUIwZfm2_gRKaPVzT8Bl1oikjaaT4K1Ammq1SQFmUFH50xoBqr-ibEnidBN7heJTkXC-HahzTLUI2AHa92jtx39O1Cesa88GUKxxBQ7PT5E-bxG6dLDbaUyYb7hxcU9StRrGUXz5TLPuXsYDOG2PU3oIf3q5tEA5HyhcJJkHaq_Y_0BaxvPHEDrxWdiwBvHqzWgaRP" alt="Modern Editorial Print - Literary journal digital publishing and print case study" />
           </div>
           <div className="flex flex-col gap-4">
             <div className="inline-flex px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-label-caps font-label-caps shadow-clay-sm self-start">
@@ -81,7 +81,7 @@ export default function PortfolioHorizontalSection() {
         {/* Card 4 */}
         <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group mt-0 md:mt-12">
           <div className="relative w-full aspect-[4/3] rounded-[3rem] overflow-hidden shadow-clay-inset">
-            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8vjpJ1gNR0LX7v9_ALjRnUmI4_NVnnLtYKf4oEtdLeilrni9pESEW5Rr5NmvSEU1GwXTUzv0MDH9FudVjoCv1VyAYapBgflMYowBbPiruWtnxD6-W8xPRlPgCFLE04XUmggxUx2b6U_LpDgnW1j6UaqM31zQzSAlu4gqbhqW1lv3d6kCMg11Su6yETr4gkd3QIqC2IzxA4oqyXkSHuVizcv-XXqSUX0XkAMttZgkMwewXWXGOp4az" alt="" />
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8vjpJ1gNR0LX7v9_ALjRnUmI4_NVnnLtYKf4oEtdLeilrni9pESEW5Rr5NmvSEU1GwXTUzv0MDH9FudVjoCv1VyAYapBgflMYowBbPiruWtnxD6-W8xPRlPgCFLE04XUmggxUx2b6U_LpDgnW1j6UaqM31zQzSAlu4gqbhqW1lv3d6kCMg11Su6yETr4gkd3QIqC2IzxA4oqyXkSHuVizcv-XXqSUX0XkAMttZgkMwewXWXGOp4az" alt="Predictive Logic Systems - Analytics dashboard and natural language data UI" />
           </div>
           <div className="flex flex-col gap-4">
             <div className="inline-flex px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-label-caps font-label-caps shadow-clay-sm self-start">
@@ -129,7 +129,7 @@ export default function PortfolioHorizontalSection() {
         </div>
         <div className="flex-1 w-full relative">
           <div className="aspect-square md:aspect-[4/5] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-surface-container-high shadow-clay-inset overflow-hidden p-4">
-            <img className="w-full h-full object-cover rounded-[2rem] shadow-clay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIt0Mmcge1UtJ-Fd8XgnO_0NaA-SzsztLG63sJVr7fqkG9afA2sv9P5te_jzvX03u98-xgun0REpbLomtO1_aFFQeIcjvzrvWrffKn2BWRAIbzNfP2MsK7h_411lSEraWgkLnJUkYwYInm4ynUxV75vxVM0hjGm1uU86xO_CJ7xzhYU62I9ZDB3lIf5HkaBl9U5urDkNPSk-yM2Uuq67HUbjtNZszoGqNxA2jeoHWCpK64dFNMj59e" alt="" />
+            <img className="w-full h-full object-cover rounded-[2rem] shadow-clay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIt0Mmcge1UtJ-Fd8XgnO_0NaA-SzsztLG63sJVr7fqkG9afA2sv9P5te_jzvX03u98-xgun0REpbLomtO1_aFFQeIcjvzrvWrffKn2BWRAIbzNfP2MsK7h_411lSEraWgkLnJUkYwYInm4ynUxV75vxVM0hjGm1uU86xO_CJ7xzhYU62I9ZDB3lIf5HkaBl9U5urDkNPSk-yM2Uuq67HUbjtNZszoGqNxA2jeoHWCpK64dFNMj59e" alt="Project Nexus - Tactile digital collaboration dashboard case study" />
           </div>
         </div>
       </section>

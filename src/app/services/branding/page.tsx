@@ -5,8 +5,8 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Branding & Animation Services: Logos, Motion, Video",
-  description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets designed to drop straight into your code.",
+  title: "Branding & Animation Services: Logos, Motion, Video | TecWrites",
+  description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets designed to drop straight into your code. Request a quote.",
   keywords: [
     "Branding and Animation Services",
     "logo design services",
@@ -19,18 +19,27 @@ export const metadata: Metadata = {
     "website animation"
   ],
   alternates: {
-    canonical: "/services/branding"
+    canonical: "https://www.tecwrites.com/services/branding"
   },
   openGraph: {
-    title: "Branding & Animation Services: Logos, Motion, Video",
+    title: "Branding & Animation Services: Logos, Motion, Video | TecWrites",
     description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets designed to drop straight into your code.",
-    url: "/services/branding",
-    type: "website"
+    url: "https://www.tecwrites.com/services/branding",
+    type: "website",
+    images: [
+      {
+        url: "/services/Visual Identity (Branding, Animation & Design).png",
+        width: 1200,
+        height: 630,
+        alt: "Branding and Animation Services by TecWrites",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Branding & Animation Services: Logos, Motion, Video",
-    description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets."
+    title: "Branding & Animation Services: Logos, Motion, Video | TecWrites",
+    description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets.",
+    images: ["/services/Visual Identity (Branding, Animation & Design).png"],
   }
 };
 
@@ -170,18 +179,60 @@ export default function BrandingServicesPage() {
 
   return (
     <>
-      <SchemaMarkup
-        type="Service"
-        data={{
-          name: "Branding and Animation Services",
-          serviceType: "Branding & Animation Design",
-          provider: {
-            "@type": "Organization",
-            name: "TecWrites",
-            url: "https://www.tecwrites.com"
-          },
-          areaServed: "US",
-          description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets designed to drop straight into your code."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tecwrites.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.tecwrites.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Branding & Animation",
+                    "item": "https://www.tecwrites.com/services/branding"
+                  }
+                ]
+              },
+              {
+                "@type": "Service",
+                "name": "Branding and Animation Services",
+                "serviceType": "Branding & Animation Design",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com"
+                },
+                "areaServed": "US",
+                "description": "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets designed to drop straight into your code."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          })
         }}
       />
       <Header />

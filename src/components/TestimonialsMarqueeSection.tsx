@@ -81,7 +81,7 @@ export default function TestimonialsMarqueeSection() {
           <div className="clay-card p-8 rounded-xl flex flex-col justify-between min-h-[300px]">
             <span className="material-symbols-outlined text-4xl text-primary-fixed-dim mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
             <p className="font-body-md text-lg italic text-on-surface mb-8 flex-grow">
-              "The level of depth and consideration TecWrites brought to our platform is unmatched. It feels less like software and more like a carefully crafted physical product."
+              &ldquo;The level of depth and consideration TecWrites brought to our platform is unmatched. It feels less like software and more like a carefully crafted physical product.&rdquo;
             </p>
             <div className="flex items-center gap-4">
               <img alt="Sarah Jenkins" className="w-16 h-16 rounded-full object-cover shadow-[5px_5px_10px_rgba(0,0,0,0.1),-5px_-5px_10px_rgba(255,255,255,0.9)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_tqL_t0G3Ad7N-qeOr_N2Sa1I1Rn0xxe_0i4TtJiUcQXDC8mzdbZbEZONOH6xd9COdjNKz6sLlfgLcm0S2Mn16sQ_u7ZhaBcDod5vtYNbQoiYR_dPhAUV1ucy12LNAf9uPkNge9Z7NoShvhIwX-m6thTaMavcSFEgcHnrj1yaK9OkzEJbVS6pai3dsJxWo2vKZgmM1Peac3ZeIXSLQoIA7esPNMJtKvQGWVTkOWE37IDnfE02H9zF"/>
@@ -96,7 +96,7 @@ export default function TestimonialsMarqueeSection() {
           <div className="clay-card p-8 rounded-xl flex flex-col justify-between min-h-[300px]">
             <span className="material-symbols-outlined text-4xl text-primary-fixed-dim mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
             <p className="font-body-md text-lg italic text-on-surface mb-8 flex-grow">
-              "They don't just build websites; they engineer digital spaces that invite interaction. The claymorphic approach gave our brand exactly the soft, approachable feel we needed."
+              &ldquo;They don&apos;t just build websites; they engineer digital spaces that invite interaction. The claymorphic approach gave our brand exactly the soft, approachable feel we needed.&rdquo;
             </p>
             <div className="flex items-center gap-4">
               <img alt="Marcus Vance" className="w-16 h-16 rounded-full object-cover shadow-[5px_5px_10px_rgba(0,0,0,0.1),-5px_-5px_10px_rgba(255,255,255,0.9)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3gUXcmthQsiSTxlIi7AIT9aZul6jSjdQiAhNGxldrawrLZK2V617ggDngvtSfLuuKxA7mFQjiRhjj3OdCC3w1pBehS-zEEgoEAmdpSd4XMTjfCEiRk2Rfgjj8DGr9R5WRe7_BjJ5uIIC7FlMx7P27TlcqVjHH1hDJFpXArxZ3bs-QKlmG_V_clWUQ3_JeC5rCgq66CX-siWVy85E8HWtg2RScCGhiyOECUlrFv17O2t9W9G97luAi"/>

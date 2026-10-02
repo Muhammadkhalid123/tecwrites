@@ -19,18 +19,27 @@ export const metadata: Metadata = {
     "SEO-friendly web development"
   ],
   alternates: {
-    canonical: "/services/web-design"
+    canonical: "https://www.tecwrites.com/services/web-design"
   },
   openGraph: {
     title: "Web Design & Development Services USA | TecWrites",
     description: "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds. Request a quote.",
-    url: "/services/web-design",
-    type: "website"
+    url: "https://www.tecwrites.com/services/web-design",
+    type: "website",
+    images: [
+      {
+        url: "/services/website-animation-services.png",
+        width: 1200,
+        height: 630,
+        alt: "Web Design and Development Services USA by TecWrites",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Web Design & Development Services USA | TecWrites",
-    description: "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds."
+    description: "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds.",
+    images: ["/services/website-animation-services.png"],
   }
 };
 
@@ -170,18 +179,60 @@ export default function WebDesignServicesPage() {
 
   return (
     <>
-      <SchemaMarkup
-        type="Service"
-        data={{
-          name: "Web Design and Development Services USA",
-          serviceType: "Web Design & Full-Stack Development",
-          provider: {
-            "@type": "Organization",
-            name: "TecWrites",
-            url: "https://www.tecwrites.com"
-          },
-          areaServed: "US",
-          description: "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tecwrites.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.tecwrites.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Web Design & Development",
+                    "item": "https://www.tecwrites.com/services/web-design"
+                  }
+                ]
+              },
+              {
+                "@type": "Service",
+                "name": "Web Design and Development Services USA",
+                "serviceType": "Web Design & Full-Stack Development",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com"
+                },
+                "areaServed": "US",
+                "description": "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds."
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          })
         }}
       />
       <Header />

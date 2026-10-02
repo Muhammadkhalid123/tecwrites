@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
   const imageUrl = post.coverImage.startsWith('http') 
     ? post.coverImage 
-    : `https://tecwrites.com${post.coverImage}`;
+    : `https://www.tecwrites.com${post.coverImage}`;
 
   return {
     title: `${post.title} | TecWrites`,
@@ -32,7 +32,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.publishDate,
       authors: [post.author],
-      images: [{ url: imageUrl }],
+      images: [
+        {
+          url: imageUrl,
+          alt: post.title,
+        },
+      ],
+      url: `https://www.tecwrites.com/blog/${post.slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -41,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: [imageUrl],
     },
     alternates: {
-      canonical: `https://tecwrites.com/blog/${post.slug}`,
+      canonical: `https://www.tecwrites.com/blog/${post.slug}`,
     }
   };
 }
@@ -56,30 +62,68 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const imageUrl = post.coverImage.startsWith('http') 
     ? post.coverImage 
-    : `https://tecwrites.com${post.coverImage}`;
+    : `https://www.tecwrites.com${post.coverImage}`;
 
   return (
     <>
-      <SchemaMarkup
-        type="Article"
-        data={{
-          headline: post.title,
-          description: post.metaDescription,
-          image: [imageUrl],
-          datePublished: post.publishDate,
-          author: {
-            "@type": "Organization",
-            name: post.author,
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "TecWrites",
-            url: "https://tecwrites.com",
-          },
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `https://tecwrites.com/blog/${post.slug}`,
-          },
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tecwrites.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://www.tecwrites.com/blog"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": post.title,
+                    "item": `https://www.tecwrites.com/blog/${post.slug}`
+                  }
+                ]
+              },
+              {
+                "@type": "Article",
+                "@id": `https://www.tecwrites.com/blog/${post.slug}#article`,
+                "headline": post.title,
+                "description": post.metaDescription,
+                "image": [imageUrl],
+                "datePublished": post.publishDate,
+                "dateModified": post.publishDate,
+                "author": {
+                  "@type": "Organization",
+                  "name": post.author,
+                  "url": "https://www.tecwrites.com"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "TecWrites",
+                  "url": "https://www.tecwrites.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.tecwrites.com/TecWrites-Logo_Facicon.png"
+                  }
+                },
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": `https://www.tecwrites.com/blog/${post.slug}`
+                }
+              }
+            ]
+          })
         }}
       />
       <Header />
