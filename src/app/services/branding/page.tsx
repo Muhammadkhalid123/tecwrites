@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Branding & Animation Services: Logos, Motion, Video | TecWrites",
+  title: "Branding & Animation Services: Logos, Motion, Video",
   description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets designed to drop straight into your code. Request a quote.",
   keywords: [
     "Branding and Animation Services",

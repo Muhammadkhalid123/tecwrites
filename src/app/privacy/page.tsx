@@ -4,7 +4,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | TecWrites",
+  title: "Privacy Policy",
   description: "Read the TecWrites Privacy Policy to understand how we collect, protect, and handle your personal data across our services.",
   alternates: {
     canonical: "https://www.tecwrites.com/privacy",

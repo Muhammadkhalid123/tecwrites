@@ -11,12 +11,12 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Headline */}
           <h1 className="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background tracking-tight leading-tight">
-            WHERE <span className="clay-blob-highlight"><span className="text-primary">CODE</span></span> MEETS CRAFT
+            Bespoke <span className="clay-blob-highlight"><span className="text-primary">Web Design</span></span>, App, AI &amp; Game Studio
           </h1>
           
           {/* Subheadline */}
           <p className="font-body-md text-body-md md:text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Hybrid Creative Technology &amp; Publishing Studio — we merge high-performance AI &amp; Web Engineering with refined Editorial Publishing.
+            Where Code Meets Craft — We engineer high-performance websites, custom animation, mobile applications, and intelligent AI systems.
           </p>
           
           {/* CTA */}
@@ -41,11 +41,11 @@ export default function HeroSection() {
             </div>
             <div className="clay-chip px-6 py-3 flex items-center gap-2">
               <span className="material-symbols-outlined text-primary-container text-sm">groups</span>
-              <span className="font-label-caps text-label-caps text-on-surface-variant">Active Clients: 25</span>
+              <span className="font-label-caps text-label-caps text-on-surface-variant">Active Partnerships: 25+</span>
             </div>
             <div className="clay-chip px-6 py-3 flex items-center gap-2">
               <span className="material-symbols-outlined text-secondary-container text-sm">schedule</span>
-              <span className="font-label-caps text-label-caps text-on-surface-variant">Years Experience: 3</span>
+              <span className="font-label-caps text-label-caps text-on-surface-variant">Years Experience: 5+</span>
             </div>
           </div>
         </div>

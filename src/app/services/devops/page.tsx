@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cloud & DevOps Services: AWS, GCP, Terraform | TecWrites",
+  title: "Cloud & DevOps Services: AWS, GCP, Terraform",
   description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits. Request a quote from TecWrites.",
   keywords: [
     "Cloud Infrastructure and DevOps Services",

@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Design & Development Services USA | TecWrites",
+  title: "Web Design & Development Services USA",
   description: "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds. Request a quote.",
   keywords: [
     "Web Design and Development Services USA",
@@ -62,7 +62,7 @@ export default function WebDesignServicesPage() {
     },
     {
       title: "Full-Stack Web Development",
-      description: "Modern, high-performance web systems built with React and Next.js (SSR, SSG, Turbopack) engineered for 99+ Google Lighthouse performance scores."
+      description: "Modern, high-performance web systems built with React and Next.js (SSR, SSG, Turbopack) engineered for top-tier performance and green Core Web Vitals."
     },
     {
       title: "Headless Commerce Development",
@@ -74,7 +74,7 @@ export default function WebDesignServicesPage() {
     },
     {
       title: "SEO-Friendly Web Development",
-      description: "Sub-second load times, clean HTML5 semantic markup, mobile-first responsive design, and structured JSON-LD schema built directly into every page."
+      description: "Optimized load speeds, clean HTML5 semantic markup, mobile-first responsive design, and structured JSON-LD schema built directly into every page."
     }
   ];
 
@@ -85,7 +85,7 @@ export default function WebDesignServicesPage() {
     },
     {
       title: "Performance & SEO from Day One",
-      description: "We protect Core Web Vitals, sub-second load times, and crawlable SSR content so your website is primed to rank and convert."
+      description: "We protect Core Web Vitals, fast load times, and crawlable SSR content so your website is primed to rank and convert."
     },
     {
       title: "Accessible by Design",
@@ -129,7 +129,7 @@ export default function WebDesignServicesPage() {
     },
     {
       title: "Established Brands",
-      desc: "Modernize a dated website with responsive claymorphic aesthetics, fluid animation, and sub-second page load times."
+      desc: "Modernize a dated website with responsive claymorphic aesthetics, fluid animation, and fast page load times."
     },
     {
       title: "E-Commerce & DTC Stores",

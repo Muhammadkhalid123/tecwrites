@@ -70,41 +70,30 @@ export default function TestimonialsMarqueeSection() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Studio Commitments Section */}
       <section className="flex flex-col gap-12 pt-12 pb-24">
         <div className="text-center max-w-2xl mx-auto space-y-4">
-          <h2 className="font-headline-xl text-headline-xl text-primary mb-4">Client Echoes</h2>
-          <p className="text-on-surface-variant font-body-md">Hear from those who have experienced the tactile difference of our craft.</p>
+          <h2 className="font-headline-xl text-headline-xl text-primary mb-4">The TecWrites Standard</h2>
+          <p className="text-on-surface-variant font-body-md">Engineering integrity and design excellence built into every engagement.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Testimonial 1 */}
-          <div className="clay-card p-8 rounded-xl flex flex-col justify-between min-h-[300px]">
-            <span className="material-symbols-outlined text-4xl text-primary-fixed-dim mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-            <p className="font-body-md text-lg italic text-on-surface mb-8 flex-grow">
-              &ldquo;The level of depth and consideration TecWrites brought to our platform is unmatched. It feels less like software and more like a carefully crafted physical product.&rdquo;
-            </p>
-            <div className="flex items-center gap-4">
-              <img alt="Sarah Jenkins" className="w-16 h-16 rounded-full object-cover shadow-[5px_5px_10px_rgba(0,0,0,0.1),-5px_-5px_10px_rgba(255,255,255,0.9)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_tqL_t0G3Ad7N-qeOr_N2Sa1I1Rn0xxe_0i4TtJiUcQXDC8mzdbZbEZONOH6xd9COdjNKz6sLlfgLcm0S2Mn16sQ_u7ZhaBcDod5vtYNbQoiYR_dPhAUV1ucy12LNAf9uPkNge9Z7NoShvhIwX-m6thTaMavcSFEgcHnrj1yaK9OkzEJbVS6pai3dsJxWo2vKZgmM1Peac3ZeIXSLQoIA7esPNMJtKvQGWVTkOWE37IDnfE02H9zF"/>
-              <div>
-                <h4 className="font-headline-lg-mobile text-headline-lg-mobile text-primary">Sarah Jenkins</h4>
-                <p className="font-label-caps text-label-caps text-on-surface-variant uppercase">VP of Product, Forma</p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="clay-card p-8 rounded-2xl flex flex-col gap-4">
+            <div className="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-clay-sm">
+              <span className="material-symbols-outlined text-2xl">verified_user</span>
             </div>
+            <h3 className="font-headline-sm text-xl font-bold text-on-surface">End-to-End Engineering Ownership</h3>
+            <p className="font-body-md text-on-surface-variant leading-relaxed">
+              We design, write code, build animations, and manage cloud infrastructure together in-house. No fragmented handoffs or disjointed third-party contractors.
+            </p>
           </div>
-          
-          {/* Testimonial 2 */}
-          <div className="clay-card p-8 rounded-xl flex flex-col justify-between min-h-[300px]">
-            <span className="material-symbols-outlined text-4xl text-primary-fixed-dim mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-            <p className="font-body-md text-lg italic text-on-surface mb-8 flex-grow">
-              &ldquo;They don&apos;t just build websites; they engineer digital spaces that invite interaction. The claymorphic approach gave our brand exactly the soft, approachable feel we needed.&rdquo;
-            </p>
-            <div className="flex items-center gap-4">
-              <img alt="Marcus Vance" className="w-16 h-16 rounded-full object-cover shadow-[5px_5px_10px_rgba(0,0,0,0.1),-5px_-5px_10px_rgba(255,255,255,0.9)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3gUXcmthQsiSTxlIi7AIT9aZul6jSjdQiAhNGxldrawrLZK2V617ggDngvtSfLuuKxA7mFQjiRhjj3OdCC3w1pBehS-zEEgoEAmdpSd4XMTjfCEiRk2Rfgjj8DGr9R5WRe7_BjJ5uIIC7FlMx7P27TlcqVjHH1hDJFpXArxZ3bs-QKlmG_V_clWUQ3_JeC5rCgq66CX-siWVy85E8HWtg2RScCGhiyOECUlrFv17O2t9W9G97luAi"/>
-              <div>
-                <h4 className="font-headline-lg-mobile text-headline-lg-mobile text-primary">Marcus Vance</h4>
-                <p className="font-label-caps text-label-caps text-on-surface-variant uppercase">Founder, Nexus Toys</p>
-              </div>
+          <div className="clay-card p-8 rounded-2xl flex flex-col gap-4">
+            <div className="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-clay-sm">
+              <span className="material-symbols-outlined text-2xl">speed</span>
             </div>
+            <h3 className="font-headline-sm text-xl font-bold text-on-surface">Performance &amp; Core Web Vitals</h3>
+            <p className="font-body-md text-on-surface-variant leading-relaxed">
+              Visual richness should never compromise page speed. We optimize assets, SSR pipelines, and layout stability from day one so your site converts effortlessly.
+            </p>
           </div>
         </div>
       </section>

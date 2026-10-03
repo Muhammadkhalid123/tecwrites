@@ -216,24 +216,14 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Trust / Testimonial */}
+        {/* Direct Contact Reassurance */}
         <section className="max-w-4xl mx-auto py-16 border-t border-outline-variant/30 flex flex-col items-center text-center">
-          <span className="material-symbols-outlined text-primary mb-6 text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-          <p className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-8 italic text-opacity-80">
-            "TecWrites didn't just build our platform; they molded a digital experience that feels entirely human."
-          </p>
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-surface-container-lowest shadow-clay-inset overflow-hidden">
-              <img
-                className="w-full h-full object-cover opacity-80 mix-blend-multiply"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwh4ups9242JGV2N4nc5ZWZD90HMjQ2HymLVU3YZKOJlryYpcOv5N7X13JJzF8eh8PDpN6JDEsRbX6st_kPYYyupWjIzDbe2prrJJ8CFfvdKlhDMki82Kr0e38Ew8HTScM_z4arl6WkfW_ECIt3maRWomypro-LkcaG8jhDVeu3Oq1AhFoDOVuuIvcFYdgSmXskgYCoteQHqxzeMx9WXhAouB13lQRE8EXfvvjvq1gNsOEhyGReCmD"
-                alt="Alex Mercer"
-              />
-            </div>
-            <div className="text-left">
-              <p className="font-body-md text-body-md font-bold">Alex Mercer</p>
-              <p className="text-label-caps font-label-caps text-on-surface-variant">CTO, Vertex Innovations</p>
-            </div>
+          <div className="clay-card p-8 rounded-2xl flex flex-col items-center max-w-xl">
+            <span className="material-symbols-outlined text-primary mb-3 text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>support_agent</span>
+            <h3 className="font-headline-sm text-lg font-bold text-on-surface mb-2">Direct Studio Collaboration</h3>
+            <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Every inquiry is reviewed directly by our engineering and design leads. We reply within 24 business hours with honest feedback and clear next steps.
+            </p>
           </div>
         </section>
       </main>

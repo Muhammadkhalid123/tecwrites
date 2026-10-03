@@ -6,7 +6,7 @@ import { getAllPosts } from "@/data/posts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog & Technical Insights | TecWrites Studio",
+  title: "Blog & Technical Insights",
   description: "Read in-depth guides and strategic insights on Web Design, Animation, Mobile Apps, Artificial Intelligence, and Digital Publishing from the TecWrites team.",
   keywords: [
     "TecWrites blog",
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     canonical: "https://www.tecwrites.com/blog",
   },
   openGraph: {
-    title: "Blog & Technical Insights | TecWrites Studio",
+    title: "Blog & Technical Insights | TecWrites",
     description: "Read in-depth guides on Web Design, Animation, Mobile Apps, AI, and Publishing from TecWrites.",
     url: "https://www.tecwrites.com/blog",
     type: "website",
     images: [
       {
-        url: "/modern-website-for-business-2026.png",
+        url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
         alt: "TecWrites Blog & Technical Insights",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog & Technical Insights | TecWrites Studio",
+    title: "Blog & Technical Insights | TecWrites",
     description: "Read in-depth guides on Web Design, Animation, Mobile Apps, AI, and Publishing from TecWrites.",
-    images: ["/modern-website-for-business-2026.png"],
+    images: ["/tecwrites-og-banner.png"],
   },
 };
 

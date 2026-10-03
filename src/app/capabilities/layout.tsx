@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Capabilities & Services | TecWrites Studio",
+  title: "Our Capabilities & Services",
   description: "Explore TecWrites capabilities: Bespoke Web Design, End-to-End App Development, AI-Integrated Products, Game Dev, Branding, DevOps, and App Store Publishing.",
   keywords: [
     "TecWrites capabilities",
@@ -17,24 +17,24 @@ export const metadata: Metadata = {
     canonical: "https://www.tecwrites.com/capabilities",
   },
   openGraph: {
-    title: "Our Capabilities & Services | TecWrites Studio",
+    title: "Our Capabilities & Services | TecWrites",
     description: "Explore TecWrites capabilities: Bespoke Web Design, App Dev, AI, Game Dev, Branding, DevOps, and Publishing.",
     url: "https://www.tecwrites.com/capabilities",
     type: "website",
     images: [
       {
-        url: "/modern-website-for-business-2026.png",
+        url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
-        alt: "TecWrites Capabilities & Pricing Tiers",
+        alt: "TecWrites Capabilities & Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Capabilities & Services | TecWrites Studio",
+    title: "Our Capabilities & Services | TecWrites",
     description: "Explore TecWrites capabilities: Bespoke Web Design, App Dev, AI, Game Dev, Branding, DevOps, and Publishing.",
-    images: ["/modern-website-for-business-2026.png"],
+    images: ["/tecwrites-og-banner.png"],
   },
 };
 

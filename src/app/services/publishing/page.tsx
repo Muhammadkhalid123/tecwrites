@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "App Store Publishing & ASO Services | TecWrites",
+  title: "App Store Publishing & ASO Services",
   description: "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup to help your app or book get discovered.",
   keywords: [
     "App Store Publishing and ASO Services",

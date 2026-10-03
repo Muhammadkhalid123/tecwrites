@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Game Development Services: WebGL, 3D & Mobile | TecWrites",
+  title: "Game Development Services: WebGL, 3D & Mobile",
   description: "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps built for engagement. Start your project today.",
   keywords: [
     "Game Development Services",

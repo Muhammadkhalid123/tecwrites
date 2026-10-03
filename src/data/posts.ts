@@ -383,11 +383,6 @@ export const posts: BlogPost[] = [
       <h2 class="font-headline-lg text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Why Brands Trust TecWrites</h2>
       <p class="mb-6">TecWrites is a hybrid creative technology studio where code meets craft. With more than 150 projects delivered, the team combines engineering, design, and animation, so motion is built to work inside the codebase rather than bolted on afterward. Every project starts with your business goals, and every animation has to earn its place.</p>
 
-      <blockquote class="p-6 my-8 bg-surface-container rounded-2xl border-l-4 border-[#003B95] italic shadow-clay-sm text-on-surface">
-        <p class="mb-2 font-medium text-lg leading-relaxed">“They don't just build websites; they engineer digital spaces that invite interaction.”</p>
-        <cite class="not-italic text-sm font-label-caps text-on-surface-variant uppercase tracking-wider block mt-2">— Marcus Vance, Founder, Nexus Toys</cite>
-      </blockquote>
-
       <p class="mb-6">Once your site is moving the way you want, the same team can support you with <a href="/services/app" class="text-primary underline hover:text-primary/80 transition-colors">end-to-end app development</a>, <a href="/services/game" class="text-primary underline hover:text-primary/80 transition-colors">game development</a>, <a href="/services/ai" class="text-primary underline hover:text-primary/80 transition-colors">AI-integrated products</a>, <a href="/services/devops" class="text-primary underline hover:text-primary/80 transition-colors">cloud infrastructure and DevOps</a>, and <a href="/services/publishing" class="text-primary underline hover:text-primary/80 transition-colors">app store publishing and ASO</a>, so your brand grows from website to full product without switching providers.</p>
 
       <h2 class="font-headline-lg text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Frequently Asked Questions</h2>
@@ -436,7 +431,7 @@ export const posts: BlogPost[] = [
     keywords: ["AI solutions", "automated workflows", "AI integrations", "web development automation", "TecWrites AI"],
     publishDate: "2026-08-11",
     author: "TecWrites Team",
-    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAZLL7o1oaXLXDfD10gtRoSW1tBaGXcvS3MGWz2VLgoWu0oKq7fgnhCDC6EGPHK53uhM7lyS4DrlXSNgVerYNKyk065To8sC0y48VSd-oj9x9WiCvkmbMiuGz3P2M1sSqc-wkK8LHlSI5LUi23arBiL03zw2I-Hh_mxMgefxt7oc12_g6Frq7doYYv7n29vCypiqfYD0g4IlRlY4dvW27vUjBTTaS3tYldT3FhsFkDPBez1RNFEAVCV",
+    coverImage: "/services/AI & Intelligence.png",
     category: "AI & Automation",
     content: `
       <h2>The Rise of Intelligent Workflows</h2>
@@ -464,7 +459,7 @@ export const posts: BlogPost[] = [
     keywords: ["eBook publishing", "self-publishing services", "book formatting", "KDP distribution", "author marketing"],
     publishDate: "2026-08-10",
     author: "TecWrites Team",
-    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuB4KNbuuJTvRYftltkrRNztwMf9ej7S0fdwuMxmUZ52knRObWUUIwZfm2_gRKaPVzT8Bl1oikjaaT4K1Ammq1SQFmUFH50xoBqr-ibEnidBN7heJTkXC-HahzTLUI2AHa92jtx39O1Cesa88GUKxxBQ7PT5E-bxG6dLDbaUyYb7hxcU9StRrGUXz5TLPuXsYDOG2PU3oIf3q5tEA5HyhcJJkHaq_Y_0BaxvPHEDrxWdiwBvHqzWgaRP",
+    coverImage: "/services/Self Publishing & Formatting.png",
     category: "Publishing",
     content: `
       <h2>Taking Control of Your Author Journey</h2>
@@ -495,7 +490,7 @@ export const posts: BlogPost[] = [
     keywords: ["game development", "mobile games", "gamified learning", "branded mini games", "ed-tech Pakistan"],
     publishDate: "2026-08-22",
     author: "TecWrites Team",
-    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYR-8PcR9L573tt8SAjfLGrWvfQ0PQr60zWI7--O2DYebcO-tmeOpBqD5v-21x0pBZXD2ukc_ZDqXDCS_Xa4FiBJhU371usr_ef5DWFKFqkUknA3usiq4c-c8c-ojkNEPqNu0mbupZZsT9wXUSlESHHx6kUlHhUKSqqe0MhbrTVPVRa6Wd3TkusV-fQ_mNojwc7pJPePg_kRn6ZvZOaJBhpqCbUJhB8aibBQWm3wcEKPov5EUzV6Ug",
+    coverImage: "/services/Interactive Games.png",
     category: "Game Development",
     content: `
       <h2>The Engagement Power of Interactive Code</h2>
@@ -521,7 +516,7 @@ export const posts: BlogPost[] = [
     keywords: ["app development", "mobile app launch", "App Store Optimization", "ASO audits", "idea to App Store"],
     publishDate: "2026-08-20",
     author: "TecWrites Team",
-    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYR-8PcR9L573tt8SAjfLGrWvfQ0PQr60zWI7--O2DYebcO-tmeOpBqD5v-21x0pBZXD2ukc_ZDqXDCS_Xa4FiBJhU371usr_ef5DWFKFqkUknA3usiq4c-c8c-ojkNEPqNu0mbupZZsT9wXUSlESHHx6kUlHhUKSqqe0MhbrTVPVRa6Wd3TkusV-fQ_mNojwc7pJPePg_kRn6ZvZOaJBhpqCbUJhB8aibBQWm3wcEKPov5EUzV6Ug",
+    coverImage: "/services/Full Product Builds.png",
     category: "App Development",
     content: `
       <h2>Beyond Coding: The App Store Launchpad</h2>
@@ -554,7 +549,7 @@ export const posts: BlogPost[] = [
     keywords: ["DevOps", "cloud scaling", "cost optimization", "Terraform infrastructure", "CI/CD pipeline"],
     publishDate: "2026-08-18",
     author: "TecWrites Team",
-    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAZLL7o1oaXLXDfD10gtRoSW1tBaGXcvS3MGWz2VLgoWu0oKq7fgnhCDC6EGPHK53uhM7lyS4DrlXSNgVerYNKyk065To8sC0y48VSd-oj9x9WiCvkmbMiuGz3P2M1sSqc-wkK8LHlSI5LUi23arBiL03zw2I-Hh_mxMgefxt7oc12_g6Frq7doYYv7n29vCypiqfYD0g4IlRlY4dvW27vUjBTTaS3tYldT3FhsFkDPBez1RNFEAVCV",
+    coverImage: "/services/DevOps & Scaling (Cloud Infrastructure).png",
     category: "Cloud & DevOps",
     content: `
       <h2>The Hidden Cost of Unoptimized Servers</h2>

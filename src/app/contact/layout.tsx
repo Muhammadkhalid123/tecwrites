@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact TecWrites Studio | Start a Project",
+  title: "Contact Studio | Start a Project",
   description: "Get in touch with TecWrites Studio for custom web design, mobile app development, AI integrations, game dev, DevOps, or publishing projects. Request a quote.",
   keywords: [
     "contact TecWrites",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/modern-website-for-business-2026.png",
+        url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
         alt: "Contact TecWrites Studio",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact TecWrites Studio | Start a Project",
     description: "Get in touch with TecWrites for custom software engineering, AI integrations, web design, and publishing projects.",
-    images: ["/modern-website-for-business-2026.png"],
+    images: ["/tecwrites-og-banner.png"],
   },
 };
 

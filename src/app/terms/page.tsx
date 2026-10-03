@@ -4,7 +4,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | TecWrites",
+  title: "Terms of Service",
   description: "Read the Terms of Service governing the use of the TecWrites website and creative technology services.",
   alternates: {
     canonical: "https://www.tecwrites.com/terms",

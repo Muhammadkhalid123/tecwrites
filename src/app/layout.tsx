@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     google: "ZifE4ji4x6DAhHBhJ1LE1zfdcbSjSvOkV8r8O_RLN9k",
   },
   title: {
-    default: "TecWrites | Where Code Meets Craft",
+    default: "TecWrites | Web Design, App, AI & Game Development Studio",
     template: "%s | TecWrites",
   },
-  description: "TecWrites is a hybrid creative technology & publishing studio specializing in AI & Automation, Bespoke Web Design, Mobile Apps, Game Dev, and Self Publishing Services.",
+  description: "TecWrites is a digital studio specializing in bespoke web design, custom animation, mobile apps, AI automation, and publishing services.",
   keywords: [
     "AI automation",
     "web design studio",
@@ -72,22 +72,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.tecwrites.com",
     siteName: "TecWrites",
-    title: "TecWrites | Where Code Meets Craft",
-    description: "Hybrid creative technology & publishing studio: AI & Automation, Bespoke Web Design, Mobile Apps, Game Dev, and Self Publishing Services.",
+    title: "TecWrites | Web Design, App, AI & Game Development Studio",
+    description: "Bespoke web design, custom animation, mobile apps, AI automation, and publishing services.",
     images: [
       {
-        url: "/modern-website-for-business-2026.png",
+        url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
-        alt: "TecWrites Studio - Where Code Meets Craft",
+        alt: "TecWrites Studio - Web Design, App, AI & Game Development",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TecWrites | Where Code Meets Craft",
-    description: "Hybrid creative technology & publishing studio: AI & Automation, Bespoke Web Design, Mobile Apps, Game Dev, and Self Publishing Services.",
-    images: ["/modern-website-for-business-2026.png"],
+    title: "TecWrites | Web Design, App, AI & Game Development Studio",
+    description: "Bespoke web design, custom animation, mobile apps, AI automation, and publishing services.",
+    images: ["/tecwrites-og-banner.png"],
   },
 };
 

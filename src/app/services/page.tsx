@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Creative Technology & Engineering Services | TecWrites",
+  title: "Creative Technology & Engineering Services",
   description: "Explore TecWrites full suite of digital services: Bespoke Web Design, End-to-End App Dev, AI Integrations, Game Development, Branding & Motion, DevOps, and App Store Publishing.",
   keywords: [
     "creative technology services",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/modern-website-for-business-2026.png",
+        url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
         alt: "TecWrites Services Portfolio",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Creative Technology & Engineering Services | TecWrites",
     description: "Explore TecWrites full suite of digital services: Bespoke Web Design, App Dev, AI, Game Dev, Branding, DevOps, and Publishing.",
-    images: ["/modern-website-for-business-2026.png"],
+    images: ["/tecwrites-og-banner.png"],
   },
 };
 

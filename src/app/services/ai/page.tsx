@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Integration Services: Chatbots, LLMs & RAG | TecWrites",
+  title: "AI Integration Services: Chatbots, LLMs & RAG",
   description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using. Request a quote.",
   keywords: [
     "AI Integration Services",

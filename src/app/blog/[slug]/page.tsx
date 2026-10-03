@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : `https://www.tecwrites.com${post.coverImage}`;
 
   return {
-    title: `${post.title} | TecWrites`,
+    title: post.title,
     description: post.metaDescription,
     keywords: post.keywords.join(", "),
     openGraph: {
