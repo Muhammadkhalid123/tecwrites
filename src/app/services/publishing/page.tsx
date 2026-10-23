@@ -439,11 +439,13 @@ export default function PublishingServicesPage() {
 
           <div className="mt-10 pt-8 border-t border-outline-variant/30 flex flex-wrap justify-center items-center gap-3 text-xs font-label-caps text-on-surface-variant uppercase">
             <span>Related Services:</span>
+            <Link href="/services/digital-marketing" className="text-tertiary hover:underline">Digital Marketing &amp; SEO</Link>
+            <span>•</span>
             <Link href="/services/app" className="text-tertiary hover:underline">End-to-End App Dev</Link>
             <span>•</span>
             <Link href="/services/branding" className="text-tertiary hover:underline">Branding &amp; Animation</Link>
             <span>•</span>
-            <Link href="/services/ai" className="text-tertiary hover:underline">AI-Integrated Products</Link>
+            <Link href="/services/ai" className="text-tertiary hover:underline">AI-Integrated Products &amp; Automation</Link>
           </div>
         </section>
       </main>

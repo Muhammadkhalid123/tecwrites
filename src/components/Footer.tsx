@@ -12,7 +12,8 @@ export default function Footer() {
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/capabilities">Capabilities</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/web-design">Web Design</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/app">App Services</Link>
-        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/ai">AI Services</Link>
+        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/ai">AI &amp; Automation</Link>
+        <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/digital-marketing">Digital Marketing</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/game">Game Dev</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/devops">DevOps</Link>
         <Link className="text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-transform" href="/services/branding">Branding</Link>

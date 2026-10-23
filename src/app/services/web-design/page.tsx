@@ -438,9 +438,11 @@ export default function WebDesignServicesPage() {
 
           <div className="mt-10 pt-8 border-t border-outline-variant/30 flex flex-wrap justify-center items-center gap-3 text-xs font-label-caps text-on-surface-variant uppercase">
             <span>Related Services:</span>
+            <Link href="/services/digital-marketing" className="text-primary hover:underline">Digital Marketing &amp; SEO</Link>
+            <span>•</span>
             <Link href="/services/branding" className="text-primary hover:underline">Branding &amp; Animation</Link>
             <span>•</span>
-            <Link href="/services/ai" className="text-primary hover:underline">AI-Integrated Products</Link>
+            <Link href="/services/ai" className="text-primary hover:underline">AI-Integrated Products &amp; Automation</Link>
             <span>•</span>
             <Link href="/services/devops" className="text-primary hover:underline">Cloud &amp; DevOps</Link>
           </div>

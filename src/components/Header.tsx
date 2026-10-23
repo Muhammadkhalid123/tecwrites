@@ -37,12 +37,13 @@ export default function Header() {
 
               <div className="flex flex-col gap-2">
                 <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">AI &amp; CLOUD</span>
-                <Link href="/services/ai" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">AI-Integrated Products</Link>
+                <Link href="/services/ai" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">AI-Integrated Products &amp; Automation</Link>
                 <Link href="/services/devops" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Cloud Infrastructure &amp; DevOps</Link>
               </div>
 
               <div className="flex flex-col gap-2">
-                <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">CREATIVE &amp; PUBLISHING</span>
+                <span className="text-primary font-label-caps text-[10px] tracking-widest mb-1">GROWTH &amp; CREATIVE</span>
+                <Link href="/services/digital-marketing" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Digital Marketing &amp; SEO</Link>
                 <Link href="/services/branding" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">Branding, Animation &amp; Design</Link>
                 <Link href="/services/publishing" className="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors py-1">App Store Publishing &amp; ASO</Link>
               </div>
@@ -103,11 +104,12 @@ export default function Header() {
               </div>
               <div className="flex flex-col gap-2">
                 <span className="text-primary font-label-caps text-[10px] tracking-widest">AI &amp; CLOUD</span>
-                <Link href="/services/ai" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">AI-Integrated Products</Link>
+                <Link href="/services/ai" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">AI-Integrated Products &amp; Automation</Link>
                 <Link href="/services/devops" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Cloud Infrastructure &amp; DevOps</Link>
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-primary font-label-caps text-[10px] tracking-widest">CREATIVE &amp; PUBLISHING</span>
+                <span className="text-primary font-label-caps text-[10px] tracking-widest">GROWTH &amp; CREATIVE</span>
+                <Link href="/services/digital-marketing" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Digital Marketing &amp; SEO</Link>
                 <Link href="/services/branding" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">Branding, Animation &amp; Design</Link>
                 <Link href="/services/publishing" onClick={() => setMenuOpen(false)} className="text-on-surface-variant text-sm hover:text-primary py-1">App Store Publishing &amp; ASO</Link>
               </div>

@@ -17,6 +17,14 @@ interface ServiceItem {
 
 const SERVICES_LEFT: ServiceItem[] = [
   {
+    id: "web",
+    name: "Web Design & Development",
+    tagline: "Bespoke, animated, and sub-second WebGL sites.",
+    description: "We craft custom websites and 3D WebGL experiences engineered for maximum speed, tactile interaction, and top-tier SEO discoverability.",
+    points: ["Next.js & React Engineering", "3D WebGL & GSAP Animation", "SEO-First Architecture"],
+    color: "#00E5FF",
+  },
+  {
     id: "app",
     name: "End-to-End App Development",
     tagline: "Full-product mobile & web builds from idea to store.",
@@ -26,10 +34,10 @@ const SERVICES_LEFT: ServiceItem[] = [
   },
   {
     id: "ai",
-    name: "AI-Integrated Products",
-    tagline: "Adding cognitive capabilities and smart logic to your app.",
-    description: "We build custom LLM fine-tuning, RAG databases, recommendation algorithms, and conversational chat interfaces that give your product a high-value competitive edge.",
-    points: ["Custom LLM Integrations", "Conversational Chat Assistants", "Private RAG Knowledge Bases"],
+    name: "AI-Integrated Products & Automation",
+    tagline: "Adding cognitive capabilities and smart automation to your app.",
+    description: "We build custom LLM fine-tuning, autonomous agent workflows, RAG databases, recommendation algorithms, and conversational chat interfaces that give your product a high-value competitive edge.",
+    points: ["Custom LLM & Agent Integrations", "Conversational Chat Assistants", "Automated Workflow Pipelines"],
     color: "#34F5FC",
   },
   {
@@ -43,6 +51,14 @@ const SERVICES_LEFT: ServiceItem[] = [
 ];
 
 const SERVICES_RIGHT: ServiceItem[] = [
+  {
+    id: "marketing",
+    name: "Digital Marketing & Growth",
+    tagline: "Data-driven SEO, multi-channel PPC ads, and CRO.",
+    description: "We engineer full-funnel marketing strategies: technical SEO audits, high-ROAS Google & Meta ads, conversion rate optimization, and automated email retention funnels.",
+    points: ["Technical SEO & Search Dominance", "Google & Meta PPC Advertising", "Conversion Rate Optimization (CRO)"],
+    color: "#FF8A00",
+  },
   {
     id: "branding",
     name: "Branding, Animation & Design",

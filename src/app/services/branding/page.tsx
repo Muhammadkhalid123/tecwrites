@@ -433,6 +433,8 @@ export default function BrandingServicesPage() {
 
           <div className="mt-10 pt-8 border-t border-outline-variant/30 flex flex-wrap justify-center items-center gap-3 text-xs font-label-caps text-on-surface-variant uppercase">
             <span>Related Services:</span>
+            <Link href="/services/digital-marketing" className="text-primary hover:underline">Digital Marketing &amp; SEO</Link>
+            <span>•</span>
             <Link href="/services/web-design" className="text-primary hover:underline">Web Design &amp; Development</Link>
             <span>•</span>
             <Link href="/services/game" className="text-primary hover:underline">Game Development</Link>

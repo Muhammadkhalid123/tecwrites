@@ -5,13 +5,18 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Creative Technology & Engineering Services",
-  description: "Explore TecWrites full suite of digital services: Bespoke Web Design, End-to-End App Dev, AI Integrations, Game Development, Branding & Motion, DevOps, and App Store Publishing.",
+  title: "Creative Technology, AI Automation & Digital Marketing Services",
+  description: "Explore TecWrites full suite of digital services: Bespoke Web Design, End-to-End App Dev, AI-Integrated Products & Automation, Digital Marketing & SEO, Game Development, Branding & Motion, DevOps, and App Store Publishing.",
   keywords: [
     "creative technology services",
     "web design and development services USA",
     "mobile app development services",
     "AI integration services",
+    "AI automation services",
+    "digital marketing services",
+    "SEO services USA",
+    "PPC management services",
+    "conversion rate optimization",
     "game development services",
     "branding and animation services",
     "cloud infrastructure and DevOps",
@@ -21,8 +26,8 @@ export const metadata: Metadata = {
     canonical: "https://www.tecwrites.com/services",
   },
   openGraph: {
-    title: "Creative Technology & Engineering Services | TecWrites",
-    description: "Explore TecWrites full suite of digital services: Bespoke Web Design, App Dev, AI, Game Dev, Branding, DevOps, and Publishing.",
+    title: "Creative Technology, AI Automation & Digital Marketing Services | TecWrites",
+    description: "Explore TecWrites full suite of digital services: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing, Game Dev, Branding, DevOps, and Publishing.",
     url: "https://www.tecwrites.com/services",
     type: "website",
     images: [
@@ -36,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Creative Technology & Engineering Services | TecWrites",
-    description: "Explore TecWrites full suite of digital services: Bespoke Web Design, App Dev, AI, Game Dev, Branding, DevOps, and Publishing.",
+    title: "Creative Technology, AI Automation & Digital Marketing Services | TecWrites",
+    description: "Explore TecWrites full suite of digital services: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing, Game Dev, Branding, DevOps, and Publishing.",
     images: ["/tecwrites-og-banner.png"],
   },
 };
@@ -67,15 +72,26 @@ export default function ServicesHubPage() {
       link: "/services/app"
     },
     {
-      title: "AI-Integrated Products",
-      subtitle: "AI & Intelligence",
+      title: "AI-Integrated Products & Automation",
+      subtitle: "AI, Intelligence & Automation",
       icon: "smart_toy",
       image: "/services/AI & Intelligence.png",
       colorClass: "text-secondary",
       badgeBg: "bg-secondary-container",
-      description: "Embed high-value cognitive capabilities into your systems. We design chat assistants, recommendation systems, and automated pipelines behind tactile, approachable user interfaces.",
-      points: ["Custom LLM Integrations", "Retrieval-Augmented Generation (RAG)", "Conversational Chat Assistants"],
+      description: "Embed high-value cognitive capabilities and autonomous workflows into your systems. We design chat assistants, agentic automation pipelines, and recommendation features behind intuitive, tactile interfaces.",
+      points: ["Custom LLM & Agent Integrations", "Retrieval-Augmented Generation (RAG)", "Automated Workflow & Task Pipelines"],
       link: "/services/ai"
+    },
+    {
+      title: "Digital Marketing & Growth",
+      subtitle: "Performance & Growth",
+      icon: "campaign",
+      image: "/services/Digital Marketing & Growth.png",
+      colorClass: "text-[#C84B10]",
+      badgeBg: "bg-amber-100",
+      description: "Data-driven SEO audits, high-ROAS Google & Meta paid advertising, conversion rate optimization (CRO), and email lifecycle automation engineered to compound revenue.",
+      points: ["Technical SEO & Search Dominance", "PPC & Paid Social Ad Management", "Conversion Rate Optimization (CRO)"],
+      link: "/services/digital-marketing"
     },
     {
       title: "Game Development",

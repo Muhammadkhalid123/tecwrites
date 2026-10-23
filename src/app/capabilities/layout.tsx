@@ -1,13 +1,18 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Capabilities & Services",
-  description: "Explore TecWrites capabilities: Bespoke Web Design, End-to-End App Development, AI-Integrated Products, Game Dev, Branding, DevOps, and App Store Publishing.",
+  title: "Our Capabilities & Services | Creative Tech, AI Automation & Marketing",
+  description: "Explore TecWrites capabilities: Bespoke Web Design, End-to-End App Development, AI-Integrated Products & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and App Store Publishing.",
   keywords: [
     "TecWrites capabilities",
     "web design services",
     "mobile app development services",
     "AI integration services",
+    "AI automation services",
+    "digital marketing services",
+    "SEO services USA",
+    "PPC and performance marketing",
+    "conversion rate optimization",
     "game development services",
     "branding and animation",
     "app store publishing and ASO",
@@ -18,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Our Capabilities & Services | TecWrites",
-    description: "Explore TecWrites capabilities: Bespoke Web Design, App Dev, AI, Game Dev, Branding, DevOps, and Publishing.",
+    description: "Explore TecWrites capabilities: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and Publishing.",
     url: "https://www.tecwrites.com/capabilities",
     type: "website",
     images: [
@@ -33,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Our Capabilities & Services | TecWrites",
-    description: "Explore TecWrites capabilities: Bespoke Web Design, App Dev, AI, Game Dev, Branding, DevOps, and Publishing.",
+    description: "Explore TecWrites capabilities: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and Publishing.",
     images: ["/tecwrites-og-banner.png"],
   },
 };
@@ -47,6 +52,10 @@ export default function CapabilitiesLayout({
     {
       question: "Can we hire TecWrites for standalone DevOps and cloud services?",
       answer: "Yes, absolutely! Our cloud engineer provides DevOps as a standalone service. We can audit your existing cloud setups (AWS/GCP), configure Terraform Infrastructure as Code, set up CI/CD pipeline automations, and optimize your servers to cut monthly host costs."
+    },
+    {
+      question: "What does your Digital Marketing & SEO service include?",
+      answer: "We provide full-service digital marketing including technical SEO audits, Google & Meta PPC ad campaigns, conversion rate optimization (CRO), content marketing, email drip automation, and custom GA4/GTM attribution dashboards."
     },
     {
       question: "What makes your Game Development service unique?",

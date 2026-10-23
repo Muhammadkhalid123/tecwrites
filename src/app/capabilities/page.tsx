@@ -39,16 +39,28 @@ export default function CapabilitiesPage() {
       link: "/services/app"
     },
     {
-      title: "AI-Integrated Products",
-      subtitle: "AI & Intelligence",
+      title: "AI-Integrated Products & Automation",
+      subtitle: "AI, Intelligence & Automation",
       icon: "smart_toy",
       image: "/services/AI & Intelligence.png",
       colorClass: "text-secondary",
       bgGradient: "from-secondary-fixed/20 to-transparent",
       badgeBg: "bg-secondary-container",
-      description: "Embed high-value cognitive capabilities into your systems. We design chat assistants, recommendation systems, and automated pipelines behind tactile, approachable user interfaces.",
-      points: ["Custom LLM Integrations", "Retrieval-Augmented Generation (RAG)", "Conversational Chat Assistants"],
+      description: "Embed high-value cognitive capabilities and autonomous workflows into your systems. We design chat assistants, agentic automation pipelines, and recommendation features behind intuitive, approachable user interfaces.",
+      points: ["Custom LLM & Agent Integrations", "Retrieval-Augmented Generation (RAG)", "Automated Workflow & Task Pipelines"],
       link: "/services/ai"
+    },
+    {
+      title: "Digital Marketing & Growth",
+      subtitle: "Performance & SEO",
+      icon: "campaign",
+      image: "/services/Digital Marketing & Growth.png",
+      colorClass: "text-[#C84B10]",
+      bgGradient: "from-amber-100/40 to-transparent",
+      badgeBg: "bg-amber-100/80 dark:bg-amber-950/20",
+      description: "Data-driven SEO audits, high-ROAS Google & Meta paid advertising, conversion rate optimization (CRO), content marketing, and email lifecycle automation engineered to scale ROI.",
+      points: ["Technical SEO & Organic Dominance", "Google & Meta PPC Ad Management", "CRO, Heatmaps & Funnel A/B Testing"],
+      link: "/services/digital-marketing"
     },
     {
       title: "Game Development",
@@ -104,6 +116,10 @@ export default function CapabilitiesPage() {
     {
       question: "Can we hire TecWrites for standalone DevOps and cloud services?",
       answer: "Yes, absolutely! Our cloud engineer provides DevOps as a standalone service. We can audit your existing cloud setups (AWS/GCP), configure Terraform Infrastructure as Code, set up CI/CD pipeline automations, and optimize your servers to cut monthly host costs."
+    },
+    {
+      question: "What does your Digital Marketing & SEO service include?",
+      answer: "We provide full-service digital marketing including technical SEO audits, Google & Meta PPC ad campaigns, conversion rate optimization (CRO), content marketing, email drip automation, and custom GA4/GTM attribution dashboards."
     },
     {
       question: "What makes your Game Development service unique?",

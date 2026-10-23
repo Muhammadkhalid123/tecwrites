@@ -21,13 +21,13 @@ export default function ServicesStackSection() {
       pills: ["iOS & Android", "Full-Stack", "Backend", "API Setup"]
     },
     {
-      title: "AI-Integrated Products",
-      description: "Chat assistants, custom LLM fine-tuning, RAG databases, and intelligent recommendation features built with intuitive claymorphic UI.",
+      title: "AI-Integrated Products & Automation",
+      description: "Chat assistants, autonomous AI agents, workflow automation, custom LLM fine-tuning, RAG databases, and intelligent decision systems built with intuitive claymorphic UI.",
       icon: "smart_toy",
       link: "/services/ai",
       iconColor: "#007A87",
       bgClass: "clay-surface-cyan",
-      pills: ["Chatbots", "RAG", "LLMs", "Custom APIs"]
+      pills: ["Agents & Bots", "RAG & LLMs", "Automation", "Custom APIs"]
     },
     {
       title: "Game Development",
@@ -64,6 +64,15 @@ export default function ServicesStackSection() {
       iconColor: "#3B4252",
       bgClass: "bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0]",
       pills: ["AWS & GCP", "Terraform", "CI/CD", "Docker"]
+    },
+    {
+      title: "Digital Marketing & Growth",
+      description: "Data-driven SEO audits, high-ROAS Google & Meta ads, conversion rate optimization (CRO), and email lifecycle automation to scale revenue.",
+      icon: "campaign",
+      link: "/services/digital-marketing",
+      iconColor: "#C84B10",
+      bgClass: "bg-gradient-to-br from-[#fff7ed] to-[#ffedd5]",
+      pills: ["Technical SEO", "Google & Meta Ads", "CRO", "Email Automation"]
     }
   ];
 

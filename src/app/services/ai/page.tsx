@@ -5,25 +5,28 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Integration Services: Chatbots, LLMs & RAG",
-  description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using. Request a quote.",
+  title: "AI-Integrated Products & Automation: Chatbots, LLMs & Workflow Systems",
+  description: "Custom AI integration and workflow automation services in the USA: autonomous agents, chatbots, LLM fine-tuning, RAG databases, and intelligent decision systems built into products people enjoy using.",
   keywords: [
     "AI Integration Services",
+    "AI automation services",
+    "AI-integrated products and automation",
+    "enterprise AI workflow automation",
+    "autonomous AI agents",
     "custom AI development services",
     "AI chatbot development",
     "LLM fine-tuning services",
     "RAG development services",
-    "AI-integrated products",
-    "enterprise AI assistants",
-    "recommendation engine development",
+    "business process automation AI",
+    "intelligent workflow automation",
     "natural language interface for business data"
   ],
   alternates: {
     canonical: "https://www.tecwrites.com/services/ai"
   },
   openGraph: {
-    title: "AI Integration Services: Chatbots, LLMs & RAG | TecWrites",
-    description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using.",
+    title: "AI-Integrated Products & Automation: Chatbots, LLMs & Workflow Systems | TecWrites",
+    description: "Custom AI integration and automation services in the USA: autonomous agents, chatbots, LLM fine-tuning, RAG databases, and workflow automation.",
     url: "https://www.tecwrites.com/services/ai",
     type: "website",
     images: [
@@ -31,14 +34,14 @@ export const metadata: Metadata = {
         url: "/services/AI & Intelligence.png",
         width: 1200,
         height: 630,
-        alt: "AI Integration Services by TecWrites",
+        alt: "AI-Integrated Products & Automation Services by TecWrites",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Integration Services: Chatbots, LLMs & RAG | TecWrites",
-    description: "Custom AI integration services in the USA: chatbots, LLM fine-tuning, RAG databases, and recommendation features.",
+    title: "AI-Integrated Products & Automation: Chatbots, LLMs & Workflow Systems | TecWrites",
+    description: "Custom AI integration and automation services: autonomous agents, chatbots, LLM fine-tuning, RAG databases, and workflow automation.",
     images: ["/services/AI & Intelligence.png"],
   }
 };
@@ -46,24 +49,28 @@ export const metadata: Metadata = {
 export default function AIServicesPage() {
   const serviceIncludes = [
     {
-      title: "AI Chatbot & Assistant Development",
-      description: "Conversational assistants for support, onboarding, sales, or internal teams, purposefully designed to answer directly from your own proprietary content."
+      title: "Autonomous AI Agents & Workflow Automation",
+      description: "Multi-step agentic workflows and background process automations (via n8n, LangChain, and Python) that execute complex business tasks, data routing, and operations 24/7."
     },
     {
-      title: "Custom LLM Fine-Tuning",
-      description: "Adapting foundational large language models to your specific business domain, tone, formatting requirements, and workflows so outputs fit your brand."
+      title: "AI Chatbot & Conversational Assistant Development",
+      description: "Conversational assistants for support, onboarding, sales, or internal operations, purposefully grounded to answer directly from your proprietary documents."
+    },
+    {
+      title: "Custom LLM Fine-Tuning & Domain Adaptation",
+      description: "Adapting foundational large language models to your specific business terminology, compliance criteria, tone, and system prompts so outputs stay brand-aligned."
     },
     {
       title: "RAG (Retrieval-Augmented Generation) Databases",
-      description: "Connecting a language model to your internal documents and knowledge bases so answers are grounded in verifiable facts rather than hallucinations."
+      description: "Connecting language models directly to internal knowledge bases, PDFs, and vector archives so every answer is backed by verifiable facts without hallucinations."
     },
     {
-      title: "Intelligent Recommendation Features",
-      description: "Personalized suggestions for content, products, or next actions engineered directly into your web or mobile user journey."
+      title: "Intelligent Recommendation & Decision Engines",
+      description: "Personalized suggestions for products, content, or dynamic user actions engineered directly into your web, mobile, and SaaS application flow."
     },
     {
-      title: "Custom AI APIs",
-      description: "Clean, well-documented API endpoints so intelligent AI capabilities plug smoothly into your existing application stack, CRM, or automated workflow."
+      title: "Custom AI APIs & Microservices",
+      description: "Clean, high-performance API endpoints so intelligent AI capabilities plug smoothly into your existing application stack, CRM, and automated data pipelines."
     },
     {
       title: "Natural Language Interfaces Over Business Data",
@@ -196,22 +203,22 @@ export default function AIServicesPage() {
                   {
                     "@type": "ListItem",
                     "position": 3,
-                    "name": "AI Services",
+                    "name": "AI & Automation",
                     "item": "https://www.tecwrites.com/services/ai"
                   }
                 ]
               },
               {
                 "@type": "Service",
-                "name": "AI Integration Services",
-                "serviceType": "AI Solutions",
+                "name": "AI-Integrated Products & Automation Services",
+                "serviceType": "AI & Workflow Automation",
                 "provider": {
                   "@type": "Organization",
                   "name": "TecWrites",
                   "url": "https://www.tecwrites.com"
                 },
                 "areaServed": "US",
-                "description": "Custom AI integration services: chatbots, LLM fine-tuning, RAG databases, and recommendation features built into products people enjoy using."
+                "description": "Custom AI integration and workflow automation services: autonomous agents, chatbots, LLM fine-tuning, RAG databases, and recommendation engines built into products people enjoy using."
               },
               {
                 "@type": "FAQPage",
@@ -237,22 +244,22 @@ export default function AIServicesPage() {
             INTELLIGENCE &amp; AUTOMATION
           </p>
           <h1 className="font-headline-xl text-headline-xl text-on-surface mb-6 mx-auto max-w-4xl leading-tight text-balance">
-            AI Integration Services That Turn Your Data Into Intelligent Products
+            AI-Integrated Products &amp; Automation Services That Power Next-Gen Operations
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            AI is easy to demo and hard to ship. Plenty of teams build a clever prototype that never becomes a dependable feature. TecWrites provides AI integration services for businesses that want real capabilities, not experiments: chat assistants that answer from your own data, custom LLM fine-tuning, RAG databases, and recommendation features that fit naturally inside your product.
+            AI is easy to demo and hard to ship. Plenty of teams build a clever prototype that never becomes a dependable feature. TecWrites provides AI integration and intelligent workflow automation services for businesses that want real capabilities, not experiments: autonomous AI agents, chat assistants grounded in proprietary data, custom LLM fine-tuning, RAG databases, and automated pipelines that operate smoothly inside your product.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
-            We build AI-integrated products the way we build everything else: with strong engineering underneath and an interface people actually want to use.
+            We build AI-integrated products and automations the way we build everything else: with robust software engineering underneath and tactile interfaces people actually want to use.
           </p>
         </header>
 
         {/* What Our Services Include */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <p className="font-label-caps text-label-caps text-[#006B5B] uppercase tracking-wider mb-2">INTELLIGENT CAPABILITIES</p>
+            <p className="font-label-caps text-label-caps text-[#006B5B] uppercase tracking-wider mb-2">INTELLIGENT CAPABILITIES &amp; AUTOMATION</p>
             <h2 className="font-headline-lg text-headline-lg text-on-surface">
-              What Our AI Integration Services Include
+              What Our AI &amp; Automation Services Include
             </h2>
           </div>
 
@@ -422,6 +429,8 @@ export default function AIServicesPage() {
 
           <div className="mt-10 pt-8 border-t border-outline-variant/30 flex flex-wrap justify-center items-center gap-3 text-xs font-label-caps text-on-surface-variant uppercase">
             <span>Related Services:</span>
+            <Link href="/services/digital-marketing" className="text-primary hover:underline">Digital Marketing &amp; SEO</Link>
+            <span>•</span>
             <Link href="/services/app" className="text-primary hover:underline">End-to-End App Dev</Link>
             <span>•</span>
             <Link href="/services/web-design" className="text-primary hover:underline">Web Design &amp; Development</Link>

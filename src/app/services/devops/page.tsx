@@ -424,7 +424,9 @@ export default function DevOpsServicesPage() {
             <span>Related Services:</span>
             <Link href="/services/app" className="text-primary hover:underline">End-to-End App Dev</Link>
             <span>•</span>
-            <Link href="/services/ai" className="text-primary hover:underline">AI-Integrated Products</Link>
+            <Link href="/services/ai" className="text-primary hover:underline">AI-Integrated Products &amp; Automation</Link>
+            <span>•</span>
+            <Link href="/services/digital-marketing" className="text-primary hover:underline">Digital Marketing &amp; SEO</Link>
             <span>•</span>
             <Link href="/services/game" className="text-primary hover:underline">Game Development</Link>
           </div>
