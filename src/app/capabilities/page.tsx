@@ -114,7 +114,7 @@ export default function CapabilitiesPage() {
 
   const faqs: FAQItem[] = [
     {
-      question: "Can we hire TecWrites for standalone DevOps and cloud services?",
+      question: "Can we hire Techtron Global for standalone DevOps and cloud services?",
       answer: "Yes, absolutely! Our cloud engineer provides DevOps as a standalone service. We can audit your existing cloud setups (AWS/GCP), configure Terraform Infrastructure as Code, set up CI/CD pipeline automations, and optimize your servers to cut monthly host costs."
     },
     {

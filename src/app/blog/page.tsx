@@ -7,9 +7,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog & Technical Insights",
-  description: "Read in-depth guides and strategic insights on Web Design, Animation, Mobile Apps, Artificial Intelligence, and Digital Publishing from the TecWrites team.",
+  description: "Read in-depth guides and strategic insights on Web Design, Animation, Mobile Apps, Artificial Intelligence, and Digital Publishing from the Techtron Global team.",
   keywords: [
-    "TecWrites blog",
+    "Techtron Global blog",
     "web design articles",
     "website animation guide",
     "AI solutions for web development",
@@ -18,26 +18,26 @@ export const metadata: Metadata = {
     "DevOps cost optimization"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/blog",
+    canonical: "https://www.techtronglobal.com/blog",
   },
   openGraph: {
-    title: "Blog & Technical Insights | TecWrites",
-    description: "Read in-depth guides on Web Design, Animation, Mobile Apps, AI, and Publishing from TecWrites.",
-    url: "https://www.tecwrites.com/blog",
+    title: "Blog & Technical Insights | Techtron Global",
+    description: "Read in-depth guides on Web Design, Animation, Mobile Apps, AI, and Publishing from Techtron Global.",
+    url: "https://www.techtronglobal.com/blog",
     type: "website",
     images: [
       {
         url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
-        alt: "TecWrites Blog & Technical Insights",
+        alt: "Techtron Global Blog & Technical Insights",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog & Technical Insights | TecWrites",
-    description: "Read in-depth guides on Web Design, Animation, Mobile Apps, AI, and Publishing from TecWrites.",
+    title: "Blog & Technical Insights | Techtron Global",
+    description: "Read in-depth guides on Web Design, Animation, Mobile Apps, AI, and Publishing from Techtron Global.",
     images: ["/tecwrites-og-banner.png"],
   },
 };
@@ -50,9 +50,9 @@ export default function BlogIndexPage() {
       <SchemaMarkup
         type="CollectionPage"
         data={{
-          name: "TecWrites Blog - Insights & Technical Guides",
+          name: "Techtron Global Blog - Insights & Technical Guides",
           description: "Articles and tutorials on web design, app development, AI, and publishing.",
-          url: "https://www.tecwrites.com/blog",
+          url: "https://www.techtronglobal.com/blog",
           breadcrumb: {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -60,13 +60,13 @@ export default function BlogIndexPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.tecwrites.com"
+                "item": "https://www.techtronglobal.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Blog",
-                "item": "https://www.tecwrites.com/blog"
+                "item": "https://www.techtronglobal.com/blog"
               }
             ]
           }

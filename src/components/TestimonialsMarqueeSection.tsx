@@ -73,7 +73,7 @@ export default function TestimonialsMarqueeSection() {
       {/* Studio Commitments Section */}
       <section className="flex flex-col gap-12 pt-12 pb-24">
         <div className="text-center max-w-2xl mx-auto space-y-4">
-          <h2 className="font-headline-xl text-headline-xl text-primary mb-4">The TecWrites Standard</h2>
+          <h2 className="font-headline-xl text-headline-xl text-primary mb-4">The Techtron Global Standard</h2>
           <p className="text-on-surface-variant font-body-md">Engineering integrity and design excellence built into every engagement.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

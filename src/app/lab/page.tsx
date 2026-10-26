@@ -7,32 +7,32 @@ export const metadata: Metadata = {
   title: "Lab & Case Studies",
   description: "Explore our featured engineering and design case studies in AI & Automation, Headless Web Design, and Digital Publishing.",
   keywords: [
-    "TecWrites case studies",
+    "Techtron Global case studies",
     "web design portfolio",
     "AI automation case study",
     "headless commerce case study",
     "digital publishing portfolio"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/lab",
+    canonical: "https://www.techtronglobal.com/lab",
   },
   openGraph: {
-    title: "Lab & Case Studies | TecWrites",
+    title: "Lab & Case Studies | Techtron Global",
     description: "Explore our featured engineering and design case studies in AI, Bespoke Web Design, and Publishing.",
-    url: "https://www.tecwrites.com/lab",
+    url: "https://www.techtronglobal.com/lab",
     type: "website",
     images: [
       {
         url: "/project_nexus_dashboard.png",
         width: 1200,
         height: 630,
-        alt: "TecWrites Lab & Case Studies",
+        alt: "Techtron Global Lab & Case Studies",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lab & Case Studies | TecWrites",
+    title: "Lab & Case Studies | Techtron Global",
     description: "Explore our featured engineering and design case studies in AI, Bespoke Web Design, and Publishing.",
     images: ["/project_nexus_dashboard.png"],
   },
@@ -44,9 +44,9 @@ export default function LabPage() {
       <SchemaMarkup
         type="CollectionPage"
         data={{
-          name: "TecWrites Lab - Selected Case Studies",
-          description: "Featured engineering and design case studies by TecWrites Studio.",
-          url: "https://www.tecwrites.com/lab",
+          name: "Techtron Global Lab - Selected Case Studies",
+          description: "Featured engineering and design case studies by Techtron Global Studio.",
+          url: "https://www.techtronglobal.com/lab",
           breadcrumb: {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -54,13 +54,13 @@ export default function LabPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.tecwrites.com"
+                "item": "https://www.techtronglobal.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Lab",
-                "item": "https://www.tecwrites.com/lab"
+                "item": "https://www.techtronglobal.com/lab"
               }
             ]
           }

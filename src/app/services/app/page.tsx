@@ -19,25 +19,25 @@ export const metadata: Metadata = {
     "app development from idea to App Store"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services/app"
+    canonical: "https://www.techtronglobal.com/services/app"
   },
   openGraph: {
-    title: "Mobile App Development Services USA | iOS & Android",
+    title: "Mobile App Development Services USA | iOS & Android | Techtron Global",
     description: "Custom mobile app development services in the USA. iOS and Android apps, backend servers, and APIs engineered from idea to App Store.",
-    url: "https://www.tecwrites.com/services/app",
+    url: "https://www.techtronglobal.com/services/app",
     type: "website",
     images: [
       {
         url: "/services/Full Product Builds.png",
         width: 1200,
         height: 630,
-        alt: "Mobile App Development Services USA by TecWrites",
+        alt: "Mobile App Development Services USA by Techtron Global",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mobile App Development Services USA | iOS & Android",
+    title: "Mobile App Development Services USA | iOS & Android | Techtron Global",
     description: "Custom mobile app development services in the USA. iOS and Android apps, backend servers, and APIs engineered from idea to App Store.",
     images: ["/services/Full Product Builds.png"],
   }
@@ -191,19 +191,19 @@ export default function AppServicesPage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Services",
-                    "item": "https://www.tecwrites.com/services"
+                    "item": "https://www.techtronglobal.com/services"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "App Development",
-                    "item": "https://www.tecwrites.com/services/app"
+                    "item": "https://www.techtronglobal.com/services/app"
                   }
                 ]
               },
@@ -213,8 +213,8 @@ export default function AppServicesPage() {
                 "serviceType": "Mobile app development",
                 "provider": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com"
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com"
                 },
                 "areaServed": "US",
                 "description": "Custom mobile app development services in the USA. iOS and Android apps, backend servers, and APIs engineered from idea to App Store."
@@ -246,7 +246,7 @@ export default function AppServicesPage() {
             Mobile App Development Services in the USA, Built From Idea to App Store
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            Most app ideas do not fail because the idea was weak. They fail because the build stalled, the backend could not keep up, or the app reached the store with no plan for being found. TecWrites provides mobile app development services USA founders and businesses can rely on from the first sketch to the store launch: cross-platform iOS and Android apps, the backend servers behind them, and the APIs that connect everything together.
+            Most app ideas do not fail because the idea was weak. They fail because the build stalled, the backend could not keep up, or the app reached the store with no plan for being found. Techtron Global provides mobile app development services USA founders and businesses can rely on from the first sketch to the store launch: cross-platform iOS and Android apps, the backend servers behind them, and the APIs that connect everything together.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
             Based in Lake St. Louis, Missouri, our studio pairs high-performance engineering with refined design, so your app works reliably and feels exceptional to use.
@@ -285,13 +285,13 @@ export default function AppServicesPage() {
           </div>
         </section>
 
-        {/* Why Businesses Choose TecWrites */}
+        {/* Why Businesses Choose Techtron Global */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-clay border border-white/60">
             <div className="text-center mb-12">
-              <p className="font-label-caps text-label-caps text-primary uppercase tracking-wider mb-2">THE TECWRITES ADVANTAGE</p>
+              <p className="font-label-caps text-label-caps text-primary uppercase tracking-wider mb-2">THE TECHTRON GLOBAL ADVANTAGE</p>
               <h2 className="font-headline-lg text-headline-lg text-on-surface">
-                Why Businesses Choose TecWrites for Custom App Development
+                Why Businesses Choose Techtron Global for Custom App Development
               </h2>
               <p className="text-on-surface-variant font-body-md max-w-2xl mx-auto mt-2">
                 Plenty of agencies can build an app. Fewer can take it all the way to a store listing that people actually find.

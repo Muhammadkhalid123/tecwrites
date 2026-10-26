@@ -19,25 +19,25 @@ export const metadata: Metadata = {
     "website animation"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services/branding"
+    canonical: "https://www.techtronglobal.com/services/branding"
   },
   openGraph: {
-    title: "Branding & Animation Services: Logos, Motion, Video | TecWrites",
+    title: "Branding & Animation Services: Logos, Motion, Video | Techtron Global",
     description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets designed to drop straight into your code.",
-    url: "https://www.tecwrites.com/services/branding",
+    url: "https://www.techtronglobal.com/services/branding",
     type: "website",
     images: [
       {
         url: "/services/Visual Identity (Branding, Animation & Design).png",
         width: 1200,
         height: 630,
-        alt: "Branding and Animation Services by TecWrites",
+        alt: "Branding and Animation Services by Techtron Global",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Branding & Animation Services: Logos, Motion, Video | TecWrites",
+    title: "Branding & Animation Services: Logos, Motion, Video | Techtron Global",
     description: "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets.",
     images: ["/services/Visual Identity (Branding, Animation & Design).png"],
   }
@@ -192,19 +192,19 @@ export default function BrandingServicesPage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Services",
-                    "item": "https://www.tecwrites.com/services"
+                    "item": "https://www.techtronglobal.com/services"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "Branding & Animation",
-                    "item": "https://www.tecwrites.com/services/branding"
+                    "item": "https://www.techtronglobal.com/services/branding"
                   }
                 ]
               },
@@ -214,8 +214,8 @@ export default function BrandingServicesPage() {
                 "serviceType": "Branding & Animation Design",
                 "provider": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com"
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com"
                 },
                 "areaServed": "US",
                 "description": "Branding and animation services: logo design, illustration, explainer videos, motion graphics, and app store assets designed to drop straight into your code."
@@ -247,7 +247,7 @@ export default function BrandingServicesPage() {
             Branding and Animation Services That Bring Your Brand to Life
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            Customers form an opinion about your brand in seconds, and most of that opinion comes from how it looks and moves. TecWrites provides branding and animation services that give your business a cohesive identity: logo marks, visual styles, illustrations, app store assets, and premium explainer videos, all designed to feed directly into your codebase instead of living in a folder of disconnected files.
+            Customers form an opinion about your brand in seconds, and most of that opinion comes from how it looks and moves. Techtron Global provides branding and animation services that give your business a cohesive identity: logo marks, visual styles, illustrations, app store assets, and premium explainer videos, all designed to feed directly into your codebase instead of living in a folder of disconnected files.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
             Because design and engineering share one studio, what we create is ready to be built, animated, and shipped.
@@ -310,13 +310,13 @@ export default function BrandingServicesPage() {
           </div>
         </section>
 
-        {/* Why Choose TecWrites for Branding */}
+        {/* Why Choose Techtron Global for Branding */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-clay border border-white/60">
             <div className="text-center mb-12">
-              <p className="font-label-caps text-label-caps text-[#B25E00] uppercase tracking-wider mb-2">THE TECWRITES ADVANTAGE</p>
+              <p className="font-label-caps text-label-caps text-[#B25E00] uppercase tracking-wider mb-2">THE TECHTRON GLOBAL ADVANTAGE</p>
               <h2 className="font-headline-lg text-headline-lg text-on-surface">
-                Why Choose TecWrites for Branding and Animation
+                Why Choose Techtron Global for Branding and Animation
               </h2>
             </div>
 

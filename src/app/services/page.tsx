@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Creative Technology, AI Automation & Digital Marketing Services",
-  description: "Explore TecWrites full suite of digital services: Bespoke Web Design, End-to-End App Dev, AI-Integrated Products & Automation, Digital Marketing & SEO, Game Development, Branding & Motion, DevOps, and App Store Publishing.",
+  description: "Explore Techtron Global full suite of digital services: Bespoke Web Design, End-to-End App Dev, AI-Integrated Products & Automation, Digital Marketing & SEO, Game Development, Branding & Motion, DevOps, and App Store Publishing.",
   keywords: [
     "creative technology services",
     "web design and development services USA",
@@ -23,26 +23,26 @@ export const metadata: Metadata = {
     "app store publishing and ASO"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services",
+    canonical: "https://www.techtronglobal.com/services",
   },
   openGraph: {
-    title: "Creative Technology, AI Automation & Digital Marketing Services | TecWrites",
-    description: "Explore TecWrites full suite of digital services: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing, Game Dev, Branding, DevOps, and Publishing.",
-    url: "https://www.tecwrites.com/services",
+    title: "Creative Technology, AI Automation & Digital Marketing Services | Techtron Global",
+    description: "Explore Techtron Global full suite of digital services: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing, Game Dev, Branding, DevOps, and Publishing.",
+    url: "https://www.techtronglobal.com/services",
     type: "website",
     images: [
       {
         url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
-        alt: "TecWrites Services Portfolio",
+        alt: "Techtron Global Services Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Creative Technology, AI Automation & Digital Marketing Services | TecWrites",
-    description: "Explore TecWrites full suite of digital services: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing, Game Dev, Branding, DevOps, and Publishing.",
+    title: "Creative Technology, AI Automation & Digital Marketing Services | Techtron Global",
+    description: "Explore Techtron Global full suite of digital services: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing, Game Dev, Branding, DevOps, and Publishing.",
     images: ["/tecwrites-og-banner.png"],
   },
 };
@@ -144,16 +144,16 @@ export default function ServicesHubPage() {
       <SchemaMarkup
         type="CollectionPage"
         data={{
-          name: "TecWrites Digital Services & Capabilities",
-          description: "Full suite of creative technology and publishing services offered by TecWrites.",
-          url: "https://www.tecwrites.com/services",
+          name: "Techtron Global Digital Services & Capabilities",
+          description: "Full suite of creative technology and publishing services offered by Techtron Global.",
+          url: "https://www.techtronglobal.com/services",
           mainEntity: {
             "@type": "ItemList",
             "itemListElement": servicesList.map((service, index) => ({
               "@type": "ListItem",
               "position": index + 1,
               "name": service.title,
-              "url": `https://www.tecwrites.com${service.link}`,
+              "url": `https://www.techtronglobal.com${service.link}`,
               "description": service.description
             }))
           }

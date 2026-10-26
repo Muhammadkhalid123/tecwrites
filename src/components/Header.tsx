@@ -13,7 +13,7 @@ export default function Header() {
           href="/"
           className="hover:scale-105 transition-transform duration-300 flex items-center"
         >
-          <img src="/TecWrites-Logo-03.png" alt="TecWrites Logo" className="h-10 w-auto" />
+          <img src="/TecWrites-Logo-03.png" alt="Techtron Global Logo" className="h-10 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-6">

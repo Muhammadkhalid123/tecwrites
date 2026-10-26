@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
   const imageUrl = post.coverImage.startsWith('http') 
     ? post.coverImage 
-    : `https://www.tecwrites.com${post.coverImage}`;
+    : `https://www.techtronglobal.com${post.coverImage}`;
 
   return {
     title: post.title,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           alt: post.title,
         },
       ],
-      url: `https://www.tecwrites.com/blog/${post.slug}`,
+      url: `https://www.techtronglobal.com/blog/${post.slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: [imageUrl],
     },
     alternates: {
-      canonical: `https://www.tecwrites.com/blog/${post.slug}`,
+      canonical: `https://www.techtronglobal.com/blog/${post.slug}`,
     }
   };
 }
@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const imageUrl = post.coverImage.startsWith('http') 
     ? post.coverImage 
-    : `https://www.tecwrites.com${post.coverImage}`;
+    : `https://www.techtronglobal.com${post.coverImage}`;
 
   return (
     <>
@@ -79,25 +79,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Blog",
-                    "item": "https://www.tecwrites.com/blog"
+                    "item": "https://www.techtronglobal.com/blog"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": post.title,
-                    "item": `https://www.tecwrites.com/blog/${post.slug}`
+                    "item": `https://www.techtronglobal.com/blog/${post.slug}`
                   }
                 ]
               },
               {
                 "@type": "Article",
-                "@id": `https://www.tecwrites.com/blog/${post.slug}#article`,
+                "@id": `https://www.techtronglobal.com/blog/${post.slug}#article`,
                 "headline": post.title,
                 "description": post.metaDescription,
                 "image": [imageUrl],
@@ -106,20 +106,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 "author": {
                   "@type": "Organization",
                   "name": post.author,
-                  "url": "https://www.tecwrites.com"
+                  "url": "https://www.techtronglobal.com"
                 },
                 "publisher": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com",
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com",
                   "logo": {
                     "@type": "ImageObject",
-                    "url": "https://www.tecwrites.com/TecWrites-Logo_Facicon.png"
+                    "url": "https://www.techtronglobal.com/TecWrites-Logo_Facicon.png"
                   }
                 },
                 "mainEntityOfPage": {
                   "@type": "WebPage",
-                  "@id": `https://www.tecwrites.com/blog/${post.slug}`
+                  "@id": `https://www.techtronglobal.com/blog/${post.slug}`
                 }
               }
             ]

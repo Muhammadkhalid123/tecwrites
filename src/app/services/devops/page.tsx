@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cloud & DevOps Services: AWS, GCP, Terraform",
-  description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits. Request a quote from TecWrites.",
+  description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits. Request a quote from Techtron Global.",
   keywords: [
     "Cloud Infrastructure and DevOps Services",
     "AWS DevOps services",
@@ -19,25 +19,25 @@ export const metadata: Metadata = {
     "DevOps consulting services"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services/devops"
+    canonical: "https://www.techtronglobal.com/services/devops"
   },
   openGraph: {
-    title: "Cloud & DevOps Services: AWS, GCP, Terraform | TecWrites",
-    description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits. Request a quote from TecWrites.",
-    url: "https://www.tecwrites.com/services/devops",
+    title: "Cloud & DevOps Services: AWS, GCP, Terraform | Techtron Global",
+    description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits. Request a quote from Techtron Global.",
+    url: "https://www.techtronglobal.com/services/devops",
     type: "website",
     images: [
       {
         url: "/services/DevOps & Scaling (Cloud Infrastructure).png",
         width: 1200,
         height: 630,
-        alt: "Cloud Infrastructure and DevOps Services by TecWrites",
+        alt: "Cloud Infrastructure and DevOps Services by Techtron Global",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cloud & DevOps Services: AWS, GCP, Terraform | TecWrites",
+    title: "Cloud & DevOps Services: AWS, GCP, Terraform | Techtron Global",
     description: "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits.",
     images: ["/services/DevOps & Scaling (Cloud Infrastructure).png"],
   }
@@ -185,19 +185,19 @@ export default function DevOpsServicesPage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Services",
-                    "item": "https://www.tecwrites.com/services"
+                    "item": "https://www.techtronglobal.com/services"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "Cloud Infrastructure & DevOps",
-                    "item": "https://www.tecwrites.com/services/devops"
+                    "item": "https://www.techtronglobal.com/services/devops"
                   }
                 ]
               },
@@ -207,8 +207,8 @@ export default function DevOpsServicesPage() {
                 "serviceType": "DevOps & Cloud Engineering",
                 "provider": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com"
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com"
                 },
                 "areaServed": "US",
                 "description": "Cloud infrastructure and DevOps services: AWS and GCP automation, Terraform, secure CI/CD, Docker, and cloud cost audits."
@@ -240,7 +240,7 @@ export default function DevOpsServicesPage() {
             Cloud Infrastructure and DevOps Services That Scale Without Scaling Your Bill
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            Growth should not mean a server bill that surprises you every month or a release process that everyone dreads. TecWrites provides cloud infrastructure and DevOps services that automate your deployments, secure your pipelines, and bring your hosting costs under control across AWS and Google Cloud.
+            Growth should not mean a server bill that surprises you every month or a release process that everyone dreads. Techtron Global provides cloud infrastructure and DevOps services that automate your deployments, secure your pipelines, and bring your hosting costs under control across AWS and Google Cloud.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
             We build infrastructure the way we build products: carefully, with automation wherever it saves time and clear documentation so your team is never locked out of its own systems.
@@ -294,13 +294,13 @@ export default function DevOpsServicesPage() {
           </div>
         </section>
 
-        {/* Why Choose TecWrites for DevOps */}
+        {/* Why Choose Techtron Global for DevOps */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-clay border border-white/60">
             <div className="text-center mb-12">
-              <p className="font-label-caps text-label-caps text-[#3B4252] uppercase tracking-wider mb-2">THE TECWRITES ADVANTAGE</p>
+              <p className="font-label-caps text-label-caps text-[#3B4252] uppercase tracking-wider mb-2">THE TECHTRON GLOBAL ADVANTAGE</p>
               <h2 className="font-headline-lg text-headline-lg text-on-surface">
-                Why Choose TecWrites for DevOps and Cloud Infrastructure
+                Why Choose Techtron Global for DevOps and Cloud Infrastructure
               </h2>
             </div>
 

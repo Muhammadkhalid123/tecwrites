@@ -19,25 +19,25 @@ export const metadata: Metadata = {
     "SEO-friendly web development"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services/web-design"
+    canonical: "https://www.techtronglobal.com/services/web-design"
   },
   openGraph: {
-    title: "Web Design & Development Services USA | TecWrites",
+    title: "Web Design & Development Services USA | Techtron Global",
     description: "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds. Request a quote.",
-    url: "https://www.tecwrites.com/services/web-design",
+    url: "https://www.techtronglobal.com/services/web-design",
     type: "website",
     images: [
       {
         url: "/services/website-animation-services.png",
         width: 1200,
         height: 630,
-        alt: "Web Design and Development Services USA by TecWrites",
+        alt: "Web Design and Development Services USA by Techtron Global",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design & Development Services USA | TecWrites",
+    title: "Web Design & Development Services USA | Techtron Global",
     description: "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds.",
     images: ["/services/website-animation-services.png"],
   }
@@ -192,19 +192,19 @@ export default function WebDesignServicesPage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Services",
-                    "item": "https://www.tecwrites.com/services"
+                    "item": "https://www.techtronglobal.com/services"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "Web Design & Development",
-                    "item": "https://www.tecwrites.com/services/web-design"
+                    "item": "https://www.techtronglobal.com/services/web-design"
                   }
                 ]
               },
@@ -214,8 +214,8 @@ export default function WebDesignServicesPage() {
                 "serviceType": "Web Design & Full-Stack Development",
                 "provider": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com"
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com"
                 },
                 "areaServed": "US",
                 "description": "Custom web design and development services in the USA: animated websites, 3D web design, headless commerce, and fast SEO-ready builds."
@@ -247,7 +247,7 @@ export default function WebDesignServicesPage() {
             Web Design and Development Services in the USA for Brands That Want to Stand Out
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            Most websites look alike: the same template, the same stock images, the same scroll. TecWrites provides web design and development services USA businesses use to break from that pattern. We build bespoke, animated, performance-focused websites where design, code, and motion are planned together, so your site looks distinctive, loads fast, and is ready to rank.
+            Most websites look alike: the same template, the same stock images, the same scroll. Techtron Global provides web design and development services USA businesses use to break from that pattern. We build bespoke, animated, performance-focused websites where design, code, and motion are planned together, so your site looks distinctive, loads fast, and is ready to rank.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
             Our studio in Lake St. Louis, Missouri merges high-performance web engineering with refined design and editorial craft.
@@ -310,13 +310,13 @@ export default function WebDesignServicesPage() {
           </div>
         </section>
 
-        {/* Why Choose TecWrites for Web Design */}
+        {/* Why Choose Techtron Global for Web Design */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-clay border border-white/60">
             <div className="text-center mb-12">
-              <p className="font-label-caps text-label-caps text-primary uppercase tracking-wider mb-2">THE TECWRITES ADVANTAGE</p>
+              <p className="font-label-caps text-label-caps text-primary uppercase tracking-wider mb-2">THE TECHTRON GLOBAL ADVANTAGE</p>
               <h2 className="font-headline-lg text-headline-lg text-on-surface">
-                Why Choose TecWrites for Website Design and Development
+                Why Choose Techtron Global for Website Design and Development
               </h2>
             </div>
 

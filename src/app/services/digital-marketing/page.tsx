@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Services: SEO, PPC, CRO & Performance Growth",
-  description: "Full-service digital marketing by TecWrites in the USA: technical SEO audits, Google & Meta PPC ads, conversion rate optimization (CRO), content marketing, email automation & data analytics.",
+  description: "Full-service digital marketing by Techtron Global in the USA: technical SEO audits, Google & Meta PPC ads, conversion rate optimization (CRO), content marketing, email automation & data analytics.",
   keywords: [
     "digital marketing services",
     "full-service digital marketing agency",
@@ -26,25 +26,25 @@ export const metadata: Metadata = {
     "digital marketing and growth"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services/digital-marketing"
+    canonical: "https://www.techtronglobal.com/services/digital-marketing"
   },
   openGraph: {
-    title: "Digital Marketing Services: SEO, PPC, CRO & Growth | TecWrites",
+    title: "Digital Marketing Services: SEO, PPC, CRO & Growth | Techtron Global",
     description: "Data-driven digital marketing services: technical SEO audits, high-ROAS PPC advertising, conversion rate optimization, and automated growth funnels.",
-    url: "https://www.tecwrites.com/services/digital-marketing",
+    url: "https://www.techtronglobal.com/services/digital-marketing",
     type: "website",
     images: [
       {
         url: "/services/Digital Marketing & Growth.png",
         width: 1200,
         height: 630,
-        alt: "Digital Marketing Services by TecWrites",
+        alt: "Digital Marketing Services by Techtron Global",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing Services: SEO, PPC, CRO & Growth | TecWrites",
+    title: "Digital Marketing Services: SEO, PPC, CRO & Growth | Techtron Global",
     description: "Data-driven digital marketing services: technical SEO audits, high-ROAS PPC advertising, CRO, and automated growth funnels.",
     images: ["/services/Digital Marketing & Growth.png"],
   }
@@ -102,7 +102,7 @@ export default function DigitalMarketingPage() {
   const whyChoosePoints = [
     {
       title: "Engineered by Developers & Marketers Under One Roof",
-      description: "Most agencies propose marketing recommendations that get stuck in developer backlogs. Because TecWrites has full-stack software engineers in-house, we implement technical SEO fixes, tracking pixels, and sub-second landing pages instantly."
+      description: "Most agencies propose marketing recommendations that get stuck in developer backlogs. Because Techtron Global has full-stack software engineers in-house, we implement technical SEO fixes, tracking pixels, and sub-second landing pages instantly."
     },
     {
       title: "Obsessed with Revenue & ROI, Not Vanity Metrics",
@@ -162,8 +162,8 @@ export default function DigitalMarketingPage() {
 
   const faqs = [
     {
-      question: "What digital marketing services does TecWrites provide?",
-      answer: "TecWrites delivers end-to-end digital marketing covering Search Engine Optimization (SEO & technical audits), Pay-Per-Click advertising (Google Ads & Bing), Paid Social (Meta, LinkedIn, TikTok), Content Marketing, Conversion Rate Optimization (CRO), Email Marketing Automation, Performance Tracking (GA4/GTM), and Digital PR."
+      question: "What digital marketing services does Techtron Global provide?",
+      answer: "Techtron Global delivers end-to-end digital marketing covering Search Engine Optimization (SEO & technical audits), Pay-Per-Click advertising (Google Ads & Bing), Paid Social (Meta, LinkedIn, TikTok), Content Marketing, Conversion Rate Optimization (CRO), Email Marketing Automation, Performance Tracking (GA4/GTM), and Digital PR."
     },
     {
       question: "How quickly will we see results from SEO vs PPC advertising?",
@@ -174,8 +174,8 @@ export default function DigitalMarketingPage() {
       answer: "We configure transparent, real-time Looker Studio dashboards linked to Google Analytics 4 (GA4), your ad accounts, and your CRM. We track actual revenue, qualified pipeline leads, cost per acquisition (CPA), and return on ad spend (ROAS)—ensuring complete transparency without confusing jargon."
     },
     {
-      question: "Can TecWrites fix technical SEO and tracking issues on our existing website?",
-      answer: "Yes! Because TecWrites is a creative technology and engineering studio, our developers can directly audit and repair broken structured data, slow Core Web Vitals, crawl errors, server-side Google Tag Manager containers, and Meta Conversions API (CAPI) setups without needing third-party engineering support."
+      question: "Can Techtron Global fix technical SEO and tracking issues on our existing website?",
+      answer: "Yes! Because Techtron Global is a creative technology and engineering studio, our developers can directly audit and repair broken structured data, slow Core Web Vitals, crawl errors, server-side Google Tag Manager containers, and Meta Conversions API (CAPI) setups without needing third-party engineering support."
     },
     {
       question: "Do you require long-term lock-in contracts?",
@@ -203,9 +203,9 @@ export default function DigitalMarketingPage() {
       <SchemaMarkup
         type="CollectionPage"
         data={{
-          name: "TecWrites Digital Marketing Services",
+          name: "Techtron Global Digital Marketing Services",
           description: "Full suite of data-driven digital marketing services: SEO, PPC, paid social, CRO, content strategy, email marketing, and analytics.",
-          url: "https://www.tecwrites.com/services/digital-marketing"
+          url: "https://www.techtronglobal.com/services/digital-marketing"
         }}
       />
       <script
@@ -221,19 +221,19 @@ export default function DigitalMarketingPage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Services",
-                    "item": "https://www.tecwrites.com/services"
+                    "item": "https://www.techtronglobal.com/services"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "Digital Marketing",
-                    "item": "https://www.tecwrites.com/services/digital-marketing"
+                    "item": "https://www.techtronglobal.com/services/digital-marketing"
                   }
                 ]
               },
@@ -243,8 +243,8 @@ export default function DigitalMarketingPage() {
                 "serviceType": "Performance Marketing & SEO",
                 "provider": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com"
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com"
                 },
                 "areaServed": "US",
                 "description": "Full-service digital marketing: technical SEO, PPC management, conversion rate optimization, content marketing, and lifecycle automation engineered for sustainable ROI."
@@ -276,7 +276,7 @@ export default function DigitalMarketingPage() {
             Digital Marketing Services Engineered for Measurable ROI and Sustainable Growth
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            Great technology and exceptional products deserve a qualified audience. TecWrites delivers full-service digital marketing that unites data-driven technical SEO, high-converting PPC advertising, paid social campaigns, and conversion rate optimization (CRO) to build predictable customer acquisition engines.
+            Great technology and exceptional products deserve a qualified audience. Techtron Global delivers full-service digital marketing that unites data-driven technical SEO, high-converting PPC advertising, paid social campaigns, and conversion rate optimization (CRO) to build predictable customer acquisition engines.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
             We don’t chase vanity clicks or empty impressions. We engineer every campaign to increase your bottom-line revenue, lower your acquisition costs, and maximize customer lifetime value.
@@ -289,7 +289,7 @@ export default function DigitalMarketingPage() {
             <div className="w-full md:w-1/2 aspect-[4/3] rounded-2xl overflow-hidden shadow-clay-sm bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
               <img
                 src="/services/Digital Marketing & Growth.png"
-                alt="TecWrites Digital Marketing and SEO Services"
+                alt="Techtron Global Digital Marketing and SEO Services"
                 className="w-full h-full object-contain drop-shadow-md rounded-xl"
               />
             </div>
@@ -344,12 +344,12 @@ export default function DigitalMarketingPage() {
           </div>
         </section>
 
-        {/* Why Choose TecWrites */}
+        {/* Why Choose Techtron Global */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <p className="font-label-caps text-label-caps text-[#C84B10] uppercase tracking-wider mb-2">THE TECWRITES ADVANTAGE</p>
+            <p className="font-label-caps text-label-caps text-[#C84B10] uppercase tracking-wider mb-2">THE TECHTRON GLOBAL ADVANTAGE</p>
             <h2 className="font-headline-lg text-headline-lg text-on-surface">
-              Why Choose TecWrites for Digital Marketing
+              Why Choose Techtron Global for Digital Marketing
             </h2>
           </div>
 

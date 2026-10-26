@@ -19,25 +19,25 @@ export const metadata: Metadata = {
     "branded mini-games for marketing"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services/game"
+    canonical: "https://www.techtronglobal.com/services/game"
   },
   openGraph: {
-    title: "Game Development Services: WebGL, 3D & Mobile | TecWrites",
+    title: "Game Development Services: WebGL, 3D & Mobile | Techtron Global",
     description: "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps built for engagement. Start your project today.",
-    url: "https://www.tecwrites.com/services/game",
+    url: "https://www.techtronglobal.com/services/game",
     type: "website",
     images: [
       {
         url: "/services/Interactive Games.png",
         width: 1200,
         height: 630,
-        alt: "Game Development Services by TecWrites",
+        alt: "Game Development Services by Techtron Global",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Game Development Services: WebGL, 3D & Mobile | TecWrites",
+    title: "Game Development Services: WebGL, 3D & Mobile | Techtron Global",
     description: "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps.",
     images: ["/services/Interactive Games.png"],
   }
@@ -191,19 +191,19 @@ export default function GameServicesPage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Services",
-                    "item": "https://www.tecwrites.com/services"
+                    "item": "https://www.techtronglobal.com/services"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "Game Development",
-                    "item": "https://www.tecwrites.com/services/game"
+                    "item": "https://www.techtronglobal.com/services/game"
                   }
                 ]
               },
@@ -213,8 +213,8 @@ export default function GameServicesPage() {
                 "serviceType": "Game Development",
                 "provider": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com"
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com"
                 },
                 "areaServed": "US",
                 "description": "Game development services for 2D and 3D browser games, WebGL worlds, mobile games, and gamified ed-tech apps built for engagement."
@@ -246,7 +246,7 @@ export default function GameServicesPage() {
             Game Development Services for Browser, Mobile, and Ed-Tech
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            A great game does something most software cannot: it makes people want to come back. TecWrites provides game development services for brands, educators, and founders who want that kind of engagement, from addictive 2D and 3D browser games to hardware-accelerated WebGL worlds and gamified learning applications.
+            A great game does something most software cannot: it makes people want to come back. Techtron Global provides game development services for brands, educators, and founders who want that kind of engagement, from addictive 2D and 3D browser games to hardware-accelerated WebGL worlds and gamified learning applications.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
             Our team combines game engineering, art, and animation in one studio, so the experience feels cohesive from the first load screen to the final level.
@@ -305,13 +305,13 @@ export default function GameServicesPage() {
           </div>
         </section>
 
-        {/* Why Choose TecWrites for Game Dev */}
+        {/* Why Choose Techtron Global for Game Dev */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-clay border border-white/60">
             <div className="text-center mb-12">
-              <p className="font-label-caps text-label-caps text-[#9E003A] uppercase tracking-wider mb-2">THE TECWRITES ADVANTAGE</p>
+              <p className="font-label-caps text-label-caps text-[#9E003A] uppercase tracking-wider mb-2">THE TECHTRON GLOBAL ADVANTAGE</p>
               <h2 className="font-headline-lg text-headline-lg text-on-surface">
-                Why Choose TecWrites for Game Development
+                Why Choose Techtron Global for Game Development
               </h2>
             </div>
 

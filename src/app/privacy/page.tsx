@@ -5,9 +5,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Read the TecWrites Privacy Policy to understand how we collect, protect, and handle your personal data across our services.",
+  description: "Read the Techtron Global Privacy Policy to understand how we collect, protect, and handle your personal data across our services.",
   alternates: {
-    canonical: "https://www.tecwrites.com/privacy",
+    canonical: "https://www.techtronglobal.com/privacy",
   },
   robots: {
     index: true,
@@ -21,9 +21,9 @@ export default function PrivacyPage() {
       <SchemaMarkup
         type="WebPage"
         data={{
-          name: "Privacy Policy - TecWrites",
-          url: "https://www.tecwrites.com/privacy",
-          description: "Privacy policy and personal data protection principles of TecWrites Studio."
+          name: "Privacy Policy - Techtron Global",
+          url: "https://www.techtronglobal.com/privacy",
+          description: "Privacy policy and personal data protection principles of Techtron Global Studio."
         }}
       />
       <Header />
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
         <section className="bg-surface-container-lowest shadow-[20px_20px_40px_rgba(0,0,0,0.05),inset_2px_2px_4px_rgba(255,255,255,1),inset_-4px_-4px_8px_rgba(0,0,0,0.03)] rounded-xl p-8 md:p-12 space-y-6">
           <h2 className="font-headline-lg text-headline-lg-mobile text-on-surface">1. Introduction</h2>
           <p className="font-body-md text-on-surface-variant leading-relaxed">
-            Welcome to TecWrites. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights.
+            Welcome to Techtron Global. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights.
           </p>
           <h2 className="font-headline-lg text-headline-lg-mobile text-on-surface">2. Data We Collect</h2>
           <p className="font-body-md text-on-surface-variant leading-relaxed">

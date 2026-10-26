@@ -26,7 +26,7 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.tecwrites.com'),
+  metadataBase: new URL('https://www.techtronglobal.com'),
   alternates: {
     canonical: '/',
   },
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     google: "ZifE4ji4x6DAhHBhJ1LE1zfdcbSjSvOkV8r8O_RLN9k",
   },
   title: {
-    default: "TecWrites | Web Design, App, AI & Game Development Studio",
-    template: "%s | TecWrites",
+    default: "Techtron Global | Web Design, App, AI & Game Development Studio",
+    template: "%s | Techtron Global",
   },
-  description: "TecWrites is a digital studio specializing in bespoke web design, custom animation, mobile apps, AI automation, and publishing services.",
+  description: "Techtron Global is a digital studio specializing in bespoke web design, custom animation, mobile apps, AI automation, and publishing services.",
   keywords: [
     "AI automation",
     "web design studio",
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     "3D web design",
     "creative agency"
   ],
-  authors: [{ name: "TecWrites Studio", url: "https://www.tecwrites.com" }],
-  creator: "TecWrites",
-  publisher: "TecWrites Studio",
+  authors: [{ name: "Techtron Global Studio", url: "https://www.techtronglobal.com" }],
+  creator: "Techtron Global",
+  publisher: "Techtron Global Studio",
   robots: {
     index: true,
     follow: true,
@@ -70,22 +70,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.tecwrites.com",
-    siteName: "TecWrites",
-    title: "TecWrites | Web Design, App, AI & Game Development Studio",
+    url: "https://www.techtronglobal.com",
+    siteName: "Techtron Global",
+    title: "Techtron Global | Web Design, App, AI & Game Development Studio",
     description: "Bespoke web design, custom animation, mobile apps, AI automation, and publishing services.",
     images: [
       {
         url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
-        alt: "TecWrites Studio - Web Design, App, AI & Game Development",
+        alt: "Techtron Global Studio - Web Design, App, AI & Game Development",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TecWrites | Web Design, App, AI & Game Development Studio",
+    title: "Techtron Global | Web Design, App, AI & Game Development Studio",
     description: "Bespoke web design, custom animation, mobile apps, AI automation, and publishing services.",
     images: ["/tecwrites-og-banner.png"],
   },
@@ -112,16 +112,16 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "Organization",
-                  "@id": "https://www.tecwrites.com/#organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com",
+                  "@id": "https://www.techtronglobal.com/#organization",
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com",
                   "logo": {
                     "@type": "ImageObject",
-                    "@id": "https://www.tecwrites.com/#logo",
-                    "url": "https://www.tecwrites.com/TecWrites-Logo_Facicon.png",
-                    "caption": "TecWrites Logo"
+                    "@id": "https://www.techtronglobal.com/#logo",
+                    "url": "https://www.techtronglobal.com/TecWrites-Logo_Facicon.png",
+                    "caption": "Techtron Global Logo"
                   },
-                  "image": "https://www.tecwrites.com/TecWrites-Logo-03.png",
+                  "image": "https://www.techtronglobal.com/TecWrites-Logo-03.png",
                   "description": "Hybrid creative technology & publishing studio specializing in AI & Automation, Bespoke Web Design, App Development, Game Dev, and Publishing.",
                   "address": {
                     "@type": "PostalAddress",
@@ -135,20 +135,20 @@ export default function RootLayout({
                     "@type": "ContactPoint",
                     "telephone": "+1-888-921-3331",
                     "contactType": "customer service",
-                    "email": "info@tecwrites.com"
+                    "email": "info@techtronglobal.com"
                   },
                   "sameAs": [
-                    "https://twitter.com/tecwrites",
-                    "https://linkedin.com/company/tecwrites"
+                    "https://twitter.com/techtronglobal",
+                    "https://linkedin.com/company/techtronglobal"
                   ]
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://www.tecwrites.com/#website",
-                  "url": "https://www.tecwrites.com",
-                  "name": "TecWrites",
+                  "@id": "https://www.techtronglobal.com/#website",
+                  "url": "https://www.techtronglobal.com",
+                  "name": "Techtron Global",
                   "publisher": {
-                    "@id": "https://www.tecwrites.com/#organization"
+                    "@id": "https://www.techtronglobal.com/#organization"
                   },
                   "inLanguage": "en-US"
                 }

@@ -33,7 +33,7 @@ export default function PortfolioHorizontalSection() {
         {/* Card 1 */}
         <article className="bg-surface rounded-3xl p-8 shadow-clay flex flex-col gap-6 hover:shadow-clay-active hover:-translate-y-2 transition-all duration-500 group">
           <div className="relative w-full aspect-[4/3] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden shadow-clay-inset">
-            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="/portfolio/neural-interface.png" alt="Neural Interface Logic - AI workflow redesign case study by TecWrites" />
+            <img className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="/portfolio/neural-interface.png" alt="Neural Interface Logic - AI workflow redesign case study by Techtron Global" />
           </div>
           <div className="flex flex-col gap-4">
             <div className="inline-flex px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-label-caps font-label-caps shadow-clay-sm self-start">

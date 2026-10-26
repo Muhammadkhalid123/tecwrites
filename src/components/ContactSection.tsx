@@ -80,7 +80,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="text-label-caps font-label-caps text-on-surface-variant mb-1">EMAIL US</h3>
-                <p className="text-body-md font-body-md text-on-surface font-medium">info@tecwrites.com</p>
+                <p className="text-body-md font-body-md text-on-surface font-medium">info@techtronglobal.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

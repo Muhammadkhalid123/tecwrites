@@ -2,9 +2,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Capabilities & Services | Creative Tech, AI Automation & Marketing",
-  description: "Explore TecWrites capabilities: Bespoke Web Design, End-to-End App Development, AI-Integrated Products & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and App Store Publishing.",
+  description: "Explore Techtron Global capabilities: Bespoke Web Design, End-to-End App Development, AI-Integrated Products & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and App Store Publishing.",
   keywords: [
-    "TecWrites capabilities",
+    "Techtron Global capabilities",
     "web design services",
     "mobile app development services",
     "AI integration services",
@@ -19,26 +19,26 @@ export const metadata: Metadata = {
     "cloud infrastructure and DevOps"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/capabilities",
+    canonical: "https://www.techtronglobal.com/capabilities",
   },
   openGraph: {
-    title: "Our Capabilities & Services | TecWrites",
-    description: "Explore TecWrites capabilities: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and Publishing.",
-    url: "https://www.tecwrites.com/capabilities",
+    title: "Our Capabilities & Services | Techtron Global",
+    description: "Explore Techtron Global capabilities: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and Publishing.",
+    url: "https://www.techtronglobal.com/capabilities",
     type: "website",
     images: [
       {
         url: "/tecwrites-og-banner.png",
         width: 1200,
         height: 630,
-        alt: "TecWrites Capabilities & Services",
+        alt: "Techtron Global Capabilities & Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Capabilities & Services | TecWrites",
-    description: "Explore TecWrites capabilities: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and Publishing.",
+    title: "Our Capabilities & Services | Techtron Global",
+    description: "Explore Techtron Global capabilities: Bespoke Web Design, App Dev, AI & Automation, Digital Marketing & SEO, Game Dev, Branding, DevOps, and Publishing.",
     images: ["/tecwrites-og-banner.png"],
   },
 };
@@ -50,7 +50,7 @@ export default function CapabilitiesLayout({
 }) {
   const faqs = [
     {
-      question: "Can we hire TecWrites for standalone DevOps and cloud services?",
+      question: "Can we hire Techtron Global for standalone DevOps and cloud services?",
       answer: "Yes, absolutely! Our cloud engineer provides DevOps as a standalone service. We can audit your existing cloud setups (AWS/GCP), configure Terraform Infrastructure as Code, set up CI/CD pipeline automations, and optimize your servers to cut monthly host costs."
     },
     {
@@ -90,13 +90,13 @@ export default function CapabilitiesLayout({
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Capabilities",
-                    "item": "https://www.tecwrites.com/capabilities"
+                    "item": "https://www.techtronglobal.com/capabilities"
                   }
                 ]
               },

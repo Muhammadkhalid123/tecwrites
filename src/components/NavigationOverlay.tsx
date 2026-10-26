@@ -81,7 +81,7 @@ export default function NavigationOverlay({ isOpen, onClose }: NavigationOverlay
       {/* Footer Info */}
       <div className="flex flex-col md:flex-row justify-between items-center text-black font-semibold uppercase text-sm border-t border-black/20 pt-6">
         <div>San Francisco, CA • Wroclaw, PL • London, UK</div>
-        <div className="mt-2 md:mt-0">© {new Date().getFullYear()} TecWrites Studio. All Rights Reserved.</div>
+        <div className="mt-2 md:mt-0">© {new Date().getFullYear()} Techtron Global Studio. All Rights Reserved.</div>
       </div>
     </div>
   );

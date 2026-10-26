@@ -1,8 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/data/posts'
 
-// Canonical baseUrl for TecWrites
-const baseUrl = 'https://www.tecwrites.com'
+// Canonical baseUrl for Techtron Global
+const baseUrl = 'https://www.techtronglobal.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const posts = getAllPosts()

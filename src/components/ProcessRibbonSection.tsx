@@ -278,7 +278,7 @@ export default function ProcessRibbonSection() {
                     <span className="w-2 h-2 rounded-full bg-[#12D6C4] animate-ping" />
                     <span className="font-semibold uppercase">METHODOLOGY STAGE {i + 1} // ACTIVE</span>
                   </div>
-                  <span className="text-gray-400 font-mono text-[10px]">TECWRITES WORKFLOW</span>
+                  <span className="text-gray-400 font-mono text-[10px]">TECHTRON GLOBAL WORKFLOW</span>
                 </div>
               </div>
             );

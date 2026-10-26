@@ -4,4 +4,4 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /staging/
 
-Sitemap: https://www.tecwrites.com/sitemap.xml
+Sitemap: https://www.techtronglobal.com/sitemap.xml

@@ -41,7 +41,7 @@ export default function InfinityKnotDivider({ title = "WRITING MEETS CODE" }: { 
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img
           src="/BG/ChatGPT Image Aug 1, 2026, 10_44_38 AM.png"
-          alt="TecWrites Mesh Motif Background"
+          alt="Techtron Global Mesh Motif Background"
           className="w-full h-full object-cover object-center opacity-30 dark:opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white dark:from-[#0A0E1A] dark:via-transparent dark:to-[#0A0E1A]" />

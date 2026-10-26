@@ -85,7 +85,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-label-caps font-label-caps text-on-surface-variant mb-1">EMAIL</p>
-                  <p className="font-body-md text-body-md font-semibold">info@tecwrites.com</p>
+                  <p className="font-body-md text-body-md font-semibold">info@techtronglobal.com</p>
                 </div>
               </div>
               

@@ -14,7 +14,7 @@ export async function POST(req: Request) {
         }
 
         // SMTP Credentials
-        const smtpUser = process.env.SMTP_USER || process.env.EMAIL_USER || 'info@tecwrites.com';
+        const smtpUser = process.env.SMTP_USER || process.env.EMAIL_USER || 'info@techtronglobal.com';
         const smtpPass = (process.env.SMTP_PASS || process.env.EMAIL_PASS || '').trim();
 
         // Create a transporter
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
         });
 
         // Email content for the business owner & team
-        const TO_EMAIL = 'info@tecwrites.com';
+        const TO_EMAIL = 'info@techtronglobal.com';
         const CC_EMAILS = [
             'aliahk.developer@gmail.com',
             'khalid8sharpk@gmail.com',
@@ -60,15 +60,15 @@ export async function POST(req: Request) {
         const autoReplyOptions = {
             from: smtpUser,
             to: email,
-            subject: 'Thank you for contacting TecWrites!',
-            text: `Hi ${firstName},\n\nThank you for reaching out to TecWrites. We have received your message regarding "${service}" and our team will get back to you within 24 hours.\n\nBest regards,\nTecWrites Team`,
+            subject: 'Thank you for contacting Techtron Global!',
+            text: `Hi ${firstName},\n\nThank you for reaching out to Techtron Global. We have received your message regarding "${service}" and our team will get back to you within 24 hours.\n\nBest regards,\nTechtron Global Team`,
             html: `
                 <h3>Hello ${firstName},</h3>
-                <p>Thank you for reaching out to <strong>TecWrites</strong>.</p>
+                <p>Thank you for reaching out to <strong>Techtron Global</strong>.</p>
                 <p>We have received your message regarding "<strong>${service}</strong>" and our team will get back to you within 24 hours.</p>
                 <br>
                 <p>Best regards,</p>
-                <p><strong>TecWrites Team</strong></p>
+                <p><strong>Techtron Global Team</strong></p>
             `,
         };
 

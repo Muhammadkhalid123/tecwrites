@@ -19,25 +19,25 @@ export const metadata: Metadata = {
     "self-publishing services"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services/publishing"
+    canonical: "https://www.techtronglobal.com/services/publishing"
   },
   openGraph: {
-    title: "App Store Publishing & ASO Services | TecWrites",
+    title: "App Store Publishing & ASO Services | Techtron Global",
     description: "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup to help your app or book get discovered.",
-    url: "https://www.tecwrites.com/services/publishing",
+    url: "https://www.techtronglobal.com/services/publishing",
     type: "website",
     images: [
       {
         url: "/services/App Store Publishing.png",
         width: 1200,
         height: 630,
-        alt: "App Store Publishing and ASO Services by TecWrites",
+        alt: "App Store Publishing and ASO Services by Techtron Global",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "App Store Publishing & ASO Services | TecWrites",
+    title: "App Store Publishing & ASO Services | Techtron Global",
     description: "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup.",
     images: ["/services/App Store Publishing.png"],
   }
@@ -192,19 +192,19 @@ export default function PublishingServicesPage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Services",
-                    "item": "https://www.tecwrites.com/services"
+                    "item": "https://www.techtronglobal.com/services"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "App Store Publishing & ASO",
-                    "item": "https://www.tecwrites.com/services/publishing"
+                    "item": "https://www.techtronglobal.com/services/publishing"
                   }
                 ]
               },
@@ -214,8 +214,8 @@ export default function PublishingServicesPage() {
                 "serviceType": "App Store Optimization & Publishing",
                 "provider": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com"
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com"
                 },
                 "areaServed": "US",
                 "description": "App Store publishing and ASO services: release management, metadata copywriting, ASO audits, and KDP setup to help your app or book get discovered."
@@ -247,7 +247,7 @@ export default function PublishingServicesPage() {
             App Store Publishing and ASO Services That Get You Discovered
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            Publishing is not the finish line. A great app or book that nobody finds is still a struggle. TecWrites provides app store publishing and ASO services that take your product from finished build to discoverable listing: release management, metadata copywriting, App Store Optimization audits, and KDP setup for authors.
+            Publishing is not the finish line. A great app or book that nobody finds is still a struggle. Techtron Global provides app store publishing and ASO services that take your product from finished build to discoverable listing: release management, metadata copywriting, App Store Optimization audits, and KDP setup for authors.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
             We have delivered 150+ digital projects and published 40+ books, so we know how store review, keywords, and listing copy work together in practice.
@@ -306,13 +306,13 @@ export default function PublishingServicesPage() {
           </div>
         </section>
 
-        {/* Why Choose TecWrites for Publishing */}
+        {/* Why Choose Techtron Global for Publishing */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-clay border border-white/60">
             <div className="text-center mb-12">
-              <p className="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-2">THE TECWRITES ADVANTAGE</p>
+              <p className="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-2">THE TECHTRON GLOBAL ADVANTAGE</p>
               <h2 className="font-headline-lg text-headline-lg text-on-surface">
-                Why Choose TecWrites for App Publishing and ASO
+                Why Choose Techtron Global for App Publishing and ASO
               </h2>
             </div>
 

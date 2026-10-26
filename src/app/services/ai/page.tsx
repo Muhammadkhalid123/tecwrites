@@ -22,25 +22,25 @@ export const metadata: Metadata = {
     "natural language interface for business data"
   ],
   alternates: {
-    canonical: "https://www.tecwrites.com/services/ai"
+    canonical: "https://www.techtronglobal.com/services/ai"
   },
   openGraph: {
-    title: "AI-Integrated Products & Automation: Chatbots, LLMs & Workflow Systems | TecWrites",
+    title: "AI-Integrated Products & Automation: Chatbots, LLMs & Workflow Systems | Techtron Global",
     description: "Custom AI integration and automation services in the USA: autonomous agents, chatbots, LLM fine-tuning, RAG databases, and workflow automation.",
-    url: "https://www.tecwrites.com/services/ai",
+    url: "https://www.techtronglobal.com/services/ai",
     type: "website",
     images: [
       {
         url: "/services/AI & Intelligence.png",
         width: 1200,
         height: 630,
-        alt: "AI-Integrated Products & Automation Services by TecWrites",
+        alt: "AI-Integrated Products & Automation Services by Techtron Global",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI-Integrated Products & Automation: Chatbots, LLMs & Workflow Systems | TecWrites",
+    title: "AI-Integrated Products & Automation: Chatbots, LLMs & Workflow Systems | Techtron Global",
     description: "Custom AI integration and automation services: autonomous agents, chatbots, LLM fine-tuning, RAG databases, and workflow automation.",
     images: ["/services/AI & Intelligence.png"],
   }
@@ -192,19 +192,19 @@ export default function AIServicesPage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.tecwrites.com"
+                    "item": "https://www.techtronglobal.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Services",
-                    "item": "https://www.tecwrites.com/services"
+                    "item": "https://www.techtronglobal.com/services"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "AI & Automation",
-                    "item": "https://www.tecwrites.com/services/ai"
+                    "item": "https://www.techtronglobal.com/services/ai"
                   }
                 ]
               },
@@ -214,8 +214,8 @@ export default function AIServicesPage() {
                 "serviceType": "AI & Workflow Automation",
                 "provider": {
                   "@type": "Organization",
-                  "name": "TecWrites",
-                  "url": "https://www.tecwrites.com"
+                  "name": "Techtron Global",
+                  "url": "https://www.techtronglobal.com"
                 },
                 "areaServed": "US",
                 "description": "Custom AI integration and workflow automation services: autonomous agents, chatbots, LLM fine-tuning, RAG databases, and recommendation engines built into products people enjoy using."
@@ -247,7 +247,7 @@ export default function AIServicesPage() {
             AI-Integrated Products &amp; Automation Services That Power Next-Gen Operations
           </h1>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-            AI is easy to demo and hard to ship. Plenty of teams build a clever prototype that never becomes a dependable feature. TecWrites provides AI integration and intelligent workflow automation services for businesses that want real capabilities, not experiments: autonomous AI agents, chat assistants grounded in proprietary data, custom LLM fine-tuning, RAG databases, and automated pipelines that operate smoothly inside your product.
+            AI is easy to demo and hard to ship. Plenty of teams build a clever prototype that never becomes a dependable feature. Techtron Global provides AI integration and intelligent workflow automation services for businesses that want real capabilities, not experiments: autonomous AI agents, chat assistants grounded in proprietary data, custom LLM fine-tuning, RAG databases, and automated pipelines that operate smoothly inside your product.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-base">
             We build AI-integrated products and automations the way we build everything else: with robust software engineering underneath and tactile interfaces people actually want to use.
@@ -301,13 +301,13 @@ export default function AIServicesPage() {
           </div>
         </section>
 
-        {/* Why Choose TecWrites for AI */}
+        {/* Why Choose Techtron Global for AI */}
         <section className="mb-24 max-w-5xl mx-auto">
           <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-clay border border-white/60">
             <div className="text-center mb-12">
-              <p className="font-label-caps text-label-caps text-[#006B5B] uppercase tracking-wider mb-2">THE TECWRITES ADVANTAGE</p>
+              <p className="font-label-caps text-label-caps text-[#006B5B] uppercase tracking-wider mb-2">THE TECHTRON GLOBAL ADVANTAGE</p>
               <h2 className="font-headline-lg text-headline-lg text-on-surface">
-                Why Choose TecWrites for AI-Integrated Products
+                Why Choose Techtron Global for AI-Integrated Products
               </h2>
             </div>
 
